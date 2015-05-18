@@ -1,0 +1,284 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"rhsusf_c_troops",
+		"A3_Modules_F_Curator_Curator",
+		"A3_Structures_F_Ind_Cargo",
+		"A3_Soft_F_HEMTT",
+		"a3_map_altis",
+		"task_force_radio_items"
+	};
+	addOnsAuto[]=
+	{
+		"rhsusf_c_troops",
+		"A3_Modules_F_Curator_Curator",
+		"task_force_radio_items",
+		"a3_map_altis"
+	};
+	randomSeed=8463124;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=2;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={2314.2637,12.695036,9260.3291};
+					id=0;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					text="s1";
+					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
+				};
+				class Item1
+				{
+					position[]={2307.9785,11.546208,9256.8525};
+					id=1;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
+				};
+				class Item2
+				{
+					position[]={2319.3867,12.604083,9255.9814};
+					id=2;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={8474.2021,82.808533,25293.213};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="s1";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=3;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={8442.2275,79.973686,25292.924};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="0";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="TeamLeaderRadio";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="RiflemanRadio";
+						};
+						class Item2
+						{
+							value="7";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="terrain_interception_coefficient";
+						};
+						class Item3
+						{
+							value="TaskForceRadio";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="radio_channel_name";
+						};
+						class Item4
+						{
+							value="123";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="radio_channel_password";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="same_sw_frequencies_for_side";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="same_lr_frequencies_for_side";
+						};
+					};
+					id=4;
+					side="LOGIC";
+					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Markers
+	{
+		items=1;
+		class Item0
+		{
+			position[]={24109.932,3.1740577,17965.543};
+			name="respawn_west";
+			type="Empty";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=9398752;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=9738289;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=8491721;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
