@@ -9,29 +9,18 @@ for "_i" from 0 to 5 do {
 
 sleep 8;
 
-_side = side _container;
+_side = _container getVariable "side";
 _position = getPos _container;
 
 deleteVehicle _container;
 
 _building = _building_class createVehicle _position;
-spawnpositionwest = spawnpositionwest +1;
-_respawnname = format ["respawn_west%1", spawnpositionwest];
-_respawnpos = createMarker [_respawnname, getPos _building];
-_respawnpos setMarkerShape "ICON";
-_respawnpos setMarkerType "b_hq";
+
+[_side, _building] call BIS_fnc_addRespawnPosition;
+_building setVariable ["side", west, true];
 
 [
-    [
-        [_building, _respawnname],
-        "tmscti\server\register_spawn_building_destroyed_handler.sqf"
-    ],
-    "BIS_fnc_execVM",
-    true
-] call BIS_fnc_MP;
-
-[
-     [[_building, 50000, west], "R3F_LOG\USER_FUNCT\init_creation_factory.sqf"],
+     [[_building, 50000, _side], "R3F_LOG\USER_FUNCT\init_creation_factory.sqf"],
      "BIS_fnc_execVM",
      true,
      true
@@ -39,7 +28,7 @@ _respawnpos setMarkerType "b_hq";
 
 [
     [_building,
-        [format ["<t color='#FF0000'>Pack %1</t>", _building_name], "tmscti\pack_base_container.sqf", [_building_name, _building_class, _respawnname]]
+        [format ["<t color='#FF0000'>Pack %1</t>", _building_name], "tmscti\pack_base_container.sqf", [_building_name, _building_class]]
     ],
     "addAction",
     true,
