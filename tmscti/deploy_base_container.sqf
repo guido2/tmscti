@@ -34,3 +34,14 @@ _building setVariable ["side", west, true];
     true,
     true
 ] call BIS_fnc_MP;
+
+[
+    [_building,
+        [format ["Request base supply %1", _building_name], {createDialog "HQSupply";} ]
+    ],
+    "addAction",
+    true,
+    true
+] call BIS_fnc_MP;
+
+

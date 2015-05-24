@@ -8,13 +8,15 @@ class Mission
 		"A3_Structures_F_Ind_Cargo",
 		"A3_Soft_F_HEMTT",
 		"a3_map_altis",
-		"task_force_radio_items"
+		"task_force_radio_items",
+		"A3_Structures_F_Mil_Helipads"
 	};
 	addOnsAuto[]=
 	{
 		"rhsusf_c_troops",
 		"A3_Modules_F_Curator_Curator",
 		"task_force_radio_items",
+		"A3_Structures_F_Mil_Helipads",
 		"a3_map_altis"
 	};
 	randomSeed=8463124;
@@ -181,13 +183,79 @@ class Mission
 			};
 		};
 	};
-	class Markers
+	class Vehicles
 	{
 		items=1;
 		class Item0
 		{
+			position[]={24080.49,3.1900001,18013.66};
+			id=5;
+			side="EMPTY";
+			vehicle="Land_JumpTarget_F";
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=10;
+		class Item0
+		{
 			position[]={24109.932,3.1740577,17965.543};
 			name="respawn_west";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={24080.375,3.1900001,18013.539};
+			name="hqdrop1";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={14999.799,-0.19105482,30717.947};
+			name="sp_n";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={30718.199,-185.97,15000.015};
+			name="sp_e";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={14999.989,-185.97,0.36254883};
+			name="sp_s";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={0.33955079,-185.97,14999.962};
+			name="sp_w";
+			type="Empty";
+		};
+		class Item6
+		{
+			position[]={30719.742,-185.97,30719.832};
+			name="sp_ne";
+			type="Empty";
+		};
+		class Item7
+		{
+			position[]={30719.75,-185.97,0.16296387};
+			name="sp_se";
+			type="Empty";
+		};
+		class Item8
+		{
+			position[]={0.10946045,-185.97,0.26184082};
+			name="sp_sw";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={0.1322754,-185.97,30719.846};
+			name="sp_nw";
 			type="Empty";
 		};
 	};

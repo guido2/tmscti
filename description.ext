@@ -1,3 +1,5 @@
+#include "defines.hpp"
+#include "dialog.hpp"
 #include "R3F_LOG\desc_include.h"
 
 // Respawn type, see the table below
