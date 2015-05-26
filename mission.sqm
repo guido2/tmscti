@@ -8,13 +8,17 @@ class Mission
 		"A3_Structures_F_Ind_Cargo",
 		"A3_Soft_F_HEMTT",
 		"a3_map_altis",
-		"task_force_radio_items"
+		"task_force_radio_items",
+		"A3_Structures_F_Mil_Flags",
+		"rhs_cti_insurgents"
 	};
 	addOnsAuto[]=
 	{
 		"rhsusf_c_troops",
+		"rhs_cti_insurgents",
 		"A3_Modules_F_Curator_Curator",
 		"task_force_radio_items",
+		"A3_Structures_F_Mil_Flags",
 		"a3_map_altis"
 	};
 	randomSeed=8463124;
@@ -38,7 +42,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			side="WEST";
@@ -81,6 +85,42 @@ class Mission
 		};
 		class Item1
 		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={2156.2544,9.2301369,11588.836};
+					id=3;
+					side="EAST";
+					vehicle="rhs_g_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={2149.9692,8.6055422,11585.359};
+					id=4;
+					side="EAST";
+					vehicle="rhs_g_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={2161.3774,10.027225,11584.488};
+					id=5;
+					side="EAST";
+					vehicle="rhs_g_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item2
+		{
 			side="LOGIC";
 			class Vehicles
 			{
@@ -116,7 +156,7 @@ class Mission
 							typeName="Forced";
 						};
 					};
-					id=3;
+					id=6;
 					side="LOGIC";
 					vehicle="ModuleCurator_F";
 					leader=1;
@@ -172,7 +212,7 @@ class Mission
 							typeName="same_lr_frequencies_for_side";
 						};
 					};
-					id=4;
+					id=7;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
 					lock="UNLOCKED";
@@ -181,13 +221,32 @@ class Mission
 			};
 		};
 	};
-	class Markers
+	class Vehicles
 	{
 		items=1;
 		class Item0
 		{
+			position[]={24098.098,3.1900001,17980.002};
+			id=8;
+			side="EMPTY";
+			vehicle="Flag_Red_F";
+			skill=0.60000002;
+			init="nullReturn = [this, ""SaltLake""] execVM ""tmscti\init_flag.sqf""";
+		};
+	};
+	class Markers
+	{
+		items=2;
+		class Item0
+		{
 			position[]={24109.932,3.1740577,17965.543};
 			name="respawn_west";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={24108,3.1740577,17965.543};
+			name="respawn_east";
 			type="Empty";
 		};
 	};

@@ -9,7 +9,7 @@ respawnVehicleDelay = 60;
 // 0 to disable the score table (it can still be opened manually by pressing 'P' key).
 respawnDialog = 0;
 // Respawn templates from CfgRespawnTemplates. You can combine any number of them together.
-respawnTemplates[] = {"MenuPosition"};
+respawnTemplates[] = {"MenuPosition", "Tickets"};
 // Side specific respawn templates. When undefined, general respawnTemplates are used instead.
 respawnTemplatesEast[] = {"MenuPosition"};
 // 1 to respawn player when he joins the game. Available only for INSTANT and BASE respawn types.
