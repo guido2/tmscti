@@ -24,7 +24,6 @@ _CH47F setVehicleLock "LOCKED";
 _grp = group _CH47F;
 
 _wp1 = _grp addWaypoint [getMarkerPos "sp_e", 0]; //Spawnpoint
-_grp setCurrentWaypoint [_wp1];
 _wp1 setWaypointType "MOVE";
 _wp1 setWaypointSpeed "FULL";
 _wp1 setWaypointTimeout [2, 3, 4];
@@ -34,40 +33,19 @@ _marker2pos = getmarkerpos "hqdrop1";
 _direction = [_marker2pos, _marker1pos] call BIS_fnc_dirTo;
 _additionalwp = [_marker2pos, 800, _direction] call BIS_fnc_relPos;
 _wp3 =_grp addWaypoint [_additionalwp, 0]; //Interimpoint
-_grp setCurrentWaypoint [_wp3];
 _wp3 setWaypointType "MOVE";
 _wp3 setWaypointCompletionRadius 0;
 _wp3 setWaypointSpeed "FULL";
-_CH47F flyinheight 40;
+_wp3 setWaypointStatements ["true", "vehicle this flyinheight 15;"];
 
 _wp2 =_grp addWaypoint [getMarkerPos "hqdrop1", 0]; //Droppoint
-_grp setCurrentWaypoint [_wp2];
 _wp2 setWaypointType "MOVE";
 _wp2 setWaypointCompletionRadius 0;
 _wp2 setWaypointSpeed "LIMITED";
-_CH47F flyinheight 15;
-_wp2 setWaypointTimeout [10, 15, 20];
-_wp2 setWaypointStatements ["true", "ropeDestroy containerrope1; ropeDestroy containerrope2; ropeDestroy containerrope3; ropeDestroy containerrope4; hint 'Your supply has arrived';"];
+_wp2 setWaypointTimeout [25, 28, 30];
+_wp2 setWaypointStatements ["true", "vehicle this flyinheight 40; ropeDestroy containerrope1; ropeDestroy containerrope2; ropeDestroy containerrope3; ropeDestroy containerrope4; hint 'Your supply has arrived';"];
 
 _wp4 =_grp addWaypoint [getMarkerPos "sp_e", 0];
 _wp4 setWaypointType "MOVE";
 _wp4 setWaypointSpeed "FULL";
 _wp4 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

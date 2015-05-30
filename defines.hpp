@@ -87,12 +87,11 @@ class RscCombo
   style = ST_CENTER;
   shadow = 2;
   colorText[] = {1,1,1,1};
-  font = "Bitstream";
-  sizeEx = 0.02;
+  font = "TahomaB";
+  sizeEx = 0.0225;
   colorBackground[] = { 0,0,0, 0.5 }; 
   text = ""; 
 };
-
 class RscText
 {
    access = 0;
@@ -107,9 +106,9 @@ class RscText
    h = 0.037;
    w = 0.3;
    style = 0;
-   shadow = 2;
-   font = "puristaMedium";
-   SizeEx = 0.03921;
+   shadow = 1;
+   font = "TahomaB";
+   SizeEx = 0.0225;
 };
 class RscButton
 {
@@ -117,12 +116,12 @@ class RscButton
    type = 1;
    text = "";
    colorText[] = {1,1,1,1};
-   colorDisabled[] = {0.277,0.414,0.559,1};
+   colorDisabled[] = {0.1,0.1,0.1,1};
    colorBackground[] = {0.277,0.414,0.559,1};
-   colorBackgroundDisabled[] = {0.277,0.414,0.559,1};
-   colorBackgroundActive[] = {0.277,0.414,0.559,1};
-   colorFocused[] = {0.371,0.555,0.746,1};
-   colorShadow[] = {0.023529,0,0.0313725,1};
+   colorBackgroundDisabled[] = {0.2,0.2,0.2,1};
+   colorBackgroundActive[] = {0.833333,0.706667,0.409804,1};
+   colorFocused[] = {0.833333,0.706667,0.409804,1};
+   colorShadow[] = {0.023529,0,0.0313725,0};
    colorBorder[] = {0.023529,0,0.0313725,1};
    soundEnter[] = {"",0.09,1};
    soundPush[] = {"",0,0};
@@ -133,9 +132,9 @@ class RscButton
    y = 0;
    w = 0.095589;
    h = 0.039216;
-   shadow = 2;
-   font = "puristaMedium";
-   sizeEx = 0.03921;
+   shadow = 0;
+   font = "TahomaB";
+   sizeEx = 0.0225;
    offsetX = 0.003;
    offsetY = 0.003;
    offsetPressedX = 0.002;
@@ -144,52 +143,52 @@ class RscButton
 };
 class RscListbox
 {
- access = 0;
- type = 5;
- style = 0;
- w = 0.4;
- h = 0.4;
- font = "TahomaB";
- sizeEx = 0.04;
- rowHeight = 0;
- colorText[] = {1,1,1,1};
- colorScrollbar[] = {1,1,1,1};
- colorSelect[] = {0,0,0,1};
- colorSelect2[] = {1,0.5,0,1};
- colorSelectBackground[] = {0.6,0.6,0.6,1};
- colorSelectBackground2[] = {0.2,0.2,0.2,1};
- colorBackground[] = {0,0,0,1};
- maxHistoryDelay = 1.0;
- soundSelect[] = {"",0.1,1};
- period = 1;
- autoScrollSpeed = -1;
- autoScrollDelay = 5;
- autoScrollRewind = 0;
- arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
- arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
- shadow = 0;
- class ListScrollBar
- {
-  color[] = {1,1,1,0.6};
-  colorActive[] = {1,1,1,1};
-  colorDisabled[] = {1,1,1,0.3};
-  thumb = "#(argb,8,8,3)color(1,1,1,1)";
-  arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
-  arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-  border = "#(argb,8,8,3)color(1,1,1,1)";
-  shadow = 0;
- };
+	access = 0;
+	type = 5;
+	style = 0;
+	w = 0.4;
+	h = 0.4;
+	font = "TahomaB";
+	sizeEx = 0.0225;
+	rowHeight = 0;
+	colorText[] = {1,1,1,1};
+	colorScrollbar[] = {1,1,1,1};
+	colorSelect[] = {0,0,0,1};
+	colorSelect2[] = {1,0.5,0,1};
+	colorSelectBackground[] = {0.6,0.6,0.6,1};
+	colorSelectBackground2[] = {0.2,0.2,0.2,1};
+	colorBackground[] = {0,0,0,1};
+	maxHistoryDelay = 1.0;
+	period = 1;
+	autoScrollSpeed = -1;
+	autoScrollDelay = 5;
+	autoScrollRewind = 0;
+	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+	shadow = 0;
+	
+		class ListScrollBar
+		{
+		color[] = {1,1,1,0.6};
+		colorActive[] = {1,1,1,1};
+		colorDisabled[] = {1,1,1,0.3};
+		thumb = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+		border = "#(argb,8,8,3)color(1,1,1,1)";
+		shadow = 0;
+		};
 };
 class RscPicture
 {
  access = 0;
  type = CT_STATIC;
  idc = -1;
- style = 48;//ST_PICTURE
+ style = 48;
  colorBackground[] = {0,0,0,0};
  colorText[] = {1,1,1,1};
  font = "TahomaB";
- sizeEx = 0;
+ sizeEx = 0.0225;
  lineSpacing = 0;
  text = "";
  fixedWidth = 0;
