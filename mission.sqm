@@ -10,7 +10,7 @@ class Mission
 		"a3_map_altis",
 		"task_force_radio_items",
 		"A3_Structures_F_Mil_Flags",
-		"rhs_cti_insurgents"
+		"rhs_cti_insurgents",
 		"A3_Structures_F_Mil_Helipads"
 	};
 	addOnsAuto[]=
@@ -257,6 +257,7 @@ class Mission
 		{
 			position[]={24108,3.1740577,17965.543};
 			name="respawn_east";
+			type="Empty";
 		};
 		class Item2
 		{
