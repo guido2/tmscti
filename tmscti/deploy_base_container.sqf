@@ -43,5 +43,3 @@ _building setVariable ["side", west, true];
     true,
     true
 ] call BIS_fnc_MP;
-
-

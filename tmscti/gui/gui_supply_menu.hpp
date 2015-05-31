@@ -174,6 +174,7 @@ class Controls
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Select object family"; //--- ToDo: Localize;
+	onLBSelChanged = nul = _this execVM "tmscti\gui\set_type_select_list.sqf";
 	};
 	class supplylist2: RscListbox
 	{
@@ -484,6 +485,7 @@ class Controls
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Main Battle Tanks"; //--- ToDo: Localize;
+	action = [tms_supply_mbt_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplyifvsaps: RscButton
 	{
