@@ -1,5 +1,8 @@
 execVM "R3F_LOG\init.sqf";
 _igiload = execVM "IgiLoad\IgiLoadInit.sqf";
+execVM "tmscti\gui\defines_idcs.sqf";
+
+call compile loadFile "tmscti\supply_definitions.sqf";
 
 spawnpositionwest = 0;
 
