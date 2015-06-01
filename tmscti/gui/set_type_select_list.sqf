@@ -3,8 +3,6 @@ disableSerialization;
 _family_list = _this select 0;
 _selected_index = _this select 1;
 
-hint format ["index: %1", _selected_index];
-
 _display = findDisplay 5000;
 _type_list = _display displayCtrl 1501;
 

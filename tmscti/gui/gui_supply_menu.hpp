@@ -187,6 +187,7 @@ class Controls
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Select object type"; //--- ToDo: Localize;
+	onLBSelChanged = nul = _this execVM "tmscti\gui\set_object_select_list.sqf";
 	};
 	class supplylist3: RscListbox
 	{
