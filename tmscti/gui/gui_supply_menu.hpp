@@ -2,7 +2,7 @@ class hqsupply
    {   
       idd = 5000;
       movingenable = 0;
-      onLoad = [tms_idc_fob_installations + tms_idc_all_vehicles + tms_idc_all_gear + tms_idc_supply] execVM "tmscti\gui\gui_initial_category_deactivation.sqf";
+      onLoad = [tms_idc_fob_installations + tms_idc_all_vehicles + tms_idc_all_gear + tms_idc_supply] execVM "tmscti\gui\gui_initial_preparing_dialog.sqf";
       enableSimulation = 1;      
 
 class ControlsBackground
@@ -324,72 +324,14 @@ class Controls
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Add selected supply to cargo list"; //--- ToDo: Localize;
 	};
-	class supplytrans1: RscButton
-	{
-	idc = 1612;
+class supplycargocraftlist: RscListbox
+{
+	idc = 2100;
 	x = 0.373958 * safezoneW + safezoneX;
-	y = 0.214111 * safezoneH + safezoneY;
-	w = 0.0802083 * safezoneW;
-	h = 0.0329871 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0.656863,0.556863,0.319608,1};
-	};
-	class supplytrans2: RscButton
-	{
-	idc = 1613;
-	x = 0.459896 * safezoneW + safezoneX;
-	y = 0.214111 * safezoneH + safezoneY;
-	w = 0.0802083 * safezoneW;
-	h = 0.0329871 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0.656863,0.556863,0.319608,1};
-	};
-	class supplytrans3: RscButton
-	{
-	idc = 1614;
-	x = 0.545833 * safezoneW + safezoneX;
-	y = 0.214111 * safezoneH + safezoneY;
-	w = 0.0802083 * safezoneW;
-	h = 0.0329871 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0.656863,0.556863,0.319608,1};
-	};
-	class supplytrans4: RscButton
-	{
-	idc = 1615;
-	x = 0.373958 * safezoneW + safezoneX;
-	y = 0.258094 * safezoneH + safezoneY;
-	w = 0.0802083 * safezoneW;
-	h = 0.0329871 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0.656863,0.556863,0.319608,1};
-	};
-	class supplytrans5: RscButton
-	{
-	idc = 1616;
-	x = 0.459896 * safezoneW + safezoneX;
-	y = 0.258094 * safezoneH + safezoneY;
-	w = 0.0802083 * safezoneW;
-	h = 0.0329871 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0.656863,0.556863,0.319608,1};
-	};
-	class supplytrans6: RscButton
-	{
-	idc = 1617;
-	x = 0.545833 * safezoneW + safezoneX;
-	y = 0.258094 * safezoneH + safezoneY;
-	w = 0.0802083 * safezoneW;
-	h = 0.0329871 * safezoneH;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0.656863,0.556863,0.319608,1};
-	};
+	y = 0.203116 * safezoneH + safezoneY;
+	w = 0.252083 * safezoneW;
+	h = 0.0879657 * safezoneH;
+};
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>Categories<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
 	class supplyfobinst: RscButton
 	{
