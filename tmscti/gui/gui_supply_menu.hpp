@@ -323,7 +323,7 @@ class Controls
 	colorBackground[] = {0.456863,0.356863,0.119608,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Add selected supply to cargo list"; //--- ToDo: Localize;
-	action = execVM "tmscti\gui\adds_object_to_cargolist.sqf";
+	action = execVM "tmscti\gui\add_object_to_cargolist.sqf";
 	};
 class supplycargocraftlist: RscListbox
 {

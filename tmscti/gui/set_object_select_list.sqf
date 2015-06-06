@@ -13,5 +13,5 @@ lbClear _object_list;
 {
 	_object = call compile _x;
 	_index = _object_list lbAdd (_object select 0);
-	_type_list lbSetData [_index, _x];
+	_object_list lbSetData [_index, _x];
 } forEach _items;
