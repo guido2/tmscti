@@ -1,7 +1,7 @@
 hint "Your selected supply is on the way";
 
-_row = lbCurSel 1500;
-_supply = lbData [1500, _row];
+_row = lbCurSel 1507;
+_supply = lbData [1507, _row];
 
 _chosencraft = lbCurSel 2100;
 _transportcraft = lbData [2100, _chosencraft];
@@ -69,27 +69,18 @@ if (_transportcraft == "CH-47 Chinook") then {
     _wp4 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
 	};
 
-
 if (_transportcraft == "C-17 Globemaster III") then {
-
-	_transC17 = createVehicle ["USAF_C17", getMarkerPos "sp_e", [], 0, "FLY"];
-
-	createVehicleCrew (_transC17);
-	_cargo1 = _supply createVehicle getMarkerPos "sp_e";
-	null = [_transC17, _cargo1] spawn Lala_C17_fnc_forceLoadCargo;
-
-	_transC17 setVehicleLock "LOCKED";
-
-	_transC17 landAt 5;
-
-	_grp2 = group _transC17;
+    _transC17 = createVehicle ["USAF_C17", getMarkerPos "sp_e", [], 0, "FLY"];
+    createVehicleCrew (_transC17);
 	
-	_transC17 addEventHandler ["LandedStopped", {
-    
-	hint "Halteposition erreicht!";
+    _cargo1 = _supply createVehicle getMarkerPos "sp_e";
+    [_transC17, _cargo1] call Lala_C17_fnc_forceLoadCargo;
+    _transC17 setVehicleLock "LOCKED";
+
+    _transC17 landAt 5;
 	
-    {deleteVehicle _x;} forEach crew _transC17;
-	
-	}];
-	
-	};
+    _transC17 addEventHandler ["LandedStopped", {
+        hint "Your supply has arrived";
+        {deleteVehicle _x} forEach crew (_this select 0);
+        }];
+    };
