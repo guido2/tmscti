@@ -238,7 +238,7 @@ class Mission
 		class Item1
 		{
 			position[]={24080.49,3.1900001,18013.66};
-			id=5;
+			id=9;
 			side="EMPTY";
 			vehicle="Land_JumpTarget_F";
 			skill=0.60000002;
