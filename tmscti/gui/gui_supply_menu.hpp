@@ -2,7 +2,7 @@ class hqsupply
    {   
       idd = 5000;
       movingenable = 0;
-      onLoad = [tms_idc_fob_installations + tms_idc_all_vehicles + tms_idc_all_gear + tms_idc_supply] execVM "tmscti\gui\gui_initial_category_deactivation.sqf";
+      onLoad = [tms_idc_fob_installations + tms_idc_all_vehicles + tms_idc_all_gear + tms_idc_supply] execVM "tmscti\gui\gui_initial_prepare_dialog.sqf";
       enableSimulation = 1;      
 
 class ControlsBackground
