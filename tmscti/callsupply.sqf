@@ -1,7 +1,7 @@
 hint "Your selected supply is on the way";
 
-_row = lbCurSel 1500;
-_supply = lbData [1500, _row];
+_row = lbCurSel 1507;
+_supply = lbData [1507, _row];
 
 _CH47F = createVehicle ["RHS_CH_47F", getMarkerPos "sp_e", [], 0, "FLY"];
 
