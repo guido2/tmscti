@@ -243,6 +243,15 @@ class Mission
 			vehicle="Land_JumpTarget_F";
 			skill=0.60000002;
 		};
+		class Item2
+		{
+			position[]={24099.152,3.1900001,18000.721};
+			id=10;
+			side="EMPTY";
+			vehicle="Land_Barrel_sand";
+			skill=0.60000002;
+			init="this addAction [""<t color='#FFFF00'>Teammenu</t>"", {createDialog ""teammanagement"";}];";
+		};
 	};
 	class Markers
 	{
