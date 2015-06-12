@@ -4,12 +4,8 @@ tms_supply_mbt_families = [["M1 Abrams", "tms_supply_m1_types", west],
 						   ["T-72", "tms_supply_t72_types", east],
 						   ["T-80", "tms_supply_t80_types", east],
 						   ["T-90", "tms_supply_t90_types", east],
-<<<<<<< Updated upstream
-						   ["T-100", "tms_supply_t100_types", east]];
-=======
 						   ["T-100", "tms_supply_t100_types", east]
 						   ["2S25 SPRUT-SD", "tms_supply_2s25_types", east]];
->>>>>>> Stashed changes
 						   
 tms_supply_fighter_families =	[["F/A-18 Hornet", "tms_supply_f18_types", west],
 								["F/A-22 Raptor", "tms_supply_f22_types", west],
@@ -24,12 +20,9 @@ tms_supply_gaplanes_families = 	[["A-10 Thunderbolt II", "tms_supply_a10_types",
 								 ["Suchoi Su-34", "tms_supply_su34_types", east],
 								 ["AC-130 Gunship", "tms_supply_ac130gun_types", west],
 								 ["YAK-130", "tms_supply_yak130_types", east]];
-<<<<<<< Updated upstream
-=======
 								 
 tms_supply_transport_families =	[["HMMWV Humvee", "tms_supply_humvee_types", west],
 								 ["UAZ-3151 Kozlik", "tms_supply_uaz3151_types, east"]];
->>>>>>> Stashed changes
 
 // Vehicle Family List
 tms_supply_m1_types = [["M1A1 Abrams", "tms_supply_m1a1_objects"],
@@ -48,11 +41,8 @@ tms_supply_t90_types = [["T-90", "tms_supply_t90_objects"]];
 
 tms_supply_t100_types = [["T-100 Black Eagle", "tms_supply_t100_objects"]];
 
-<<<<<<< Updated upstream
-=======
 tms_supply_2s25_types = [["2S25 Sprut-SD", "tms_supply_2s25_objects"]];
 
->>>>>>> Stashed changes
 tms_supply_f18_types = [["F/A-18 Super Hornet", "tms_supply_f18_objects"]];
 
 tms_supply_f22_types = [["F/A-22 Raptor", "tms_supply_f22_objects"]];
@@ -74,12 +64,6 @@ tms_supply_su25_types = [["Suchoi Su-25", "tms_supply_su25_objects"]];
 
 tms_supply_su34_types = [["Suchoi Su-34", "tms_supply_su34_objects"]];
 
-<<<<<<< Updated upstream
-tms_supply_ac130gun_types = [["AC-130U Spooky II", "tms_supply_ac130u_objects"]],
-							[["AC-130E Pave Spectre", "tms_supply_ac130e_objects"]];
-					  
-tms_supply_yak130_types = 	["YAK-130", "tms_supply_yak130_objects"];
-=======
 tms_supply_ac130gun_types = [["AC-130U Spooky II", "tms_supply_ac130u_objects"],
 							["AC-130E Pave Spectre", "tms_supply_ac130e_objects"]];
 					  
@@ -91,7 +75,6 @@ tms_supply_humvee_types =	[["M1025A2 Humvee", "tms_supply_m1025a2_objects"],
 							 ["M1151 Humvee", "tms_m1151_objects"]];
 							 
 tms_supply_uaz3151_types =	[["UAZ-3151 Kozlik", "tms_supply_uaz3151_objects"]];
->>>>>>> Stashed changes
 
 // Vehicle Variant List
 tms_supply_m1a1_objects = ["tms_objects_m1a1sa",
@@ -156,34 +139,6 @@ tms_supply_a10_objects = ["tms_objects_a10a",
 
 tms_supply_a100_objects = ["tms_objects_a100"];
 
-<<<<<<< Updated upstream
-tms_supply_t100_objects = ["tms_objects_t100"];
-
-tms_supply_f18_objects = ["tms_objects_fa18e",
-						  "tms_objects_fa18f",
-						  "tms_objects_fa18x"];
-
-tms_supply_f22_objects = ["tms_objects_fa22"];
-
-tms_supply_f16_objects = ["tms_objects_f16b",
-						  "tms_objects_f16c"];
-
-tms_supply_f35_objects = ["tms_objects_f35a",
-						  "tms_objects_f35b"];
-						  
-tms_supply_su22_objects = ["tms_objects_su22"];
-
-tms_supply_su35_objects = ["tms_objects_su35"];						  
-
-tms_supply_t50_objects = ["tms_objects_t50"];
-
-tms_supply_a10_objects = ["tms_objects_a10a",
-						  "tms_objects_a10c"];
-
-tms_supply_a100_objects = ["tms_objects_a100"];
-
-=======
->>>>>>> Stashed changes
 tms_supply_su25_objects = ["tms_objects_su25"];
 
 tms_supply_su34_objects = ["tms_objects_su34"];
@@ -192,9 +147,6 @@ tms_supply_ac130u_objects = ["tms_objects_ac130u"];
 
 tms_supply_ac130e_objects = ["tms_objects_ac130e"];
 
-<<<<<<< Updated upstream
-tms_supply_yak130_objects = ["tms_objects_yak133ib"] 					   
-=======
 tms_supply_yak130_objects = ["tms_objects_yak133ib"];
 
 tms_supply_m1025a2_objects = ["tms_objects_m1025a2",
@@ -222,14 +174,11 @@ tms_supply_uaz3151_objects = ["tms_objects_uaz3151_open",
 							  "tms_objects_uaz3151"];
 								
 								
->>>>>>> Stashed changes
   
 // Vehicle Definitions
 tms_objects_m1a1_aim_d = ["M1A1 Abrams AIM", // Name of the vehicle
 						  "rhsusf_m1a1aimd_usarmy",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
-<<<<<<< Updated upstream
-=======
 						  100, // Supply points used
 						  20, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -290,7 +239,6 @@ tms_objects_m1a2sepv1_tusk1 = ["M1A2 Abrams SEP V1 TUSK I", // Name of the vehic
 tms_objects_m1a2sepv1_tusk2 = ["M1A2 Abrams SEP V1 TUSK II", // Name of the vehicle
 						  "rhsusf_m1a1aimd_usarmy",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
->>>>>>> Stashed changes
 						  100, // Supply points used
 						  20, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -371,8 +319,6 @@ tms_objects_t80b = 		["T-80B",
 tms_objects_t80bv = 	["T-80BV",
 						"rhs_t80bv",// Classname
 						"\rhsafrf\addons\rhs_t80\T80BV.p3d",// P3D model
-<<<<<<< Updated upstream
-=======
 						100, // Supply points used
 						20, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -423,7 +369,6 @@ tms_objects_t80v = 	   ["T-80V",
 tms_objects_t80vk =    ["T-80VK",
 						"",// Classname
 						"",// P3D model
->>>>>>> Stashed changes
 						100, // Supply points used
 						20, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -464,8 +409,6 @@ tms_objects_t80ue1 = 	["T-80UE-1",
 tms_objects_t80um = 	["T-80UM",
 						"rhs_t80um",// Classname
 						"\rhsafrf\addons\rhs_t80u\rhs_t80um.p3d",// P3D model
-<<<<<<< Updated upstream
-=======
 						100, // Supply points used
 						20, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -476,7 +419,6 @@ tms_objects_t80um = 	["T-80UM",
 tms_objects_t90 = 	   ["T-90",
 						"",// Classname
 						"",// P3D model
->>>>>>> Stashed changes
 						100, // Supply points used
 						20, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -494,8 +436,6 @@ tms_objects_t100 = 		["T-100 Black Eagle",
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
 						
-<<<<<<< Updated upstream
-=======
 tms_objects_2s25 = 	   ["2S25 Sprut-SD",
 						"",// Classname
 						"",// P3D model
@@ -506,7 +446,6 @@ tms_objects_2s25 = 	   ["2S25 Sprut-SD",
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
 						
->>>>>>> Stashed changes
 tms_objects_fa18e = 	["F/A-18E Super Hornet",
 						"JS_JC_FA18E",// Classname
 						"\js_jc_fa18\JC_JS_FZ_FA18E.p3d",// P3D model
@@ -549,11 +488,7 @@ tms_objects_fa22 = 		["F/A-22 Raptor",
 						
 tms_objects_f16b = 		["F-16B Fighting Falcon ",
 						"USAF_F16",// Classname
-<<<<<<< Updated upstream
-						"model = "\USAF_F16\USAF_F16_falcon.p3d";",// P3D model
-=======
 						"model = "\USAF_F16\USAF_F16_falcon.p3d",// P3D model
->>>>>>> Stashed changes
 						100, // Supply points used
 						20, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
@@ -699,8 +634,6 @@ tms_objects_yak133ib = 	["YAK-133IB",
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
-<<<<<<< Updated upstream
-=======
 						];
 						
 tms_objects_m1025a2 = 	["M1025A2 Humvee",
@@ -891,5 +824,4 @@ tms_objects_uaz3151 =  ["UAZ-3151 Kozlik",
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
->>>>>>> Stashed changes
 						];
