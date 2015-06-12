@@ -575,6 +575,7 @@ class supplycargocraftlist: RscListbox
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Multi role combat aircrafts, interceptor jets and air superiority fighter"; //--- ToDo: Localize;
+	action = [tms_supply_fighter_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplygroundattackjets: RscButton
 	{
@@ -588,6 +589,7 @@ class supplycargocraftlist: RscListbox
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Ground attack planes, gunships and fighter-bomber"; //--- ToDo: Localize;
+	action = [tms_supply_gaplanes_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplybomber: RscButton
 	{
