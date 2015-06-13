@@ -4,7 +4,7 @@ tms_supply_mbt_families = [["M1 Abrams", "tms_supply_m1_types", west],
 						   ["T-72", "tms_supply_t72_types", east],
 						   ["T-80", "tms_supply_t80_types", east],
 						   ["T-90", "tms_supply_t90_types", east],
-						   ["T-100", "tms_supply_t100_types", east]
+						   ["T-100", "tms_supply_t100_types", east],
 						   ["2S25 SPRUT-SD", "tms_supply_2s25_types", east]];
 						   
 tms_supply_fighter_families =	[["F/A-18 Hornet", "tms_supply_f18_types", west],
@@ -70,7 +70,7 @@ tms_supply_ac130gun_types = [["AC-130U Spooky II", "tms_supply_ac130u_objects"],
 tms_supply_yak130_types = 	["YAK-130", "tms_supply_yak130_objects"];
 
 tms_supply_humvee_types =	[["M1025A2 Humvee", "tms_supply_m1025a2_objects"],
-							 ["M1097A2 2D" Humvee, "tms_supply_m1097a22d_objects"],
+							 ["M1097A2 2D Humvee", "tms_supply_m1097a22d_objects"],
 							 ["M1097A2 4D Humvee", "tms_supply_m1097a24d_objects"],
 							 ["M1151 Humvee", "tms_m1151_objects"]];
 							 
@@ -79,7 +79,7 @@ tms_supply_uaz3151_types =	[["UAZ-3151 Kozlik", "tms_supply_uaz3151_objects"]];
 // Vehicle Variant List
 tms_supply_m1a1_objects = ["tms_objects_m1a1sa",
 						   "tms_objects_m1a1sa_tusk1",
-						   "tms_objects_m1a1fep"
+						   "tms_objects_m1a1fep",
 						   "tms_objects_m1a1_aim_d"];
 						   
 tms_supply_m1a2_objects = ["tms_objects_m1a2sepv1",
@@ -488,7 +488,7 @@ tms_objects_fa22 = 		["F/A-22 Raptor",
 						
 tms_objects_f16b = 		["F-16B Fighting Falcon ",
 						"USAF_F16",// Classname
-						"model = "\USAF_F16\USAF_F16_falcon.p3d",// P3D model
+						"\USAF_F16\USAF_F16_falcon.p3d", // P3D model
 						100, // Supply points used
 						20, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
