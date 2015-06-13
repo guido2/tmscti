@@ -456,6 +456,7 @@ class supplycargocraftlist: RscListbox
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Mine Resistant Ambush Vehicles"; //--- ToDo: Localize;
+	action = [tms_supply_mrap_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplylight: RscButton
 	{
@@ -469,6 +470,7 @@ class supplycargocraftlist: RscListbox
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Transport and light vehicles"; //--- ToDo: Localize;
+	action = [tms_supply_transport_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplyartillery: RscButton
 	{
