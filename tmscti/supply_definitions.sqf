@@ -22,7 +22,9 @@ tms_supply_gaplanes_families = 	[["A-10 Thunderbolt II", "tms_supply_a10_types",
 								 ["YAK-130", "tms_supply_yak130_types", east]];
 								 
 tms_supply_transport_families =	[["HMMWV Humvee", "tms_supply_humvee_types", west],
-								 ["UAZ-3151 Kozlik", "tms_supply_uaz3151_types, east"]];
+								 ["UAZ-3151 Kozlik", "tms_supply_uaz3151_types", east]];
+
+tms_supply_mrap_families =	[["M-ATV", "tms_supply_matv_types", west]];
 
 // Vehicle Family List
 tms_supply_m1_types = [["M1A1 Abrams", "tms_supply_m1a1_objects"],
@@ -72,7 +74,9 @@ tms_supply_yak130_types = 	["YAK-130", "tms_supply_yak130_objects"];
 tms_supply_humvee_types =	[["M1025A2 Humvee", "tms_supply_m1025a2_objects"],
 							 ["M1097A2 2D Humvee", "tms_supply_m1097a22d_objects"],
 							 ["M1097A2 4D Humvee", "tms_supply_m1097a24d_objects"],
-							 ["M1151 Humvee", "tms_m1151_objects"]];
+							 ["M1151 Humvee", "tms_supply_m1151_objects"]];
+
+tms_supply_matv_types =	[["M-ATV", "tms_supply_matv_objects"]];
 							 
 tms_supply_uaz3151_types =	[["UAZ-3151 Kozlik", "tms_supply_uaz3151_objects"]];
 
@@ -167,9 +171,11 @@ tms_supply_m1097a24d_objects = ["tms_objects_m1097a24dopen",
 								"tms_objects_m1097a24dhalfsnorkel",
 								"tms_objects_m1097a24dsnorkel"];
 								
-tms_m1151_objects = ["tms_objects_m1151m2",
+tms_supply_m1151_objects = ["tms_objects_m1151m2",
 					 "tms_objects_m1151"];
-					 
+
+tms_supply_matv_objects = ["tms_objects_matv_unarmed"];
+
 tms_supply_uaz3151_objects = ["tms_objects_uaz3151_open",
 							  "tms_objects_uaz3151"];
 								
@@ -805,7 +811,16 @@ tms_objects_m1151 =	   ["M1151 Humvee",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+tms_objects_matv_unarmed = ["M-ATV (unarmed)",
+						"B_MRAP_01_F",// Classname
+						"",// P3D model
+						100, // Supply points used
+						20, // Size of the vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+                        ];
+
 tms_objects_uaz3151_open = ["UAZ-3151 Kozlik open",
 						"",// Classname
 						"",// P3D model

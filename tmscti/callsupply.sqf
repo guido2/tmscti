@@ -1,72 +1,69 @@
 hint "Your selected supply is on the way";
 
-_row = lbCurSel 1507;
-_supply = lbData [1507, _row];
-
 _chosencraft = lbCurSel 2100;
 _transportcraft = lbData [2100, _chosencraft];
 
 hint format ["Index: %1" ,_transportcraft];
 
 if (_transportcraft == "CH-47 Chinook") then {
+    if (lbSize 1507 == 1) then {
+        _droppoint_pos = getmarkerpos "hqdrop1"; // TODO: Get the correct droppoint
+        _spawnpos = getmarkerpos "sp_e";
 
-    _CH47F = createVehicle ["RHS_CH_47F", getMarkerPos "sp_e", [], 0, "FLY"];
+        _supply_item_data_string = lbData [1507, 0];
+        _supply_item_data = call compile _supply_item_data_string;
 
-    createVehicleCrew (_CH47F);
+        // Create the helicopter and its cargo
+        _CH47F = createVehicle ["B_Heli_Transport_03_F", _spawnpos, [], 0, "FLY"];
+        createVehicleCrew (_CH47F);
+        _CH47F setPosASL [_spawnpos select 0, _spawnpos select 1, 200];
+        _cargo_classname = _supply_item_data select 1;
+        _cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
+        _cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
 
-    _cargo1 = _supply createVehicle getMarkerPos "sp_e";
+        // For basecontainers and other offcially "not slingloadable" objects:
+        if(_cargo_classname == "Land_Cargo20_military_green_F") then {
+            systemChat "Setting mass";
+            _cargo setMass [5000, 0];
 
+            containerrope1 = ropeCreate [_CH47F, "slingload0", _cargo, [0, 1.0, 1], 10];
+            containerrope2 = ropeCreate [_CH47F, "slingload0", _cargo, [0, -1.0, 1], 10];
+            containerrope3 = ropeCreate [_CH47F, "slingload0", _cargo, [3.0, 0, 1], 10];
+            containerrope4 = ropeCreate [_CH47F, "slingload0", _cargo, [-3.0, 0, 1], 10];
+            }
+        else {
+            systemChat "Attaching slingload";
+            _CH47F setSlingLoad _cargo;
+            };
 
-    // For basecontainers and other "not slingloadable" objects:
+        _CH47F setVehicleLock "LOCKED";
 
-    _cargo1 setMass [5000, 0];
+        _group = group _CH47F;
 
+        // Set an interim waypoint 800 meters before the drop point, to allow the helicopter to slow down
+        _direction = [_droppoint_pos, _spawnpos] call BIS_fnc_dirTo;
+        _additional_wp_pos = [_droppoint_pos, 800, _direction] call BIS_fnc_relPos;
+        _wp1 =_group addWaypoint [_additional_wp_pos, 0]; //Interimpoint
+        _wp1 setWaypointType "MOVE";
+        _wp1 setWaypointCompletionRadius 0;
+        _wp1 setWaypointSpeed "FULL";
+        _wp1 setWaypointStatements ["true", "vehicle this flyinheight 13;"];
 
-    containerrope1 = ropeCreate [_CH47F, "slingload0", _cargo1, [0, 1.0, 1], 10];
-    containerrope2 = ropeCreate [_CH47F, "slingload0", _cargo1, [0, -1.0, 1], 10];
-    containerrope3 = ropeCreate [_CH47F, "slingload0", _cargo1, [3.0, 0, 1], 10];
-    containerrope4 = ropeCreate [_CH47F, "slingload0", _cargo1, [-3.0, 0, 1], 10];
-
-
-    // For all slingloadable objects:
-
-    //_CH47F setSlingLoad _cargo1;
-
-    _CH47F setVehicleLock "LOCKED";
-
-    _grp = group _CH47F;
-
-    _wp1 = _grp addWaypoint [getMarkerPos "sp_e", 0]; //Spawnpoint
-    _wp1 setWaypointType "MOVE";
-    _wp1 setWaypointSpeed "FULL";
-    _wp1 setWaypointTimeout [2, 3, 4];
-
-    _marker1pos = getmarkerpos "sp_e";
-    _marker2pos = getmarkerpos "hqdrop1";
-
-    _direction = [_marker2pos, _marker1pos] call BIS_fnc_dirTo;
-
-    _additionalwp = [_marker2pos, 800, _direction] call BIS_fnc_relPos;
-
-    _wp3 =_grp addWaypoint [_additionalwp, 0]; //Interimpoint
-    _wp3 setWaypointType "MOVE";
-    _wp3 setWaypointCompletionRadius 0;
-    _wp3 setWaypointSpeed "FULL";
-    _wp3 setWaypointStatements ["true", "vehicle this flyinheight 15;"];
-
-
-    _wp2 =_grp addWaypoint [getMarkerPos "hqdrop1", 0]; //Droppoint
-    _wp2 setWaypointType "MOVE";
-    _wp2 setWaypointCompletionRadius 0;
-    _wp2 setWaypointSpeed "LIMITED";
-    _wp2 setWaypointTimeout [25, 28, 30];
-    _wp2 setWaypointStatements ["true", "vehicle this flyinheight 15; ropeDestroy containerrope1; ropeDestroy containerrope2; ropeDestroy containerrope3; ropeDestroy containerrope4; hint 'Your supply has arrived';"];
-
-
-    _wp4 =_grp addWaypoint [getMarkerPos "sp_e", 0];
-    _wp4 setWaypointType "MOVE";
-    _wp4 setWaypointSpeed "FULL";
-    _wp4 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
+        _wp2 =_group addWaypoint [_droppoint_pos, 0];
+        _wp2 setWaypointType "MOVE";
+        _wp2 setWaypointCompletionRadius 0.1;
+        _wp2 setWaypointSpeed "LIMITED";
+        _wp2 setWaypointTimeout [12, 13, 14];
+        if(_cargo_classname == "Land_Cargo20_military_green_F") then {
+            _wp2 setWaypointStatements ["true", "vehicle this flyinheight 15; ropeDestroy containerrope1; ropeDestroy containerrope2; ropeDestroy containerrope3; ropeDestroy containerrope4; hint 'Your supply has arrived';"];
+            }
+        else {
+            _wp2 setWaypointStatements ["true", "[vehicle this, getMarkerPos 'sp_e'] execVM 'tmscti\drop_slingload_cargo_and_rtb.sqf';"];
+            };
+        }
+    else {
+        systemChat "CH-47 Chinook (slingload) can only deliver exactly one item";
+        };
 	};
 
 if (_transportcraft == "C-17 Globemaster III") then {
