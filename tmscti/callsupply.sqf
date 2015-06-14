@@ -18,7 +18,7 @@ if (_transportcraft == "CH-47 Chinook") then {
         createVehicleCrew (_CH47F);
         _CH47F setPosASL [_spawnpos select 0, _spawnpos select 1, 200];
         _cargo_classname = _supply_item_data select 1;
-        _cargo = _cargo_classname createVehicle _spawnpos;
+        _cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
         _cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
 
         // For basecontainers and other offcially "not slingloadable" objects:
