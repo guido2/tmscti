@@ -298,6 +298,7 @@ class Controls
 	colorBackground[] = {0.456863,0.356863,0.119608,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Delete selected cargo"; //--- ToDo: Localize;
+	action = execVM "tmscti\gui\gui_delete_selected_cargo.sqf";
 	};
 	class Deleteallcargo: RscButton
 	{
@@ -311,6 +312,7 @@ class Controls
 	colorBackground[] = {0.456863,0.356863,0.119608,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Delete all cargo in list"; //--- ToDo: Localize;
+	action = "lbClear 1507";
 	};
 	class addtocart: RscButton
 	{
