@@ -131,7 +131,7 @@ class ControlsBackground
     enableZoom = 1;
     zoomDuration = 1;
     waitForLoad = 0; 
-};
+	};
 	 };	  
 class Controls
 {
@@ -200,6 +200,7 @@ class Controls
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Select object model"; //--- ToDo: Localize;
+	onLBSelChanged = nul = _this execVM "tmscti\gui\gui_show_object_in_viewport.sqf";
 	};
 	class attachlist1: RscListbox
 	{
