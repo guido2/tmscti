@@ -39,6 +39,7 @@ if (_transportcraft == "CH-47 Chinook") then {
         _CH47F setVehicleLock "LOCKED";
 
         _group = group _CH47F;
+	_group setBehaviour "CARELESS";
 
         // Set an interim waypoint 800 meters before the drop point, to allow the helicopter to slow down
         _direction = [_droppoint_pos, _spawnpos] call BIS_fnc_dirTo;
