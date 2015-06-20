@@ -3,8 +3,6 @@ hint "Your selected supply is on the way";
 _chosencraft = lbCurSel 2100;
 _transportcraft = lbData [2100, _chosencraft];
 
-hint format ["Index: %1" ,_transportcraft];
-
 if (_transportcraft == "CH-47 Chinook") then {
     if (lbSize 1507 == 1) then {
         _droppoint_pos = getmarkerpos "hqdrop1"; // TODO: Get the correct droppoint
@@ -23,7 +21,6 @@ if (_transportcraft == "CH-47 Chinook") then {
 
         // For basecontainers and other offcially "not slingloadable" objects:
         if(_cargo_classname == "Land_Cargo20_military_green_F") then {
-            systemChat "Setting mass";
             _cargo setMass [5000, 0];
 
             containerrope1 = ropeCreate [_CH47F, "slingload0", _cargo, [0, 1.0, 1], 10];
@@ -32,7 +29,6 @@ if (_transportcraft == "CH-47 Chinook") then {
             containerrope4 = ropeCreate [_CH47F, "slingload0", _cargo, [-3.0, 0, 1], 10];
             }
         else {
-            systemChat "Attaching slingload";
             _CH47F setSlingLoad _cargo;
             };
 
