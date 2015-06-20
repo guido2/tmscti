@@ -255,7 +255,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			position[]={24109.932,3.1740577,17965.543};
@@ -326,6 +326,12 @@ class Mission
 		{
 			position[]={14469.679,25.091215,6180.5566};
 			name="vehiclespawn";
+			type="Empty";
+		};
+		class Item12
+		{
+			position[]={24284.031,2.7893529,18079.82};
+			name="shorelanding1";
 			type="Empty";
 		};
 	};
