@@ -112,6 +112,8 @@ class RscCombo
   colorBackground[] = { 0,0,0, 0.5 }; 
   text = ""; 
   class Scrollbar : Scrollbar {};
+  colorDisabled[] = {};
+  soundSelect[] = {} ;
 };
 
 
@@ -149,7 +151,7 @@ class RscButton
    soundEnter[] = {"",0.09,1};
    soundPush[] = {"",0,0};
    soundClick[] = {"",0.07,1};
-   soundEscape[] = {"",0.09,1};
+   soundEscape[] = {"",0.09,1};   
    style = 2;
    x = 0;
    y = 0;
@@ -189,6 +191,8 @@ class RscListbox
 	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
 	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
 	shadow = 0;
+	colorDisabled[] = {};
+	soundSelect[] = {};
 	
 		class ListScrollBar
 		{
