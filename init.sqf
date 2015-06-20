@@ -7,6 +7,8 @@ call compile preprocessFileLineNumbers "tmscti\supply_definitions.sqf";
 spawnpositionwest = 0;
 
 tms_init_base_container = compile preprocessFileLineNumbers "tmscti\init_base_container.sqf";
+tms_init_area_control_installation_container = compile preprocessFileLineNumbers "tmscti\init_area_control_installation_container.sqf";
+tms_get_nearest_object = compile preprocessFileLineNumbers "tmscti\helper_functions\get_nearest_object.sqf";
 
 if(isServer) then {
 
@@ -15,10 +17,12 @@ if(isServer) then {
     _hq_container_west = createVehicle ["Land_Cargo20_military_green_F", [getMarkerPos "respawn_west", 10, 90]  call BIS_fnc_relPos, [], 0, "NONE"];
     _hq_container_west setVariable ["side", west, true];
     [_hq_container_west, "Established HQ", "M1130_HQ_unfolded_Base_EP1"] call tms_init_base_container;
+    _flag_container_west = createVehicle ["Land_CargoBox_V1_F", [getMarkerPos "respawn_west", 20, 90] call BIS_fnc_relPos, [], 0, "NONE"];
+    [_flag_container_west, "Flag_Red_F", "Flag", west] call tms_init_area_control_installation_container;
 
     victory_position = 0; // If this reaches 100, side west wins. If this reaches -100, side east wins
-    victory_locations = []; // A list of all locations that generate victory points when owned by a side. Will be populated by the "init" parameter of those objects themselves.
-	mission_ended = false;
+    town_center_objects = []; // A list of objects, defined in mission.sqm, that determine where towns that can be taken over are
+    mission_ended = false;
 
     [] execVM "tmscti\periodically_update_score.sqf";
 };

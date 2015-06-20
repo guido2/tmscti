@@ -1,5 +1,5 @@
 while { !mission_ended } do {
-    sleep 5;
+    sleep 30;
 	_old_victory_position = victory_position;
     {
 	    if ((_x getVariable "side") == west) then {
@@ -8,7 +8,7 @@ while { !mission_ended } do {
 	    if ((_x getVariable "side") == east) then {
 		    victory_position = victory_position - 1;
 			};
-	} forEach victory_locations;
+	} forEach town_center_objects;
 
 	if (_old_victory_position != victory_position) then {
 	    [
@@ -19,7 +19,7 @@ while { !mission_ended } do {
         ] call BIS_fnc_MP;
 	};
 
-	if (victory_position >= 10) then {
+	if (victory_position >= 100) then {
 	    [
             ["end1", true, true],
             "BIS_fnc_endMission",
@@ -35,7 +35,7 @@ while { !mission_ended } do {
 		mission_ended = true;
 	};
 
-	if (victory_position <= -10) then {
+	if (victory_position <= -100) then {
 	    [
             ["end1", false, true],
             "BIS_fnc_endMission",
