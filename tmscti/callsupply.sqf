@@ -12,7 +12,7 @@ if (_transportcraft == "CH-47 Chinook") then {
         _supply_item_data = call compile _supply_item_data_string;
 
         // Create the helicopter and its cargo
-        _CH47F = createVehicle ["B_Heli_Transport_03_F", _spawnpos, [], 0, "FLY"];
+        _CH47F = createVehicle ["RHS_CH_47F", _spawnpos, [], 0, "FLY"];
         createVehicleCrew (_CH47F);
         _CH47F setPosASL [_spawnpos select 0, _spawnpos select 1, 200];
         _cargo_classname = _supply_item_data select 1;
@@ -35,6 +35,7 @@ if (_transportcraft == "CH-47 Chinook") then {
         _CH47F setVehicleLock "LOCKED";
 
         _group = group _CH47F;
+	_group setBehaviour "CARELESS";
 
         // Set an interim waypoint 800 meters before the drop point, to allow the helicopter to slow down
         _direction = [_droppoint_pos, _spawnpos] call BIS_fnc_dirTo;
@@ -63,12 +64,21 @@ if (_transportcraft == "CH-47 Chinook") then {
 	};
 
 if (_transportcraft == "C-17 Globemaster III") then {
+
+    _spawnpos = getmarkerpos "sp_e";
+	_supply_item_data_string = lbData [1507, 0];
+    _supply_item_data = call compile _supply_item_data_string;
+	_cargo_classname = _supply_item_data select 1;
+    _cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
+    _cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
+		
     _transC17 = createVehicle ["USAF_C17", getMarkerPos "sp_e", [], 0, "FLY"];
     createVehicleCrew (_transC17);
 
-    _cargo1 = _supply createVehicle getMarkerPos "sp_e";
-    [_transC17, _cargo1] call Lala_C17_fnc_forceLoadCargo;
+    [_transC17, _cargo] call Lala_C17_fnc_forceLoadCargo;
     _transC17 setVehicleLock "LOCKED";
+	_groupc17 = group _transC17;
+	_groupc17 setBehaviour "CARELESS";
 
     _transC17 landAt 5;
 
@@ -78,16 +88,16 @@ if (_transportcraft == "C-17 Globemaster III") then {
         hint "Your supply has arrived";
         {deleteVehicle _x} forEach crew (_this select 0);
         (_this select 0) addAction ["<t color='#FFFF00'>Return C-17 to home base</t>", {
-            _c17 = _this select 0;
-            createVehicleCrew _c17;
-			_c17 animate ["back_ramp", 0];
-			_c17 animate ["back_ramp_st", 0];
-			_c17 animate ["back_ramp_p", 0];
-			_c17 animate ["back_ramp_p_2", 0];
-			_c17 animate ["back_ramp_door_main", 0];
+            _transC17 = _this select 0;
+            createVehicleCrew _transC17;
+			_transC17 animate ["back_ramp", 0];
+			_transC17 animate ["back_ramp_st", 0];
+			_transC17 animate ["back_ramp_p", 0];
+			_transC17 animate ["back_ramp_p_2", 0];
+			_transC17 animate ["back_ramp_door_main", 0];
 			
             [[(driver _transC17), "C-17 Transport RTB - clear taxi- and runway!"], "sideChat", west, false, false] call BIS_fnc_MP;
-            _grpC17 = group _c17;
+            _grpC17 = group _transC17;
             _wp0 =_grpC17 addWaypoint [getMarkerPos "sp_e", 0];
             _wp0 setWaypointType "MOVE";
             _wp0 setWaypointSpeed "FULL";
