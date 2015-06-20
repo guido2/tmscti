@@ -95,3 +95,76 @@ if (_transportcraft == "C-17 Globemaster III") then {
             }];
        }];
     };
+
+if (_transportcraft == "Landing Craft Air Cushion") then {
+
+    _droppoint_pos = getmarkerpos "shorelanding1"; // TODO: Get the correct droppoint
+    _spawnpos = getmarkerpos "sp_e";
+
+    _supply_item_data_string1 = lbData [1507, 0];
+    _supply_item_data1 = call compile _supply_item_data_string1;
+	
+	_supply_item_data_string2 = lbData [1507, 1];
+    _supply_item_data2 = call compile _supply_item_data_string2;
+	
+	_supply_item_data_string3 = lbData [1507, 2];
+    _supply_item_data3 = call compile _supply_item_data_string3;
+	
+	_supply_item_data_string4 = lbData [1507, 3];
+    _supply_item_data4 = call compile _supply_item_data_string4;
+
+    // Create the LCAC and its cargo
+    _LCAC = createVehicle ["Burnes_LCAC_1", _spawnpos, [], 0, "NONE"];
+	createVehicleCrew (_LCAC);
+	
+	hint format ["Inhalt: %1", _LCAC];
+	
+    _LCAC addMPEventHandler ["MPKilled", {
+	hint "Crew is dead!";
+	_LCAC setDamage 1;
+	_counter = 0;
+	while { _counter < 100} do
+	{
+		_position = getpos _LCAC;
+		_LCAC setpos [ _position select 0, _position select 1, (_position select 2) - 0.01];
+		_counter = _counter + 1;
+	};
+		}];
+	
+	_cargo_classname1 = _supply_item_data1 select 1;
+	_cargo_classname2 = _supply_item_data2 select 1;
+	_cargo_classname3 = _supply_item_data3 select 1;
+	_cargo_classname4 = _supply_item_data4 select 1;
+	
+    _cargo1 = _cargo_classname1 createVehicle getmarkerpos "vehiclespawn";
+	_cargo2 = _cargo_classname2 createVehicle getmarkerpos "vehiclespawn";
+	_cargo3 = _cargo_classname3 createVehicle getmarkerpos "vehiclespawn";
+	_cargo4 = _cargo_classname4 createVehicle getmarkerpos "vehiclespawn";
+	
+    _cargo1 setPosASL [_spawnpos select 0, _spawnpos select 1, 4];
+	_cargo2 setPosASL [_spawnpos select 0, _spawnpos select 1, 5];
+	_cargo3 setPosASL [_spawnpos select 0, _spawnpos select 1, 6];
+	_cargo4 setPosASL [_spawnpos select 0, _spawnpos select 1, 7];
+
+	_cargo1 attachTo [_LCAC, [2,5,1.3]];
+	_cargo2 attachTo [_LCAC, [-2,5,1.3]];
+	_cargo3 attachTo [_LCAC, [2,-5,1.3]];
+	_cargo4 attachTo [_LCAC, [-2,-5,1.3]];
+	
+	_LCAC setVehicleLock "LOCKED";
+
+	_grouplcac = group _LCAC;
+	_grouplcac setBehaviour "CARELESS";	
+		
+	_wp0 =_grouplcac addWaypoint [_droppoint_pos, 0];
+    _wp0 setWaypointType "MOVE";
+    _wp0 setWaypointCompletionRadius 0.1;
+    _wp0 setWaypointSpeed "FULL";
+	_wp0 setWaypointStatements ["true", "[vehicle this, getMarkerPos 'sp_e'] execVM 'tmscti\lcac-unload.sqf';"];
+
+    _wp1 =_grouplcac addWaypoint [getMarkerPos "sp_e", 0];
+    _wp1 setWaypointType "MOVE";
+    _wp1 setWaypointSpeed "FULL";
+    _wp1 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
+
+	};
