@@ -17,7 +17,7 @@ deleteVehicle _container;
 _building = _building_class createVehicle _position;
 
 [_side, _building] call BIS_fnc_addRespawnPosition;
-_building setVariable ["side", west, true];
+_building setVariable ["side", _side, true];
 
 [
      [[_building, 50000, _side], "R3F_LOG\USER_FUNCT\init_creation_factory.sqf"],
