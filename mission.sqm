@@ -9,9 +9,9 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"a3_map_altis",
 		"task_force_radio_items",
-		"A3_Structures_F_Mil_Flags",
 		"rhs_cti_insurgents",
-		"A3_Structures_F_Mil_Helipads"
+		"A3_Structures_F_Mil_Helipads",
+		"CAStructures_E_Misc_Misc_Interier"
 	};
 	addOnsAuto[]=
 	{
@@ -19,8 +19,8 @@ class Mission
 		"rhs_cti_insurgents",
 		"A3_Modules_F_Curator_Curator",
 		"task_force_radio_items",
-		"A3_Structures_F_Mil_Flags",
 		"A3_Structures_F_Mil_Helipads",
+		"CAStructures_E_Misc_Misc_Interier",
 		"a3_map_altis"
 	};
 	randomSeed=8463124;
@@ -228,29 +228,20 @@ class Mission
 		items=2;
 		class Item0
 		{
-			position[]={24098.098,3.1900001,17980.002};
-			id=8;
-			side="EMPTY";
-			vehicle="Flag_Red_F";
-			skill=0.60000002;
-			init="nullReturn = [this, ""SaltLake""] execVM ""tmscti\init_flag.sqf""";
-		};
-		class Item1
-		{
 			position[]={24080.49,3.1900001,18013.66};
-			id=5;
+			id=8;
 			side="EMPTY";
 			vehicle="Land_JumpTarget_F";
 			skill=0.60000002;
 		};
-		class Item2
+		class Item1
 		{
-			position[]={24099.152,3.1900001,18000.721};
-			id=10;
+			position[]={23202.174,14.092994,19966.734};
+			id=9;
 			side="EMPTY";
-			vehicle="Land_Barrel_sand";
+			vehicle="Land_Sack_EP1";
 			skill=0.60000002;
-			init="this addAction [""<t color='#FFFF00'>Teammenu</t>"", {createDialog ""teammanagement"";}];";
+			init="nullReturn = [this, ""Ioannina""] execVM ""tmscti\server\init_town_center_object.sqf"";";
 		};
 	};
 	class Markers
