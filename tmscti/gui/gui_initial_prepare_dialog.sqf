@@ -17,6 +17,10 @@ _transportcraft2 = "C-17 Globemaster III";
 _craftlist lbAdd (_transportcraft2);
 _craftlist lbSetData [1, "C-17 Globemaster III"];
 
+_transportcraft3 = "Self Delivery (Jet)";
+_craftlist lbAdd (_transportcraft3);
+_craftlist lbSetData [2, "Self Delivery (Jet)"];
+
 
 
 
