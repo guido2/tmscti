@@ -66,17 +66,46 @@ if (_transportcraft == "CH-47 Chinook") then {
 if (_transportcraft == "C-17 Globemaster III") then {
 
     _spawnpos = getmarkerpos "sp_e";
-	_supply_item_data_string = lbData [1507, 0];
-    _supply_item_data = call compile _supply_item_data_string;
-	_cargo_classname = _supply_item_data select 1;
-    _cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
-    _cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
-		
+	
+	_number_of_items = lbSize 1507;
+	_transportcapacity = 6;
+
+	_counter = 0;
+	_dynamic_index = 0;
+	_totalcargofactor = 0;
+
+	while { _counter < _number_of_items} do {
+
+		_cargo_factor_data_string = lbData [1507, _dynamic_index];
+		_cargo_factor_data = call compile _cargo_factor_data_string;
+		_cargofactor = _cargo_factor_data select 6;
+
+		_totalcargofactor = _totalcargofactor + _cargofactor;
+
+		_dynamic_index = _dynamic_index + 1;
+		_counter = _counter + 1;
+	};
+
+	if ( _totalcargofactor <= _transportcapacity ) then {
+
     _transC17 = createVehicle ["USAF_C17", getMarkerPos "sp_e", [], 0, "FLY"];
     createVehicleCrew (_transC17);
 
-    [_transC17, _cargo] call Lala_C17_fnc_forceLoadCargo;
-    _transC17 setVehicleLock "LOCKED";
+	_cargo_bay = 0;
+	while { _cargo_bay < _dynamic_index} do {
+	
+		_supply_item_data_string = lbData [1507, _cargo_bay];
+		_supply_item_data = call compile _supply_item_data_string;
+		_cargo_classname = _supply_item_data select 1;
+  
+		_cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
+		_cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
+		[_transC17, _cargo] call Lala_C17_fnc_forceLoadCargo;
+    
+		_cargo_bay = _cargo_bay + 1;
+	};	
+	
+	_transC17 setVehicleLock "LOCKED";
 	_groupc17 = group _transC17;
 	_groupc17 setBehaviour "CARELESS";
 
@@ -104,4 +133,8 @@ if (_transportcraft == "C-17 Globemaster III") then {
             _wp0 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
             }];
        }];
-    };
+	   
+    } else {
+		hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!"
+	};
+};
