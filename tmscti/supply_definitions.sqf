@@ -177,7 +177,7 @@ tms_objects_m1a1sa = 	 ["M1A1 Abrams SA", // Name of the vehicle
 						  "0.028",//Scale factor
 						  "-0.04",//Y-Position
 						  100, // Supply points used
-						  20, // Size of the vehicle
+						  3, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -189,7 +189,7 @@ tms_objects_m1a1sa_tusk1 = ["M1A1 Abrams SA TUSK I", // Name of the vehicle
 						  "0.028",//Scale factor
 						  "-0.04",//Y-Position
 						  100, // Supply points used
-						  20, // Size of the vehicle
+						  3, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -201,7 +201,7 @@ tms_objects_m1a1fep = 	["M1A1 Abrams FEP", // Name of the vehicle
 						  "0.028",//Scale factor
 						  "-0.04",//Y-Position
 						  100, // Supply points used
-						  20, // Size of the vehicle
+						  3, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -213,7 +213,7 @@ tms_objects_m1a2sepv1 =	 ["M1A2 Abrams SEP V1", // Name of the vehicle
 						  "0.028",//Scale factor
 						  "-0.04",//Y-Position
 						  100, // Supply points used
-						  20, // Size of the vehicle
+						  3, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -225,7 +225,7 @@ tms_objects_m1a2sepv1_tusk1 = ["M1A2 Abrams SEP V1 TUSK I", // Name of the vehic
 						  "0.028",//Scale factor
 						  "-0.04",//Y-Position
 						  100, // Supply points used
-						  20, // Size of the vehicle
+						  3, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -237,7 +237,7 @@ tms_objects_m1a2sepv1_tusk2 = ["M1A2 Abrams SEP V1 TUSK II", // Name of the vehi
 						  "0.028",//Scale factor
 						  "-0.04",//Y-Position
 						  100, // Supply points used
-						  20, // Size of the vehicle
+						  3, // Size of the vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -249,7 +249,7 @@ tms_objects_t72b_1984 =	["T-72B obr. 1984g.",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -261,7 +261,7 @@ tms_objects_t72b_1985 = ["T-72B obr. 1985g.",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -273,7 +273,7 @@ tms_objects_t72b_1989 = ["T-72B obr. 1989g.",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -285,7 +285,7 @@ tms_objects_t72b_2012 = ["T-72B3 obr. 2012g.",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -297,7 +297,7 @@ tms_objects_t80 = 		["T-80",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -309,7 +309,7 @@ tms_objects_t80a = 		["T-80A",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -321,7 +321,7 @@ tms_objects_t80b = 		["T-80B",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -333,7 +333,7 @@ tms_objects_t80bv = 	["T-80BV",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -345,7 +345,7 @@ tms_objects_t80bvk = 	["T-80BVK",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -357,7 +357,7 @@ tms_objects_t80bk = 	["T-80BK",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -370,7 +370,7 @@ tms_objects_t80u = 		["T-80U",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -382,7 +382,7 @@ tms_objects_t80u45m = 	["T-80U 45M",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -394,7 +394,7 @@ tms_objects_t80ue1 = 	["T-80UE-1",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -406,7 +406,7 @@ tms_objects_t80um = 	["T-80UM",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -418,7 +418,7 @@ tms_objects_t90 = 	   ["T-90",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -430,7 +430,7 @@ tms_objects_t100 = 		["T-100 Black Eagle",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -442,7 +442,7 @@ tms_objects_2s25 = 	   ["2S25 Sprut-SD",
 						"0.028",//Scale factor
 						"-0.04",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						3, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -678,7 +678,7 @@ tms_objects_m1025a2 = 	["M1025A2 Humvee",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -690,7 +690,7 @@ tms_objects_m1025a2m2 = ["M1025A2 Humvee M2",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -702,7 +702,7 @@ tms_objects_m1025a2mk19 = ["M1025A2 Humvee MK19",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -714,7 +714,7 @@ tms_objects_m1097a22dopen = ["M1097A2 2D Humvee open",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -726,7 +726,7 @@ tms_objects_m1097a22dhalf = ["M1097A2 2D Humvee half",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -738,7 +738,7 @@ tms_objects_m1097a22d = ["M1097A2 2D Humvee",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -750,7 +750,7 @@ tms_objects_m1097a24dopen = ["M1097A2 4D Humvee open",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -762,7 +762,7 @@ tms_objects_m1097a24dhalf = ["M1097A2 4D Humvee half",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -774,7 +774,7 @@ tms_objects_m1097a24d = ["M1097A2 4D Humvee",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -787,7 +787,7 @@ tms_objects_m1151m2 =  ["M1151 Humvee M2",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -799,7 +799,7 @@ tms_objects_m1151 =	   ["M1151 Humvee",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -810,7 +810,7 @@ tms_objects_matv_unarmed = ["M-ATV",
 						"0.035",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -822,7 +822,7 @@ tms_objects_uaz3151_open = ["UAZ-3151 Kozlik open",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
@@ -834,7 +834,7 @@ tms_objects_uaz3151 =  ["UAZ-3151 Kozlik",
 						"0.038",//Scale factor
 						"-0.005",//Y-Position
 						100, // Supply points used
-						20, // Size of the vehicle
+						2, // Size of the vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
