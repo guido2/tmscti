@@ -119,10 +119,8 @@ if (_transportcraft == "Self Delivery (Jet)") then {
 
     _jet landAt 5;
 
-    [[(driver _jet), "Aircraft approaching sand airfield, clear runway!"], "sideChat", west, false, false] call BIS_fnc_MP;
-
     _jet addEventHandler ["LandedStopped", {
         hint "Your supply has arrived";
         {deleteVehicle _x} forEach crew (_this select 0);
-       }];
-	};
+	}];
+};
