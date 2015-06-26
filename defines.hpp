@@ -80,6 +80,16 @@
 #define MB_BUTTON_CANCEL  2
 #define MB_BUTTON_USER    4
 
+class RscProgress
+{
+	type = 8;
+	style = 0;
+	colorFrame[] = {0,0,0,1};
+	colorBar[] = {0.456863,0.356863,0.119608,1};
+	texture = "#(argb,8,8,3)color(1,1,1,1)";
+	w = 0;
+	h = 0;
+};
 class ScrollBar
 {
 	color[] = {1,1,1,0.6};
@@ -98,8 +108,6 @@ class ScrollBar
 	autoScrollDelay = 5;
 	autoScrollRewind = 0;
 };
-
-
 class RscCombo
 {
   idc = -1;
@@ -115,8 +123,6 @@ class RscCombo
   colorDisabled[] = {};
   soundSelect[] = {} ;
 };
-
-
 class RscText
 {
    access = 0;
