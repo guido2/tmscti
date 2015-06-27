@@ -134,7 +134,27 @@ if (_transportcraft == "C-17 Globemaster III") then {
             }];
        }];
 	   
-    } else {
-		hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!"
+    }
+    else {
+        hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!"
 	};
+};
+	
+if (_transportcraft == "Self Delivery (Jet)") then {
+    
+        _supply_item_data_string = lbData [1507, 0];
+        _supply_item_data = call compile _supply_item_data_string;
+        _jet_classname = _supply_item_data select 1;
+        _jet = CreateVehicle [_jet_classname, getMarkerPos "sp_e", [], 0, "FLY"];
+        createVehicleCrew (_jet);
+
+        _groupjet = group _jet;
+        _groupjet setBehaviour "CARELESS";
+
+        _jet landAt 5;
+
+        _jet addEventHandler ["LandedStopped", {
+                hint "Your supply has arrived";
+                {deleteVehicle _x} forEach crew (_this select 0);
+                }];
 };
