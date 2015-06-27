@@ -17,11 +17,4 @@ _transportcraft2 = "C-17 Globemaster III";
 _craftlist lbAdd (_transportcraft2);
 _craftlist lbSetData [1, "C-17 Globemaster III"];
 
-
-
-
-
-
-
-
-
+execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";

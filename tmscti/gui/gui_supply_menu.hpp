@@ -107,10 +107,26 @@ class ControlsBackground
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
 	tooltip = "Shows how much cargo space is left for the selected vehicle"; //--- ToDo: Localize;
+	};
+	class cargobar: RscText
+	{
+	type = 8;
+	idc = 1008;
+	x = 0.734896 * safezoneW + safezoneX;
+	y = 0.769395 * safezoneH + safezoneY;
+	w = 0.252083 * safezoneW;
+	h = 0.0219914 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.456863,0.356863,0.119608,1};
+	colorBar[] = {0.456863,0.356863,0.119608,1};
+	texture = "#(argb,8,8,3)color(1,1,1,1)";
+	colorFrame[] = {1,1,1,1};
+	onLoad = "((_this select 0) displayCtrl 1008) progressSetPosition 0";
+	};
 };
-	  };
 
-	  class Objects
+	class Objects
 {
 	class viewport
     {
@@ -133,8 +149,8 @@ class ControlsBackground
     waitForLoad = 0; 
 	};
 	 };	  
-class Controls
-{
+	class Controls
+	{
 	class supplyaccept: RscButton
 	{
 	idc = 1600;
@@ -312,7 +328,7 @@ class Controls
 	colorBackground[] = {0.456863,0.356863,0.119608,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Delete all cargo in list"; //--- ToDo: Localize;
-	action = "lbClear 1507";
+	action = execVM "tmscti\gui\gui_delete_all_cargo.sqf";
 	};
 	class addtocart: RscButton
 	{
@@ -328,14 +344,14 @@ class Controls
 	tooltip = "Add selected supply to cargo list"; //--- ToDo: Localize;
 	action = execVM "tmscti\gui\add_object_to_cargolist.sqf";
 	};
-class supplycargocraftlist: RscListbox
-{
+	class supplycargocraftlist: RscListbox
+	{
 	idc = 2100;
 	x = 0.373958 * safezoneW + safezoneX;
 	y = 0.203116 * safezoneH + safezoneY;
 	w = 0.252083 * safezoneW;
 	h = 0.0879657 * safezoneH;
-};
+	};
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>Categories<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
 	class supplyfobinst: RscButton
 	{
@@ -1165,6 +1181,5 @@ class supplyassaultbaots: RscButton
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Empty boxes and containers"; //--- ToDo: Localize;
 	};
-
-		};
-			};
+	};
+};

@@ -9,3 +9,5 @@ _cargo_list = _display displayCtrl 1507;
 
 _cargolist_index = _cargo_list lbAdd (_object_struct select 0);
 _cargo_list lbSetData [_cargolist_index, _selected_data];
+
+execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";
