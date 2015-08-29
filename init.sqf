@@ -3,6 +3,15 @@ _igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 execVM "tmscti\gui\defines_idcs.sqf";
 
 call compile preprocessFileLineNumbers "tmscti\supply_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\items\assault_rifle_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\items\machine_gun_definitions.sqf";
+
+call compile preprocessFileLineNumbers "tmscti\items\optic_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\items\bipod_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\items\magazine_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\items\railobject_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\items\silencer_definitions.sqf";
+
 
 spawnpositionwest = 0;
 
@@ -24,5 +33,12 @@ if(isServer) then {
     town_center_objects = []; // A list of objects, defined in mission.sqm, that determine where towns that can be taken over are
     mission_ended = false;
 
+	_spawnpos = getmarkerpos "hqdrop1";
+	tms_master_gear_box = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
+	clearItemCargoGlobal tms_master_gear_box;
+	clearMagazineCargoGlobal tms_master_gear_box;
+	clearWeaponCargoGlobal tms_master_gear_box;
+	clearBackpackCargoGlobal  tms_master_gear_box;
+	
     [] execVM "tmscti\periodically_update_score.sqf";
 };
