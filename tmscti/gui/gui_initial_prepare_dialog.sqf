@@ -17,11 +17,21 @@ _transportcraft2 = "C-17 Globemaster III";
 _craftlist lbAdd (_transportcraft2);
 _craftlist lbSetData [1, "C-17 Globemaster III"];
 
+_transportcraft3 = "Self Delivery (Jet)";
+_craftlist lbAdd (_transportcraft3);
+_craftlist lbSetData [2, "Self Delivery (Jet)"];
 
+_transportcraft4 = "Self Delivery (Helicopter)";
+_craftlist lbAdd (_transportcraft4);
+_craftlist lbSetData [3, "Self Delivery (Helicopter)"];
 
+_transportcraft5 = "D-41 Transport Ship";
+_craftlist lbAdd (_transportcraft5);
+_craftlist lbSetData [4, "D-41 Transport Ship"];
 
+clearItemCargo tms_master_gear_box;
+clearMagazineCargo tms_master_gear_box;
+clearWeaponCargo tms_master_gear_box;
+clearBackpackCargo tms_master_gear_box;
 
-
-
-
-
+execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";

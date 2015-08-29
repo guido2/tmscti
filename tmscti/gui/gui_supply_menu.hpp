@@ -8,6 +8,17 @@ class hqsupply
 class ControlsBackground
 {
 
+	//ONLY FOR VIEWPORT ADJUSTMENTS! NEEDS TO BE REMOVED AT LAST!
+//	class ruler: RscText
+//	{
+//	idc = 1009;
+//	x = 0.660417 * safezoneW + safezoneX;
+//	y = 0.445021 * safezoneH + safezoneY;
+//	w = 0.309375 * safezoneW;
+//	h = 0.0219914 * safezoneH;
+//	colorBackground[] = {1,1,1,1};
+//	colorActive[] = {1,1,1,1};
+//};
 	class supplybckg: RscText
 	{
 	idc = 1000;
@@ -51,9 +62,14 @@ class ControlsBackground
 	y = 0.0601715 * safezoneH + safezoneY;
 	w = 0.338021 * safezoneW;
 	h = 0.417837 * safezoneH;
-	colorText[] = {0,0,0,0};
-	colorBackground[] = {0,0,0,1};
-	colorActive[] = {0,0,0,1};
+	type = 0;
+	style = 144; //1 2 3...176
+	tileH = 10; //Tile Picture height (style = 144)
+	tileW = 10; //Tile Picture width (style = 144)
+	text = "tmscti\images\tms_supportbck.paa";
+	colorText[] = {0.5,0.5,0.5,0.75};
+	colorBackground[] = {0.3,0.3,0.3,1};
+//	colorActive[] = {0,0,0,1};
 	tooltip = "Supply preview"; //--- ToDo: Localize;
 	sizeEx = 1 * GUI_GRID_H;
 	};
@@ -107,8 +123,40 @@ class ControlsBackground
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0,0,0,1};
 	tooltip = "Shows how much cargo space is left for the selected vehicle"; //--- ToDo: Localize;
+	};
+	class cargobar: RscText
+	{
+	type = 8;
+	idc = 1008;
+	x = 0.734896 * safezoneW + safezoneX;
+	y = 0.769395 * safezoneH + safezoneY;
+	w = 0.252083 * safezoneW;
+	h = 0.0219914 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.456863,0.356863,0.119608,1};
+	colorBar[] = {0.456863,0.356863,0.119608,1};
+	texture = "#(argb,8,8,3)color(1,1,1,1)";
+	colorFrame[] = {1,1,1,1};
+	onLoad = "((_this select 0) displayCtrl 1008) progressSetPosition 0";
+	};
+
+	class viewport_infobox: RscText
+	{
+	idc = 1010;
+	x = 0.648958 * safezoneW + safezoneX;
+	y = 0.0601715 * safezoneH + safezoneY;
+	w = 0.338021 * safezoneW;
+	h = 0.0989614 * safezoneH;
+	text = "Select Your Supply"
+	colorBackground[] = {0,0,0,0.5};
+	colorActive[] = {0,0,0,0.5};
+	colorText[] = {1,1,1,1};
+	sizeEx = 0.05;
+	tooltip = "Name and Info of the selected item in viewport"; //--- ToDo: Localize;
+	};	
+
 };
-	  };
 
 	  class Objects
 {
@@ -131,8 +179,8 @@ class ControlsBackground
     enableZoom = 1;
     zoomDuration = 1;
     waitForLoad = 0; 
-	};
-	 };	  
+	};	
+};	  
 class Controls
 {
 	class supplyaccept: RscButton
@@ -212,7 +260,7 @@ class Controls
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
-	tooltip = "Select object model"; //--- ToDo: Localize;
+	tooltip = "Select attachment: Optics"; //--- ToDo: Localize;
 	};
 	class attachlist2: RscListbox
 	{
@@ -224,7 +272,7 @@ class Controls
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
-	tooltip = "Select object model"; //--- ToDo: Localize;
+	tooltip = "Select attachment: Rail objects"; //--- ToDo: Localize;
 	};
 	class attachlist4: RscListbox
 	{
@@ -236,7 +284,7 @@ class Controls
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
-	tooltip = "Select object model"; //--- ToDo: Localize;
+	tooltip = "Select attachment: Bipods"; //--- ToDo: Localize;
 	};
 	class attachlist5: RscListbox
 	{
@@ -248,7 +296,7 @@ class Controls
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
-	tooltip = "Select object model"; //--- ToDo: Localize;
+	tooltip = "Select magazines"; //--- ToDo: Localize;
 	};
 	class attachlist6: RscListbox
 	{
@@ -260,7 +308,7 @@ class Controls
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
-	tooltip = "Select object model"; //--- ToDo: Localize;
+	tooltip = "Select camo variant"; //--- ToDo: Localize;
 	};
 	class attachlist3: RscListbox
 	{
@@ -272,7 +320,7 @@ class Controls
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.75};
 	colorActive[] = {0,0,0,0.75};
-	tooltip = "Select object model"; //--- ToDo: Localize;
+	tooltip = "Select attachment: Suppressors and Silencers"; //--- ToDo: Localize;
 	};
 	class shoppinglist: RscListbox
 	{
@@ -312,7 +360,7 @@ class Controls
 	colorBackground[] = {0.456863,0.356863,0.119608,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Delete all cargo in list"; //--- ToDo: Localize;
-	action = "lbClear 1507";
+	action = execVM "tmscti\gui\gui_delete_all_cargo.sqf";
 	};
 	class addtocart: RscButton
 	{
@@ -554,6 +602,7 @@ class supplycargocraftlist: RscListbox
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Scout and attack helicopters"; //--- ToDo: Localize;
+	action = [tms_supply_attackhelicopter_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplytranschopper: RscButton
 	{
@@ -809,6 +858,7 @@ class supplyassaultbaots: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Assault and battle rifles"; //--- ToDo: Localize;
+	action = [tms_supply_assaultrifle_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplyMachineGuns: RscButton
 	{
@@ -822,6 +872,7 @@ class supplyassaultbaots: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Light, medium and heavy machine guns"; //--- ToDo: Localize;
+	action = [tms_supply_machinegun_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplySnipers: RscButton
 	{
@@ -1168,3 +1219,4 @@ class supplyassaultbaots: RscButton
 
 		};
 			};
+			
