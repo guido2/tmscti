@@ -5,22 +5,35 @@ class Mission
 	{
 		"rhsusf_c_troops",
 		"A3_Modules_F_Curator_Curator",
-		"A3_Structures_F_Ind_Cargo",
 		"A3_Soft_F_HEMTT",
 		"a3_map_altis",
 		"task_force_radio_items",
 		"rhs_cti_insurgents",
 		"A3_Structures_F_Mil_Helipads",
-		"CAStructures_E_Misc_Misc_Interier"
+		"CAStructures_E_Misc_Misc_Interier",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Supplies_F_Heli_CargoNets",
+		"ace_ballistics",
+		"CAMisc",
+		"aia_misc_config",
+		"CUP_Creatures_People_Military_DummyInfantrySet",
+		"D41_Trawler",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
-		"rhsusf_c_troops",
-		"rhs_cti_insurgents",
-		"A3_Modules_F_Curator_Curator",
+		"CUP_Creatures_People_Military_DummyInfantrySet",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"task_force_radio_items",
 		"A3_Structures_F_Mil_Helipads",
 		"CAStructures_E_Misc_Misc_Interier",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Supplies_F_Heli_CargoNets",
+		"ace_ballistics",
+		"CAMisc",
+		"aia_misc_config",
+		"D41_Trawler",
 		"a3_map_altis"
 	};
 	randomSeed=8463124;
@@ -56,7 +69,7 @@ class Mission
 					position[]={2314.2637,12.695036,9260.3291};
 					id=0;
 					side="WEST";
-					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					vehicle="CUP_B_US_Soldier";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
@@ -68,7 +81,7 @@ class Mission
 					position[]={2307.9785,11.546208,9256.8525};
 					id=1;
 					side="WEST";
-					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					vehicle="CUP_B_US_Soldier";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
@@ -78,7 +91,7 @@ class Mission
 					position[]={2319.3867,12.604083,9255.9814};
 					id=2;
 					side="WEST";
-					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					vehicle="CUP_B_US_Soldier";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
@@ -96,7 +109,7 @@ class Mission
 					position[]={2156.2544,9.2301369,11588.836};
 					id=3;
 					side="EAST";
-					vehicle="rhs_g_Soldier_F";
+					vehicle="CUP_O_RU_Soldier";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -106,7 +119,7 @@ class Mission
 					position[]={2149.9692,8.6055422,11585.359};
 					id=4;
 					side="EAST";
-					vehicle="rhs_g_Soldier_F";
+					vehicle="CUP_O_RU_Soldier";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -115,7 +128,7 @@ class Mission
 					position[]={2161.3774,10.027225,11584.488};
 					id=5;
 					side="EAST";
-					vehicle="rhs_g_Soldier_F";
+					vehicle="CUP_O_RU_Soldier";
 					player="PLAY CDG";
 					skill=0.60000002;
 				};
@@ -225,7 +238,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2;
+		items=7;
 		class Item0
 		{
 			position[]={24080.49,3.1900001,18013.66};
@@ -243,10 +256,51 @@ class Mission
 			skill=0.60000002;
 			init="nullReturn = [this, ""Ioannina""] execVM ""tmscti\server\init_town_center_object.sqf"";";
 		};
+		class Item2
+		{
+			position[]={24036.826,3.1900001,17978.297};
+			id=10;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={24040.83,3.1900001,17978.438};
+			id=11;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={24045.457,3.1900001,17978.357};
+			id=12;
+			side="EMPTY";
+			vehicle="ACE_Box_Ammo";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={24053.789,3.1900001,18011.834};
+			id=13;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={24091.621,3.1900001,18080.051};
+			id=14;
+			side="EMPTY";
+			vehicle="D41_Trawler";
+			skill=0.60000002;
+			init="this setObjectTextureGlobal [0, ""tmscti\images\boat_civil_04_1_co.paa""];";
+		};
 	};
 	class Markers
 	{
-		items=12;
+		items=18;
 		class Item0
 		{
 			position[]={24109.932,3.1740577,17965.543};
@@ -317,6 +371,42 @@ class Mission
 		{
 			position[]={14469.679,25.091215,6180.5566};
 			name="vehiclespawn";
+			type="Empty";
+		};
+		class Item12
+		{
+			position[]={24054.039,3.1900001,18011.342};
+			name="helipad1";
+			type="Empty";
+		};
+		class Item13
+		{
+			position[]={15422.532,0.031564996,15793.922};
+			name="port1";
+			type="Empty";
+		};
+		class Item14
+		{
+			position[]={15438.124,0.10285374,15796.307};
+			name="dock1";
+			type="Empty";
+		};
+		class Item15
+		{
+			position[]={16291.01,0.063766785,6232.2524};
+			name="shipwp0";
+			type="Empty";
+		};
+		class Item16
+		{
+			position[]={13724.54,-137.40222,10400.642};
+			name="shipwp1";
+			type="Empty";
+		};
+		class Item17
+		{
+			position[]={15407.094,0.011530571,13079.049};
+			name="shipwp2";
 			type="Empty";
 		};
 	};
