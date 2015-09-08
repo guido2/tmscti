@@ -5,7 +5,7 @@ tms_supply_mbt_families = [["M1 Abrams", "tms_supply_m1_types", west],
 						   ["T-90", "tms_supply_t90_types", east],
 						   ["T-100", "tms_supply_t100_types", east],
 						   ["2S25 SPRUT-SD", "tms_supply_2s25_types", east]];
-						   
+
 tms_supply_fighter_families =	[["F/A-18 Hornet", "tms_supply_f18_types", west],
 								["F/A-22 Raptor", "tms_supply_f22_types", west],
 								["F-16 Fighting Falcon", "tms_supply_f16_types", west],
@@ -13,13 +13,13 @@ tms_supply_fighter_families =	[["F/A-18 Hornet", "tms_supply_f18_types", west],
 								["Suchoi Su-22", "tms_supply_su22_types", east],
 								["Suchoi Su-35", "tms_supply_su35_types", east],
 								["Suchoi PAK FA T-50", "tms_supply_t50_types", east]];
-								
+
 tms_supply_gaplanes_families = 	[["A-10 Thunderbolt II", "tms_supply_a10_types", west],
 								 ["Suchoi Su-25", "tms_supply_su25_types", east],
 								 ["Suchoi Su-34", "tms_supply_su34_types", east],
 								 ["AC-130 Gunship", "tms_supply_ac130gun_types", west],
 								 ["YAK-130", "tms_supply_yak130_types", east]];
-								 
+
 tms_supply_transport_families =	[["HMMWV Humvee", "tms_supply_humvee_types", west],
 								 ["UAZ-3151 Kozlik", "tms_supply_uaz3151_types", east]];
 
@@ -37,7 +37,7 @@ tms_supply_t80_types = 	[["T-80", "tms_supply_t80_obects"],
 						 ["T-80A", "tms_supply_t80a_objects"],
 						 ["T-80B", "tms_supply_t80b_objects"],
 						 ["T-80U", "tms_supply_t80u_objects"]];
-						 						 
+
 tms_supply_t90_types = [["T-90", "tms_supply_t90_objects"]];
 
 tms_supply_t100_types = [["T-100 Black Eagle", "tms_supply_t100_objects"]];
@@ -76,7 +76,7 @@ tms_supply_humvee_types =	[["M1025A2 Humvee", "tms_supply_m1025a2_objects"],
 							 ["M1151 Humvee", "tms_supply_m1151_objects"]];
 
 tms_supply_matv_types =	[["M-ATV", "tms_supply_matv_objects"]];
-							 
+
 tms_supply_uaz3151_types =	[["UAZ-3151 Kozlik", "tms_supply_uaz3151_objects"]];
 
 tms_supply_ah64apache_types = [["AH-64D Apache Longbow", "tms_supply_ah64d_objects"]];
@@ -108,7 +108,7 @@ tms_supply_t80u_objects = ["tms_objects_t80u",
 						   "tms_objects_t80u45m",
 						   "tms_objects_t80ue1",
 						   "tms_objects_t80um"];
-						   					   
+
 tms_supply_t90_objects = ["tms_objects_t90"];
 						
 tms_supply_t100_objects = ["tms_objects_t100"];
@@ -126,7 +126,7 @@ tms_supply_f16_objects = ["tms_objects_f16b",
 
 tms_supply_f35_objects = ["tms_objects_f35a",
 						  "tms_objects_f35b"];
-						  
+
 tms_supply_su22_objects = ["tms_objects_su22"];
 
 tms_supply_su35_objects = ["tms_objects_su35"];						  
@@ -171,11 +171,9 @@ tms_supply_uaz3151_objects = ["tms_objects_uaz3151_open",
 							  "tms_objects_uaz3151"];
 							  
 tms_supply_ah64d_objects = ["tms_objects_ah64d_multirole"];
-								
-								
+
 // Vehicle Definitions
 
-						  
 tms_objects_m1a1sa = 	 ["M1A1 Abrams SA", // Name of the vehicle
 						  "rhsusf_m1a1aimd_usarmy",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
@@ -188,7 +186,7 @@ tms_objects_m1a1sa = 	 ["M1A1 Abrams SA", // Name of the vehicle
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
-						  
+
 tms_objects_m1a1sa_tusk1 = ["M1A1 Abrams SA TUSK I", // Name of the vehicle
 						  "rhsusf_m1a1aim_tuski_d",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_tuski_d",// P3D model
@@ -201,7 +199,7 @@ tms_objects_m1a1sa_tusk1 = ["M1A1 Abrams SA TUSK I", // Name of the vehicle
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
-						  
+
 tms_objects_m1a1fep = 	["M1A1 Abrams FEP", // Name of the vehicle
 						  "rhsusf_m1a1fep_d",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1hc_d",// P3D model
@@ -214,7 +212,7 @@ tms_objects_m1a1fep = 	["M1A1 Abrams FEP", // Name of the vehicle
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
-						  
+
 tms_objects_m1a2sepv1 =	 ["M1A2 Abrams SEP V1", // Name of the vehicle
 						  "rhsusf_m1a2sep1d_usarmy",// Classname
 						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_d",// P3D model
@@ -227,7 +225,7 @@ tms_objects_m1a2sepv1 =	 ["M1A2 Abrams SEP V1", // Name of the vehicle
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
-						  
+
 tms_objects_m1a2sepv1_tusk1 = ["M1A2 Abrams SEP V1 TUSK I", // Name of the vehicle
 						  "rhsusf_m1a2sep1tuskid_usarmy",// Classname
 						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_tuski_d",// P3D model
@@ -240,7 +238,7 @@ tms_objects_m1a2sepv1_tusk1 = ["M1A2 Abrams SEP V1 TUSK I", // Name of the vehic
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
-						  
+
 tms_objects_m1a2sepv1_tusk2 = ["M1A2 Abrams SEP V1 TUSK II", // Name of the vehicle
 						  "rhsusf_m1a2sep1tuskiid_usarmy",// Classname
 						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_tuskii_d",// P3D model
