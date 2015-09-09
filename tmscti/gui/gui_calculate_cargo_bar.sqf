@@ -28,10 +28,13 @@ while { _counter < _number_of_items } do {
 
 	_item_factor_data_string = lbData [1507, _dynamic_index];
 	_item_factor_data = call compile _item_factor_data_string;
+	
+	hint format ["supplykind: %1", _item_factor_data select 7];
+	
 	_supplykind = _item_factor_data select 7;
 	_item_class_name = _item_factor_data select 1;
 	_vehicle_cargo_factor = _item_factor_data select 6;
-
+	
 	_vehicle_cargo = _vehicle_cargo + _vehicle_cargo_factor;
 				
 	if ( _supplykind == "item" )  then {
@@ -178,3 +181,26 @@ if (_transportcraft == "Self Delivery (Helicopter)") then {
 	_cargobar ctrlSetTextColor [0.0, 0.5, 0, 1];
 	};
 };
+
+_counter = 0;
+_dynamic_index = 0;
+
+while { _counter < _number_of_items } do {
+
+	_item_factor_data_string = lbData [1507, _dynamic_index];
+	_item_factor_data = call compile _item_factor_data_string;
+	_gear = _item_factor_data select 1;
+
+	_icon_v = getText (configFile / "CfgVehicles" / _gear / "picture");
+	_icon_w = getText (configFile / "CfgWeapons" / _gear / "picture");
+
+	_cargo_list lbSetPictureRight [_dynamic_index, _icon_v];
+	_cargo_list lbSetPictureRight [_dynamic_index, _icon_w];	
+	_cargo_list lbSetPictureRightColor [_dynamic_index, [1, 1, 1, 1]];
+	
+	_counter = _counter + 1;
+	_dynamic_index = _dynamic_index + 1;
+	
+	};
+
+

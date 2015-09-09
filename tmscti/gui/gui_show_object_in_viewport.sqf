@@ -9,7 +9,7 @@ _infobox = _display displayCtrl 1010;
 _index = lbCurSel 1502;
 _supply_item_data_string = lbData [1502, _index];
 _supply_item_data = call compile _supply_item_data_string;
-//_3dmodel = _supply_item_data select 2; NOT NEEDED ANYMORE!
+//_3dmodel = _supply_item_data select 2; NEEDS TO BE RE-ACTIVATED FOR OBJECTS WITH WRONG P3D-PATH!
 _scalefactor = _supply_item_data select 3;
 _transformfactor = _supply_item_data select 4;
 _item_name = _supply_item_data select 0;
@@ -53,6 +53,8 @@ _infobox ctrlSetText _item_name;
 
 
 // Position: [X, z, Y]
+//
+//	EXAMPLES:
 //
 //	Transformation values for MRAPS
 //	_viewport ctrlSetModelScale 0.035;
