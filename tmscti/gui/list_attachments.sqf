@@ -23,7 +23,7 @@ lbClear _scopelist;
 
 _scopelist lbAdd "Iron sights (None)";
 
-while {_scans < _number_of_optics} do {
+while {_scans < _number_of_optics_in_variable} do {
 	if (_number_of_optics_in_variable == _scans) then {
 		_scans = _number_of_optics; //Stops the procedure if no more attachments could be found in the individual attachment list.
 		} else {
@@ -37,7 +37,11 @@ while {_scans < _number_of_optics} do {
 				_item_string = str _item;
 								
 				_entry = _scopelist lbAdd (_item select 0);
-				_scopelist lbSetData [_entry, _item_string];	
+				_gear = _item select 1;
+				_scopelist lbSetData [_entry, _item_string];
+				_icon = getText (configFile / "CfgWeapons" / _gear / "picture");
+				_scopelist lbSetPicture [_entry, _icon];
+
 				_counter = _number_of_optics; //Stops the search for this specific attachment, because it has already been found.
 			};
 			_counter = _counter + 1;
@@ -66,7 +70,7 @@ lbClear _robjectslist;
 
 _robjectslist lbAdd "No Rail Object";
 
-while {_scans < _number_of_robjects} do {
+while {_scans < _number_of_robjects_in_variable} do {
 	if (_number_of_robjects_in_variable == _scans) then {
 		_scans = _number_of_robjects; //Stops the procedure if no more attachments could be found in the individual attachment list.
 		} else {
@@ -80,7 +84,11 @@ while {_scans < _number_of_robjects} do {
 				_item_string = str _item;
 								
 				_entry = _robjectslist lbAdd (_item select 0);
+				_gear = _item select 1;
 				_robjectslist lbSetData [_entry, _item_string];	
+				_icon = getText (configFile / "CfgWeapons" / _gear / "picture");
+				_robjectslist lbSetPicture [_entry, _icon];
+				
 				_counter = _number_of_robjects; //Stops the search for this specific attachment, because it has already been found.
 			};
 			_counter = _counter + 1;
@@ -109,7 +117,7 @@ lbClear _bipodlist;
 
 _bipodlist lbAdd "No Bipod";
 
-while {_scans < _number_of_bipods} do {
+while {_scans < _number_of_bipods_in_variable} do {
 	if (_number_of_bipods_in_variable == _scans) then {
 		_scans = _number_of_bipods; //Stops the procedure if no more attachments could be found in the individual attachment list.
 		} else {
@@ -123,7 +131,11 @@ while {_scans < _number_of_bipods} do {
 				_item_string = str _item;
 								
 				_entry = _bipodlist lbAdd (_item select 0);
-				_bipodlist lbSetData [_entry, _item_string];	
+				_gear = _item select 1;
+				_bipodlist lbSetData [_entry, _item_string];
+				_icon = getText (configFile / "CfgWeapons" / _gear / "picture");
+				_bipodlist lbSetPicture [_entry, _icon];
+				
 				_counter = _number_of_bipods; //Stops the search for this specific attachment, because it has already been found.
 			};
 			_counter = _counter + 1;
@@ -152,7 +164,7 @@ lbClear _silencerlist;
 
 _silencerlist lbAdd "No Silencer";
 
-while {_scans < _number_of_silencers} do {
+while {_scans < _number_of_silencers_in_variable} do {
 	if (_number_of_silencers_in_variable == _scans) then {
 		_scans = _number_of_silencers; //Stops the procedure if no more attachments could be found in the individual attachment list.
 		} else {
@@ -162,13 +174,16 @@ while {_scans < _number_of_silencers} do {
 			_scanned_index = (tms_supply_silencer_objects select _selected_silencer) select 1;
 					
 			if (_scanned_index == _wpnsuppressors select _selected_index) then {
-		
-				hint "das if ding funzt"; //NEIN FUNZT IN KEINEM FALL, DIE IF SACHE WIRD NIEMALS WAHR
+						
 				_item = tms_supply_silencer_objects select _selected_silencer;
 				_item_string = str _item;
 												
 				_entry = _silencerlist lbAdd (_item select 0);
-				_silencerlist lbSetData [_entry, _item_string];	
+				_gear = _item select 1;
+				_silencerlist lbSetData [_entry, _item_string];
+				_icon = getText (configFile / "CfgWeapons" / _gear / "picture");
+				_silencerlist lbSetPicture [_entry, _icon];
+				
 				_counter = _number_of_silencers; //Stops the search for this specific attachment, because it has already been found.
 			};
 			_counter = _counter + 1;
@@ -192,27 +207,29 @@ _display = findDisplay 5000;
 _magazinelist = _display displayCtrl 1508;
 _scans = 0;
 _selected_magazine = 0;
-_number_of_magazines_in_variable = count tms_supply_silencer_objects;
+_number_of_magazines_in_variable = count tms_supply_magazine_objects;
 
 lbClear _magazinelist;
 
 _magazinelist lbAdd "No Ammo";
 
-while {_scans < _number_of_magazines} do {
+while {_scans < _number_of_magazines_in_variable} do {
 	if (_number_of_magazines_in_variable == _scans) then {
 		_scans = _number_of_magazines; //Stops the procedure if no more attachments could be found in the individual attachment list.
 		} else {
 
-			while { _counter < _number_of_magazines} do {
-		
+			while { _counter < _number_of_magazines } do {
+			
 			_scanned_index = (tms_supply_magazine_objects select _selected_magazine) select 1;
+			
 			if (_scanned_index == _magazines select _selected_index) then {
 		
 				_item = tms_supply_magazine_objects select _selected_magazine;
 				_item_string = str _item;
 								
 				_entry = _magazinelist lbAdd (_item select 0);
-				_magazinelist lbSetData [_entry, _item_string];	
+				_magazinelist lbSetData [_entry, _item_string];
+				
 				_counter = _number_of_magazines; //Stops the search for this specific attachment, because it has already been found.
 			};
 			_counter = _counter + 1;

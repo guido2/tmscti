@@ -17,8 +17,8 @@ class Mission
 		"CAMisc",
 		"aia_misc_config",
 		"CUP_Creatures_People_Military_DummyInfantrySet",
-		"D41_Trawler",
-		"3DEN"
+		"3DEN",
+		"A3_Armor_F_T100K"
 	};
 	addOnsAuto[]=
 	{
@@ -33,7 +33,6 @@ class Mission
 		"ace_ballistics",
 		"CAMisc",
 		"aia_misc_config",
-		"D41_Trawler",
 		"a3_map_altis"
 	};
 	randomSeed=8463124;
@@ -238,7 +237,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
 			position[]={24080.49,3.1900001,18013.66};
@@ -287,15 +286,6 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-		};
-		class Item6
-		{
-			position[]={24091.621,3.1900001,18080.051};
-			id=14;
-			side="EMPTY";
-			vehicle="D41_Trawler";
-			skill=0.60000002;
-			init="this setObjectTextureGlobal [0, ""tmscti\images\boat_civil_04_1_co.paa""];";
 		};
 	};
 	class Markers

@@ -8,7 +8,7 @@ class hqsupply
 class ControlsBackground
 {
 
-	//ONLY FOR VIEWPORT ADJUSTMENTS! NEEDS TO BE REMOVED AT LAST!
+	//ONLY FOR VIEWPORT ADJUSTMENTS! NEEDS TO BE REMOVED AT LAST! >>> NOT REALLY NEEDED ANYMORE DUE TO THE GRID BG IN VIEWPORT. WILL BE REMOVED NEXT UPDATE! <<<
 //	class ruler: RscText
 //	{
 //	idc = 1009;
@@ -219,7 +219,7 @@ class Controls
 	w = 0.120313 * safezoneW;
 	h = 0.758704 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Select object family"; //--- ToDo: Localize;
 	onLBSelChanged = nul = _this execVM "tmscti\gui\set_type_select_list.sqf";
@@ -232,7 +232,7 @@ class Controls
 	w = 0.120313 * safezoneW;
 	h = 0.758704 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Select object type"; //--- ToDo: Localize;
 	onLBSelChanged = nul = _this execVM "tmscti\gui\set_object_select_list.sqf";
@@ -243,9 +243,9 @@ class Controls
 	x = 0.247917 * safezoneW + safezoneX;
 	y = 0.159133 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.758704 * safezoneH;
+	h = 0.70315 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Select object model"; //--- ToDo: Localize;
 	onLBSelChanged = nul = _this execVM "tmscti\gui\gui_show_object_in_viewport.sqf";
@@ -256,10 +256,11 @@ class Controls
 	x = 0.373958 * safezoneW + safezoneX;
 	y = 0.313073 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.197923 * safezoneH;
+	h = 0.15394 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
+	onLBSelChanged = nul = [1503] execVM "tmscti\gui\gui_show_attachment_in_viewport.sqf";	
 	tooltip = "Select attachment: Optics"; //--- ToDo: Localize;
 	};
 	class attachlist2: RscListbox
@@ -268,10 +269,11 @@ class Controls
 	x = 0.505729 * safezoneW + safezoneX;
 	y = 0.313073 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.197923 * safezoneH;
+	h = 0.15394 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
+	onLBSelChanged = nul = [1504] execVM "tmscti\gui\gui_show_attachment_in_viewport.sqf";
 	tooltip = "Select attachment: Rail objects"; //--- ToDo: Localize;
 	};
 	class attachlist4: RscListbox
@@ -280,10 +282,11 @@ class Controls
 	x = 0.505729 * safezoneW + safezoneX;
 	y = 0.521991 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.186927 * safezoneH;
+	h = 0.142944 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
+	onLBSelChanged = nul = [1505] execVM "tmscti\gui\gui_show_attachment_in_viewport.sqf";
 	tooltip = "Select attachment: Bipods"; //--- ToDo: Localize;
 	};
 	class attachlist5: RscListbox
@@ -292,10 +295,11 @@ class Controls
 	x = 0.373958 * safezoneW + safezoneX;
 	y = 0.719914 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.186927 * safezoneH;
+	h = 0.142944 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
+	onLBSelChanged = nul = [1508] execVM "tmscti\gui\gui_show_attachment_in_viewport.sqf";
 	tooltip = "Select magazines"; //--- ToDo: Localize;
 	};
 	class attachlist6: RscListbox
@@ -304,10 +308,11 @@ class Controls
 	x = 0.505729 * safezoneW + safezoneX;
 	y = 0.719914 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.186927 * safezoneH;
+	h = 0.142944 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
+	onLBSelChanged = nul = [1509] execVM "tmscti\gui\gui_show_attachment_in_viewport.sqf";
 	tooltip = "Select camo variant"; //--- ToDo: Localize;
 	};
 	class attachlist3: RscListbox
@@ -316,10 +321,11 @@ class Controls
 	x = 0.373958 * safezoneW + safezoneX;
 	y = 0.521991 * safezoneH + safezoneY;
 	w = 0.120313 * safezoneW;
-	h = 0.186927 * safezoneH;
+	h = 0.142944 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
+	onLBSelChanged = nul = [1506] execVM "tmscti\gui\gui_show_attachment_in_viewport.sqf";
 	tooltip = "Select attachment: Suppressors and Silencers"; //--- ToDo: Localize;
 	};
 	class shoppinglist: RscListbox
@@ -330,7 +336,7 @@ class Controls
 	w = 0.338021 * safezoneW;
 	h = 0.208919 * safezoneH;
 	colorText[] = {1,1,1,1};
-	colorBackground[] = {0,0,0,0.75};
+	colorBackground[] = {0.15,0.15,0.15,0.75};
 	colorActive[] = {0,0,0,0.75};
 	tooltip = "Your selected cargo"; //--- ToDo: Localize;
 	};
@@ -376,13 +382,121 @@ class Controls
 	tooltip = "Add selected supply to cargo list"; //--- ToDo: Localize;
 	action = execVM "tmscti\gui\add_object_to_cargolist.sqf";
 	};
-class supplycargocraftlist: RscListbox
-{
+	class supplycargocraftlist: RscListbox
+	{
 	idc = 2100;
 	x = 0.373958 * safezoneW + safezoneX;
 	y = 0.203116 * safezoneH + safezoneY;
 	w = 0.252083 * safezoneW;
 	h = 0.0879657 * safezoneH;
+	onLBSelChanged = nul = _this execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";
+	tooltip = "Possible transport options for this supply location"; //--- ToDo: Localize;
+	};
+
+class singleobjecttocargo: RscButton
+{
+	idc = 1673;
+	text = "Add to cargo list >>>"; //--- ToDo: Localize;
+	x = 0.247917 * safezoneW + safezoneX;
+	y = 0.862858 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1502] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";
+	tooltip = "Add the selected object to cargolist without attachments"; //--- ToDo: Localize;
+
+};
+class singlemagazinetocargo: RscButton
+{
+	idc = 1674;
+	text = "Add single magazine >>>"; //--- ToDo: Localize;
+	x = 0.373958 * safezoneW + safezoneX;
+	y = 0.862858 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1508] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";	
+	tooltip = "Add the selected magazine to cargo list"; //--- ToDo: Localize;
+
+};
+class camovariants: RscButton
+{
+	idc = 1675;
+	text = "Select camo >>>"; //--- ToDo: Localize;
+	x = 0.505729 * safezoneW + safezoneX;
+	y = 0.862858 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1509] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";	
+	tooltip = "Select camo variant"; //--- ToDo: Localize;
+
+};
+class singlesilencertocargo: RscButton
+{
+	idc = 1676;
+	text = "Add single silencer >>>"; //--- ToDo: Localize;
+	x = 0.373958 * safezoneW + safezoneX;
+	y = 0.664936 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1506] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";
+	tooltip = "Add selected silencer to cargo list"; //--- ToDo: Localize;
+
+};
+class singlebipodtocargo: RscButton
+{
+	idc = 1677;
+	text = "Add single bipod >>>"; //--- ToDo: Localize;
+	x = 0.505729 * safezoneW + safezoneX;
+	y = 0.664936 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1505] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";
+	tooltip = "Add selected bipod to cargo list"; //--- ToDo: Localize;
+
+};
+class singleoptictocargo: RscButton
+{
+	idc = 1678;
+	text = "Add single optic >>>"; //--- ToDo: Localize;
+	x = 0.373958 * safezoneW + safezoneX;
+	y = 0.467013 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1503] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";	
+	tooltip = "Add selected optic to cargo list"; //--- ToDo: Localize;
+
+};
+class singlerailobjecttocargolist: RscButton
+{
+	idc = 1679;
+	text = "Add single railobject >>>"; //--- ToDo: Localize;
+	x = 0.505729 * safezoneW + safezoneX;
+	y = 0.467013 * safezoneH + safezoneY;
+	w = 0.120313 * safezoneW;
+	h = 0.0439828 * safezoneH;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.456863,0.356863,0.119608,1};
+	colorActive[] = {0.656863,0.556863,0.319608,1};
+	action = [1504] execVM "tmscti\gui\gui_add_single_attachment_to_cargolist.sqf";
+	tooltip = "Add selected rail object to cargo list"; //--- ToDo: Localize;
+
 };
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>Categories<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
 	class supplyfobinst: RscButton

@@ -525,7 +525,8 @@ if ( _number_of_items > 4 ) then {
 	} else {hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!"};
 };
 
-
+_display = findDisplay 5000;
+_display closeDisplay 1; 
 
 
 
