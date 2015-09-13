@@ -1,6 +1,10 @@
-execVM "R3F_LOG\init.sqf";
-_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
+execVM "R3F_LOG\init.sqf"; //R3F LOGISTIK SYSTEM
+_igiload = execVM "IgiLoad\IgiLoadInit.sqf"; //IGILOAD
+[]execVM "eos\OpenMe.sqf"; //EOS SYSTEM
+0 = [INDEPENDENT,true,true] execVM "JSHK_Redress\redressInit.sqf"; //For continuous checking to redress any "spawned" units
+
 execVM "tmscti\gui\defines_idcs.sqf";
+
 
 call compile preprocessFileLineNumbers "tmscti\supply_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\assault_rifle_definitions.sqf";
