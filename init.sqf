@@ -30,15 +30,7 @@ if(isServer) then {
     [_flag_container_west, "Flag_Red_F", "Flag", west] call tms_init_area_control_installation_container;
 
     victory_position = 0; // If this reaches 100, side west wins. If this reaches -100, side east wins
-    town_center_objects = []; // A list of objects, defined in mission.sqm, that determine where towns that can be taken over are
     mission_ended = false;
 
-	_spawnpos = getmarkerpos "hqdrop1";
-	tms_master_gear_box = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
-	clearItemCargoGlobal tms_master_gear_box;
-	clearMagazineCargoGlobal tms_master_gear_box;
-	clearWeaponCargoGlobal tms_master_gear_box;
-	clearBackpackCargoGlobal  tms_master_gear_box;
-	
     [] execVM "tmscti\periodically_update_score.sqf";
 };

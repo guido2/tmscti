@@ -12,8 +12,4 @@ _cargo_list lbSetData [_cargolist_index, _selected_data];
 
 _class_name = _object_struct select 1;
 
-if (tms_master_gear_box canAdd _class_name) then {	
-	tms_master_gear_box additemCargo [_class_name, 1] ;
-	};
-
 execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";

@@ -29,9 +29,4 @@ _transportcraft5 = "D-41 Transport Ship";
 _craftlist lbAdd (_transportcraft5);
 _craftlist lbSetData [4, "D-41 Transport Ship"];
 
-clearItemCargo tms_master_gear_box;
-clearMagazineCargo tms_master_gear_box;
-clearWeaponCargo tms_master_gear_box;
-clearBackpackCargo tms_master_gear_box;
-
 execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";
