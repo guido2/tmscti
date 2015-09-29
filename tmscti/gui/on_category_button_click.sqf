@@ -1,3 +1,5 @@
+disableSerialization;
+
 _close_buttons = _this select 0;
 _open_buttons = _this select 1;
 

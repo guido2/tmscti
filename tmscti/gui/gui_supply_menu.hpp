@@ -148,7 +148,7 @@ class ControlsBackground
 	y = 0.0601715 * safezoneH + safezoneY;
 	w = 0.338021 * safezoneW;
 	h = 0.0989614 * safezoneH;
-	text = "Select Your Supply"
+	text = "Select Your Supply";
 	colorBackground[] = {0,0,0,0.5};
 	colorActive[] = {0,0,0,0.5};
 	colorText[] = {1,1,1,1};
