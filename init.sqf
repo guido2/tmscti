@@ -1,17 +1,15 @@
-execVM "R3F_LOG\init.sqf";
-_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
-execVM "tmscti\gui\defines_idcs.sqf";
+execVM "R3F_LOG\init.sqf"; //R3F LOGISTIK SYSTEM
+execVM "IgiLoad\IgiLoadInit.sqf"; //IGILOAD
 
+call compile preprocessFileLineNumbers "tmscti\gui\defines_idcs.sqf";
 call compile preprocessFileLineNumbers "tmscti\supply_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\assault_rifle_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\machine_gun_definitions.sqf";
-
 call compile preprocessFileLineNumbers "tmscti\items\optic_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\bipod_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\magazine_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\railobject_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\silencer_definitions.sqf";
-
 
 spawnpositionwest = 0;
 
