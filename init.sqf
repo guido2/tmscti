@@ -27,6 +27,9 @@ if(isServer) then {
 		10*60 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 	] execVM 'repetitive_cleanup.sqf';
 
+	setViewDistance 4000;
+	setObjectViewDistance [1800, 150];
+
     _starttruck1west = createVehicle ["B_Truck_01_transport_F", getMarkerPos "respawn_west", [], 0, "NONE"];
     _starttruck1west setVariable ["side", west, true];
     _starttruck1west setVariable ["persistent",true];
