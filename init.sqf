@@ -18,9 +18,18 @@ tms_init_area_control_installation_container = compile preprocessFileLineNumbers
 tms_get_nearest_object = compile preprocessFileLineNumbers "tmscti\helper_functions\get_nearest_object.sqf";
 
 if(isServer) then {
+	[
+		5*60, // seconds to delete dead bodies (0 means don't delete)
+		10*60, // seconds to delete dead vehicles (0 means don't delete)
+		20*60, // seconds to delete immobile vehicles (0 means don't delete)
+		15*60, // seconds to delete dropped weapons (0 means don't delete)
+		10*60, // seconds to deleted planted explosives (0 means don't delete)
+		10*60 // seconds to delete dropped smokes/chemlights (0 means don't delete)
+	] execVM 'repetitive_cleanup.sqf';
 
     _starttruck1west = createVehicle ["B_Truck_01_transport_F", getMarkerPos "respawn_west", [], 0, "NONE"];
     _starttruck1west setVariable ["side", west, true];
+    _starttruck1west setVariable ["persistent",true];
     _hq_container_west = createVehicle ["Land_Cargo20_military_green_F", [getMarkerPos "respawn_west", 10, 90]  call BIS_fnc_relPos, [], 0, "NONE"];
     _hq_container_west setVariable ["side", west, true];
     [_hq_container_west, "Established HQ", "M1130_HQ_unfolded_Base_EP1"] call tms_init_base_container;
