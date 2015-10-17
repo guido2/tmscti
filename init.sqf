@@ -11,11 +11,18 @@ call compile preprocessFileLineNumbers "tmscti\items\magazine_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\railobject_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\silencer_definitions.sqf";
 
-spawnpositionwest = 0;
+// Load definitions of supply locations
+call compile preprocessFileLineNumbers "tmscti\supply_locations.sqf";
 
 tms_init_base_container = compile preprocessFileLineNumbers "tmscti\init_base_container.sqf";
 tms_init_area_control_installation_container = compile preprocessFileLineNumbers "tmscti\init_area_control_installation_container.sqf";
 tms_get_nearest_object = compile preprocessFileLineNumbers "tmscti\helper_functions\get_nearest_object.sqf";
+tms_get_nearest_supply_location = compile preprocessFileLineNumbers "tmscti\helper_functions\get_nearest_supply_location.sqf";
+tms_activate_area_control_installation = compile preprocessFileLineNumbers "tmscti\activate_area_control_installation.sqf";
+
+// TODO: Make configurable
+setViewDistance 4000;
+setObjectViewDistance [1800, 150];
 
 if(isServer) then {
 	[
@@ -27,9 +34,6 @@ if(isServer) then {
 		10*60 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 	] execVM 'repetitive_cleanup.sqf';
 
-	setViewDistance 4000;
-	setObjectViewDistance [1800, 150];
-
     _starttruck1west = createVehicle ["B_Truck_01_transport_F", getMarkerPos "respawn_west", [], 0, "NONE"];
     _starttruck1west setVariable ["side", west, true];
     _starttruck1west setVariable ["persistent",true];
@@ -39,6 +43,7 @@ if(isServer) then {
     _flag_container_west = createVehicle ["Land_CargoBox_V1_F", [getMarkerPos "respawn_west", 20, 90] call BIS_fnc_relPos, [], 0, "NONE"];
     [_flag_container_west, "Flag_Red_F", "Flag", west] call tms_init_area_control_installation_container;
 
+	town_center_objects = [];
     victory_position = 0; // If this reaches 100, side west wins. If this reaches -100, side east wins
     mission_ended = false;
 

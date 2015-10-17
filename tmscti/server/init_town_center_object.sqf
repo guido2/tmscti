@@ -14,7 +14,5 @@ if(isServer) then {
 
     _town_center_object setVariable ["side", resistance];
     _town_center_object setVariable ["town_name", _town_name];
-    systemChat format ["In init_town_center_object.sqf, town_center_objects: %1", town_center_objects];
     town_center_objects pushBack _town_center_object;
-    systemChat format ["town_center_objects now: %1", town_center_objects];
     };
