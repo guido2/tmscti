@@ -48,14 +48,20 @@ if (_transportcraft == "CH-47 Chinook") then {
 		
 						if ( isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
 							
-							_cargobox addWeaponCargoGlobal [_item_class_name, 1] ;
+							 if ( getNumber( configFile >> "CfgWeapons" >> _item_class_name >> "type" ) in [1,2,4] ) then {
+							_cargobox addWeaponCargoGlobal [ _item_class_name, 1 ];
+							}else{
+							_cargobox addItemCargoGlobal [ _item_class_name, 1 ];
+							};
+
 						} else {
 							if ( isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
 							_cargobox addMagazineCargoGlobal [_item_class_name, 1] ;
 							} else {
 							_cargobox additemCargoGlobal [_item_class_name, 1] ;
 							};
-						};  
+						};
+
 					_dynamic_index = _dynamic_index + 1;
 					_counter = _counter + 1;
 					};
