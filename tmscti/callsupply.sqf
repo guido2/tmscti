@@ -53,8 +53,7 @@ if (_transportcraft == "CH-47 Chinook") then {
 							}else{
 							_cargobox addItemCargoGlobal [ _item_class_name, 1 ];
 							};
-							
-							//_cargobox addWeaponCargoGlobal [_item_class_name, 1] ;
+
 						} else {
 							if ( isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
 							_cargobox addMagazineCargoGlobal [_item_class_name, 1] ;
