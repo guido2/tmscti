@@ -18,12 +18,42 @@ class Mission
 		"aia_misc_config",
 		"CUP_Creatures_People_Military_DummyInfantrySet",
 		"3DEN",
-		"A3_Armor_F_T100K"
+		"A3_Armor_F_T100K",
+		"A3_Modules_F",
+		"ace_advanced_ballistics",
+		"ace_map",
+		"ace_captives",
+		"ace_explosives",
+		"ace_hearing",
+		"ace_interaction",
+		"ace_microdagr",
+		"ace_mk6mortar",
+		"ace_nametags",
+		"ace_finger",
+		"ace_sitting",
+		"ace_weather",
+		"ace_winddeflection",
+		"ace_medical"
 	};
 	addOnsAuto[]=
 	{
 		"CUP_Creatures_People_Military_DummyInfantrySet",
 		"task_force_radio_items",
+		"A3_Modules_F",
+		"ace_advanced_ballistics",
+		"ace_map",
+		"ace_captives",
+		"ace_explosives",
+		"ace_hearing",
+		"ace_interaction",
+		"ace_microdagr",
+		"ace_mk6mortar",
+		"ace_nametags",
+		"ace_finger",
+		"ace_sitting",
+		"ace_weather",
+		"ace_winddeflection",
+		"ace_medical",
 		"A3_Structures_F_Mil_Helipads",
 		"CAStructures_E_Misc_Misc_Interier",
 		"A3_Weapons_F_Ammoboxes",
@@ -1041,7 +1071,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			position[]={24109.932,3.1740577,17965.543};
@@ -1149,6 +1179,13 @@ class Mission
 			position[]={15407.094,0.011530571,13079.049};
 			name="shipwp2";
 			type="Empty";
+		};
+		class Item18
+		{
+			position[]={24282.176,2.8312941,18082.713};
+			name="salt_lake_beachhead";
+			text="Salt Lake Beachhead";
+			type="mil_flag";
 		};
 	};
 };
