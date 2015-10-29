@@ -48,7 +48,7 @@ if(isServer) then
 		
 	_supply_location = call compile ([position _installation] call tms_get_nearest_supply_location);
 	_supply_location_position = getMarkerPos (_supply_location select 1);
-	if (!(isNil '_supply_location' or (_supply_location_position distance _container) > 100)) then {
+	if (!(isNil '_supply_location' or (_supply_location_position distance _installation) > 100)) then {
 		// TODO: Check if the enemy has got any area control installations of their own in range, mark the location as contested if yes
 		_supply_location set [5, _side];
 		};
