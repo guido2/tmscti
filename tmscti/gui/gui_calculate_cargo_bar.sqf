@@ -72,7 +72,6 @@ if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Tra
             _item_size = _item_data select 6;
             _cargo_usage = _cargo_usage + _item_size;
         };
-        _i = _i + 1;
     };
 
     _cargo_usage = _cargo_usage + _num_gear_boxes;
