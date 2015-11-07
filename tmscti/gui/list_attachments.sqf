@@ -66,18 +66,18 @@ while {_counter < _number_of_robjects} do {
 	while {_scans < _number_of_robjects_in_variable} do {
 		_item = (tms_supply_railobject_objects select _scans) select 1;
 
-			if (_scanned_index == _item) then {
-				_item = tms_supply_railobject_objects select _scans;
-				_item_string = str _item;
-				_entry = _robjectslist lbAdd (_item select 0);
-				_robjectslist lbSetData [_entry, _item_string];
-				_scans = _number_of_robjects_in_variable; //Stops the search for this specific attachment, because it has already been found.
-				} else {
-					_scans = _scans + 1;
-					};
+		if (_scanned_index == _item) then {
+			_item = tms_supply_railobject_objects select _scans;
+			_item_string = str _item;
+			_entry = _robjectslist lbAdd (_item select 0);
+			_robjectslist lbSetData [_entry, _item_string];
+			_scans = _number_of_robjects_in_variable; //Stops the search for this specific attachment, because it has already been found.
+			} else {
+				_scans = _scans + 1;
 				};
-				_counter = _counter + 1;
 			};
+			_counter = _counter + 1;
+		};
 
 //Bipods
 _number_of_bipods = count _wpnbipods;
@@ -97,18 +97,18 @@ while {_counter < _number_of_bipods} do {
 	while {_scans < _number_of_bipods_in_variable} do {
 	_item = (tms_supply_bipod_objects select _scans) select 1;
 
-		if (_scanned_index == _item) then {
-		_item = tms_supply_bipod_objects select _scans;
-		_item_string = str _item;
-		_entry = _bipodlist lbAdd (_item select 0);
-		_bipodlist lbSetData [_entry, _item_string];
-		_scans = _number_of_bipods_in_variable; //Stops the search for this specific attachment, because it has already been found.
-		} else {
-			_scans = _scans + 1;
-			};
+	if (_scanned_index == _item) then {
+	_item = tms_supply_bipod_objects select _scans;
+	_item_string = str _item;
+	_entry = _bipodlist lbAdd (_item select 0);
+	_bipodlist lbSetData [_entry, _item_string];
+	_scans = _number_of_bipods_in_variable; //Stops the search for this specific attachment, because it has already been found.
+	} else {
+		_scans = _scans + 1;
 		};
-		_counter = _counter + 1;
-	};  
+	};
+	_counter = _counter + 1;
+};  
 
 //Silencer
 _number_of_silencers = count _wpnsuppressors;
@@ -129,18 +129,18 @@ while {_counter < _number_of_silencers} do {
 	while {_scans < _number_of_silencers_in_variable} do {
 		_item = (tms_supply_silencer_objects select _scans) select 1;
 
-			if (_scanned_index == _item) then {
-			_item = tms_supply_silencer_objects select _scans;
-			_item_string = str _item;
-			_entry = _silencerlist lbAdd (_item select 0);
-			_silencerlist lbSetData [_entry, _item_string];
-			_scans = _number_of_silencers_in_variable; //Stops the search for this specific attachment, because it has already been found.
-			} else {
-				_scans = _scans + 1;
-				};
+		if (_scanned_index == _item) then {
+		_item = tms_supply_silencer_objects select _scans;
+		_item_string = str _item;
+		_entry = _silencerlist lbAdd (_item select 0);
+		_silencerlist lbSetData [_entry, _item_string];
+		_scans = _number_of_silencers_in_variable; //Stops the search for this specific attachment, because it has already been found.
+		} else {
+			_scans = _scans + 1;
 			};
-			_counter = _counter + 1;
 		};
+		_counter = _counter + 1;
+	};
 
 //Magazines
 _number_of_magazines = count _magazines;
