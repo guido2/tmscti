@@ -2,11 +2,9 @@ disableSerialization;
 
 waitUntil {not isNull (findDisplay 5000)};
 
-if (isNil "tms_list_attachments_script") then {
-	// Go on
-	} else {
-		terminate tms_list_attachments_script;
-		};
+if ( not isNil "tms_list_attachments_script") then {
+	terminate tms_list_attachments_script;
+	};
 
 _display = findDisplay 5000;
 _viewport = _display displayCtrl 101;
