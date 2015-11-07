@@ -2,6 +2,12 @@ disableSerialization;
 
 waitUntil {not isNull (findDisplay 5000)};
 
+if (isNil "tms_list_attachments_script") then {
+	// Go on
+	} else {
+		terminate tms_list_attachments_script;
+		};
+
 _display = findDisplay 5000;
 _viewport = _display displayCtrl 101;
 _infobox = _display displayCtrl 1010;
@@ -73,5 +79,5 @@ _infobox ctrlSetText _item_name;
 
 if (_supplykind == "item") then {
 
-	execVM "tmscti\gui\list_attachments.sqf";
+	tms_list_attachments_script = [] execVM "tmscti\gui\list_attachments.sqf";
 };
