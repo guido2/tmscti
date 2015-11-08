@@ -1,3 +1,11 @@
+tms_sl_cols_display_name = 0;
+tms_sl_cols_map_marker = 1;
+tms_sl_cols_tier = 2;
+tms_sl_cols_delivery_positions = 3;
+tms_sl_cols_airstrip_id = 4;
+tms_sl_cols_side = 5;
+tms_sl_cols_supply_points = 6;
+
 tms_supply_locations = ["tms_sl_saltlake_beachhead"]; // Variable names for the individual locations
 
 tms_sl_saltlake_beachhead = ["Salt Lake Beachhead", // Display name of the locations

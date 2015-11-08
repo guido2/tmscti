@@ -33,7 +33,7 @@ if(isServer) then
 
             waitUntil {!isNil 'victory_locations'};
             victory_locations pushBack _installation;
-            
+
             _area_control_installations = _town_center_object getVariable "area_control_installations";
             if (isNil '_area_control_installations') then {
                 _area_control_installations = [];
@@ -45,12 +45,44 @@ if(isServer) then
             // TODO
             };
         };
-		
+
 	_supply_location = call compile ([position _installation] call tms_get_nearest_supply_location);
-	_supply_location_position = getMarkerPos (_supply_location select 1);
+	_supply_location_position = getMarkerPos (_supply_location select tms_sl_cols_map_marker);
 	if (!(isNil '_supply_location' or (_supply_location_position distance _installation) > 100)) then {
-		// TODO: Check if the enemy has got any area control installations of their own in range, mark the location as contested if yes
-		_supply_location set [5, _side];
+		// Check if the enemy has got any area control installations of their own in range, mark the location as contested if yes
+		_enemy_aci_types = nil;
+		if (_side == west) then {
+			_enemy_aci_types = tms_aci_types_east;
+			}
+		else {
+			_enemy_aci_types = tms_aci_types_west;
+		};
+		_enemy_aci_found = false; // Whether there is an enemy aci in range of this supply location
+		{
+			_enemy_acis = _supply_location_position nearObjects [_x select 0, _x select 1];
+			if (count _enemy_acis > 0) then {
+				_enemy_aci_found = true;
+				};
+		} foreach _enemy_aci_types;
+
+		if (not _enemy_aci_found) then {
+			_supply_location set [tms_sl_cols_side, _side];
+			[
+				format ["We have taken over supply location %1.", _supply_location select tms_sl_cols_display_name],
+				"systemChat",
+				_side,
+				false
+			] call BIS_fnc_MP;
+			}
+		else {
+			_supply_location set [tms_sl_cols_side, nil];
+			[
+				format ["Supply Location %1 is now contested.", _supply_location select tms_sl_cols_display_name],
+				"systemChat",
+				true,
+				false
+			] call BIS_fnc_MP;
+			};
 		};
     }
 else {
