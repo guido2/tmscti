@@ -129,7 +129,7 @@ tms_supply_f35_objects = ["tms_objects_f35a",
 
 tms_supply_su22_objects = ["tms_objects_su22"];
 
-tms_supply_su35_objects = ["tms_objects_su35"];						  
+tms_supply_su35_objects = ["tms_objects_su35"];
 
 tms_supply_t50_objects = ["tms_objects_t50"];
 
