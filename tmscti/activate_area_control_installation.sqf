@@ -15,10 +15,10 @@ if (!(isNil '_supply_location' or (_supply_location_position distance _installat
 	] call BIS_fnc_MP;
 	};
 [
-    [
-        [_installation, side player],
-        "tmscti\server\activate_area_control_installation.sqf"
-    ],
-    "BIS_fnc_execVM",
-    false // Execute on server only
+	[
+		[_installation, side player],
+		"tmscti\server\activate_area_control_installation.sqf"
+	],
+	"BIS_fnc_execVM",
+	false // Execute on server only
 ] call BIS_fnc_MP;

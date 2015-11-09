@@ -85,7 +85,7 @@ tms_supply_ah64apache_types = [["AH-64D Apache Longbow", "tms_supply_ah64d_objec
 tms_supply_m1a1_objects = ["tms_objects_m1a1sa",
 						   "tms_objects_m1a1sa_tusk1",
 						   "tms_objects_m1a1fep"];
-						   
+
 tms_supply_m1a2_objects = ["tms_objects_m1a2sepv1",
 							"tms_objects_m1a2sepv1_tusk1",
 							"tms_objects_m1a2sepv1_tusk2"];
@@ -289,7 +289,7 @@ tms_objects_t72b_1989 = ["T-72B obr. 1989g.",
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
-						];							
+						];
 
 tms_objects_t72b_2012 = ["T-72B3 obr. 2012g.",
 						"rhs_t72bd_tv",// Classname
@@ -302,7 +302,7 @@ tms_objects_t72b_2012 = ["T-72B3 obr. 2012g.",
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
-						];								
+						];
 
 tms_objects_t80 = 		["T-80",
 						"rhs_t80",// Classname
@@ -316,7 +316,7 @@ tms_objects_t80 = 		["T-80",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80a = 		["T-80A",
 						"rhs_t80a",// Classname
 						"\rhsafrf\addons\rhs_t80\T80A.p3d",// P3D model
@@ -329,7 +329,7 @@ tms_objects_t80a = 		["T-80A",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80b = 		["T-80B",
 						"rhs_t80b",// Classname
 						"\rhsafrf\addons\rhs_t80\T80B1.p3d",// P3D model
@@ -342,7 +342,7 @@ tms_objects_t80b = 		["T-80B",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80bv = 	["T-80BV",
 						"rhs_t80bv",// Classname
 						"\rhsafrf\addons\rhs_t80\T80BV.p3d",// P3D model
@@ -355,7 +355,7 @@ tms_objects_t80bv = 	["T-80BV",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80bvk = 	["T-80BVK",
 						"rhs_t80bvk",// Classname
 						"\rhsafrf\addons\rhs_t80\T80BV.p3d",// P3D model
@@ -368,7 +368,7 @@ tms_objects_t80bvk = 	["T-80BVK",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80bk = 	["T-80BK",
 						"rhs_t80bk",// Classname
 						"\rhsafrf\addons\rhs_t80\T80B1.p3d",// P3D model
@@ -381,8 +381,7 @@ tms_objects_t80bk = 	["T-80BK",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
-						
+
 tms_objects_t80u = 		["T-80U",
 						"rhs_t80u",// Classname
 						"\rhsafrf\addons\rhs_t80u\rhs_t80u.p3d",// P3D model
@@ -395,7 +394,7 @@ tms_objects_t80u = 		["T-80U",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80u45m = 	["T-80U 45M",
 						"rhs_t80u45m",// Classname
 						"\rhsafrf\addons\rhs_t80u\rhs_t80um45.p3d",// P3D model
@@ -408,7 +407,7 @@ tms_objects_t80u45m = 	["T-80U 45M",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80ue1 = 	["T-80UE-1",
 						"rhs_t80ue1",// Classname
 						"\rhsafrf\addons\rhs_t80u\rhs_t80ue1.p3d",// P3D model
@@ -421,7 +420,7 @@ tms_objects_t80ue1 = 	["T-80UE-1",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t80um = 	["T-80UM",
 						"rhs_t80um",// Classname
 						"\rhsafrf\addons\rhs_t80u\rhs_t80um.p3d",// P3D model
@@ -434,8 +433,8 @@ tms_objects_t80um = 	["T-80UM",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
-tms_objects_t90 = 	   ["T-90",
+
+tms_objects_t90 = 		["T-90",
 						"rhs_t90_tv",// Classname
 						"\rhsafrf\addons\rhs_t72\rhs_t90",// P3D model
 						0.028,//Scale factor
@@ -447,8 +446,8 @@ tms_objects_t90 = 	   ["T-90",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
-tms_objects_t100 = 		["T-100 Black Eagle",
+
+tms_objects_t100 =		["T-100 Black Eagle",
 						"O_MBT_02_cannon_F",// Classname
 						"\A3\armor_f_gamma\MBT_02\MBT_02_cannon_F",// P3D model
 						0.028,//Scale factor
@@ -460,8 +459,8 @@ tms_objects_t100 = 		["T-100 Black Eagle",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
-tms_objects_2s25 = 	   ["2S25 Sprut-SD",
+
+tms_objects_2s25 =		["2S25 Sprut-SD",
 						"rhs_sprut_vdv",// Classname
 						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
 						0.028,//Scale factor
@@ -473,7 +472,7 @@ tms_objects_2s25 = 	   ["2S25 Sprut-SD",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_fa18e = 	["F/A-18E Super Hornet",
 						"JS_JC_FA18E",// Classname
 						"\js_jc_fa18\JC_JS_FZ_FA18E.p3d",// P3D model
@@ -499,7 +498,7 @@ tms_objects_fa18f = 	["F/A-18F Super Hornet",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_fa18x = 	["F/A-18X Black Wasp",
 						"JS_S_FA18X",// Classname
 						"\js_s_fa18x\JS_S_FA18X_BLACK_WASP.p3d",// P3D model
@@ -525,7 +524,7 @@ tms_objects_fa22 = 		["F/A-22 Raptor",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_f16b = 		["F-16B Fighting Falcon ",
 						"USAF_F16",// Classname
 						"\USAF_F16\USAF_F16_falcon.p3d", // P3D model
@@ -538,7 +537,7 @@ tms_objects_f16b = 		["F-16B Fighting Falcon ",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_f16c = 		["F-16C Fighting Falcon",
 						"FIR_F16C",// Classname
 						"\FIR_F16\FIR_F16C",// P3D model
@@ -551,7 +550,7 @@ tms_objects_f16c = 		["F-16C Fighting Falcon",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_f35a = 		["F-35A Lightning II",
 						"USAF_F35A_Base",// Classname
 						"\USAF_F35A\USAF_F35A.p3d",// P3D model
@@ -577,7 +576,7 @@ tms_objects_f35b = 		["F-35B Lightning II",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_t50 = 		["Suchoi PAK FA T-50",
 						"O_PAKFA_F",// Classname
 						"\A3_PAK-FA_F\models\PAKFA.p3d",// P3D model
@@ -590,7 +589,7 @@ tms_objects_t50 = 		["Suchoi PAK FA T-50",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_a10a = 		["A-10A Thunderbolt II",
 						"RHS_A10",// Classname
 						"\rhsusf\addons\rhsusf_a2port_air\a10\A10.p3d",// P3D model
@@ -603,7 +602,7 @@ tms_objects_a10a = 		["A-10A Thunderbolt II",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_a10c = 		["A-10C Thunderbolt II",
 						"USAF_A10",// Classname
 						"\usaf_a10\usaf_A10.p3d",// P3D model
@@ -616,7 +615,7 @@ tms_objects_a10c = 		["A-10C Thunderbolt II",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_a100 = 		["A-100 Thunderbolt II",
 						"B_Plane_CAS_01_F",// Classname
 						"\A3\Air_F_EPC\Plane_CAS_01\Plane_cas_01_F.p3d",// P3D model
@@ -629,7 +628,7 @@ tms_objects_a100 = 		["A-100 Thunderbolt II",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_su25 = 		["Suchoi Su-25SM",
 						"RHS_Su25SM_vvsc",// Classname
 						"\rhsafrf\addons\rhs_a2port_air\su25\su25",// P3D model
@@ -642,7 +641,7 @@ tms_objects_su25 = 		["Suchoi Su-25SM",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_su34 = 		["Suchoi Su-34",
 						"sab_SU34_O_CAP_CRU_AF",// Classname
 						"\sab_SU34\SU34.p3d",// P3D model
@@ -655,7 +654,7 @@ tms_objects_su34 = 		["Suchoi Su-34",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-					
+
 tms_objects_ac130u = 	["AC-130U Spooky II",
 						"USAF_AC130U",// Classname
 						"\USAF_AC130U\USAF_AC130U.p3d",// P3D model !! Nach Update 3D Model anpassen!!
@@ -668,7 +667,7 @@ tms_objects_ac130u = 	["AC-130U Spooky II",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_ac130e = 	["AC-130E Pave Spectre",
 						"LDL_C130J",// Classname
 						"\USAF_AC130U\USAF_AC130U.p3d",// P3D model !! Nach Update 3D Model anpassen!!
@@ -681,7 +680,7 @@ tms_objects_ac130e = 	["AC-130E Pave Spectre",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_su22 = 		["Suchoi Su-22",
 						"TCP_Su22",// Classname
 						"\TCP_Su22\TCP_Su22",// P3D model
@@ -694,7 +693,7 @@ tms_objects_su22 = 		["Suchoi Su-22",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_su35 = 		["Suchoi Su-35E",
 						"JS_JC_SU35",// Classname
 						"\js_jc_su35\JS_JC_Su35.p3d",// P3D model
@@ -707,7 +706,7 @@ tms_objects_su35 = 		["Suchoi Su-35E",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_yak133ib = 	["YAK-133IB",
 						"O_Plane_CAS_02_F",// Classname
 						"\A3\Air_F_EPC\Plane_CAS_02\Plane_cas_02_F.p3d",// P3D model
@@ -733,7 +732,7 @@ tms_objects_m1025a2 = 	["M1025A2 Humvee",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1025a2m2 = ["M1025A2 Humvee M2",
 						"rhsusf_m1025_d_m2",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m1025_m2",// P3D model
@@ -746,7 +745,7 @@ tms_objects_m1025a2m2 = ["M1025A2 Humvee M2",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1025a2mk19 = ["M1025A2 Humvee MK19",
 						"rhsusf_m1025_d_Mk19",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m1025_mk19",// P3D model
@@ -759,7 +758,7 @@ tms_objects_m1025a2mk19 = ["M1025A2 Humvee MK19",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1097a22dopen = ["M1097A2 2D Humvee open",
 						"rhsusf_m998_d_2dr",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_2dr",// P3D model
@@ -785,7 +784,7 @@ tms_objects_m1097a22dhalf = ["M1097A2 2D Humvee half",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1097a22d = ["M1097A2 2D Humvee",
 						"rhsusf_m998_d_2dr_fulltop",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_2dr",// P3D model
@@ -798,7 +797,7 @@ tms_objects_m1097a22d = ["M1097A2 2D Humvee",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-												
+
 tms_objects_m1097a24dopen = ["M1097A2 4D Humvee open",
 						"rhsusf_m998_d_4dr",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
@@ -811,7 +810,7 @@ tms_objects_m1097a24dopen = ["M1097A2 4D Humvee open",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1097a24dhalf = ["M1097A2 4D Humvee half",
 						"rhsusf_m998_d_4dr_halftop",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
@@ -824,7 +823,7 @@ tms_objects_m1097a24dhalf = ["M1097A2 4D Humvee half",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1097a24d = ["M1097A2 4D Humvee",
 						"rhsusf_m998_d_4dr_fulltop",// Classname
 						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
@@ -837,8 +836,7 @@ tms_objects_m1097a24d = ["M1097A2 4D Humvee",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
-						
+
 tms_objects_m1151m2 =  ["M1151 Humvee M2",
 						"VTN_M1151_M2_DES",// Classname
 						"\vtn_wheeledw_m1151_md\m1151_m2_gpk.p3d",// P3D model
@@ -851,7 +849,7 @@ tms_objects_m1151m2 =  ["M1151 Humvee M2",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_m1151 =	   ["M1151 Humvee",
 						"VTN_M1151_DES",// Classname
 						"\vtn_wheeledw_m1151_md\m1151.p3d",// P3D model
@@ -864,6 +862,7 @@ tms_objects_m1151 =	   ["M1151 Humvee",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
+
 tms_objects_matv_unarmed = ["M-ATV",
 						"B_MRAP_01_F",// Classname
 						"\A3\soft_f\MRAP_01\MRAP_01_unarmed_F",// P3D model
@@ -889,7 +888,7 @@ tms_objects_uaz3151_open = ["UAZ-3151 Kozlik open",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_uaz3151 =  ["UAZ-3151 Kozlik",
 						"RHS_UAZ_MSV_01",// Classname
 						"\rhsafrf\addons\rhs_a2port_car\UAZ\UAZ.p3d",// P3D model
@@ -902,7 +901,7 @@ tms_objects_uaz3151 =  ["UAZ-3151 Kozlik",
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
-						
+
 tms_objects_ah64d_multirole =  ["AH-64D Apache Longbow Multirole",
 						"RHS_AH64D",// Classname
 						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model

@@ -44,7 +44,6 @@ if (!(isNil '_supply_location' or (_supply_location_position distance _container
 	_building setVariable ["side", _side, true];
 	_building call tms_activate_area_control_installation;
 	}
-else
-    {
-    systemChat "Cannot deploy base container: Not in range of a supply location.";
-    };
+else {
+	systemChat "Cannot deploy base container: Not in range of a supply location.";
+	};
