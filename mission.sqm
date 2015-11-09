@@ -96,32 +96,32 @@ class Mission
 					position[]={2314.2637,12.695036,9260.3291};
 					id=0;
 					side="WEST";
-					vehicle="CUP_B_US_Soldier";
+					vehicle="B_Soldier_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					text="s1";
-					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
+					init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
 				};
 				class Item1
 				{
 					position[]={2307.9785,11.546208,9256.8525};
 					id=1;
 					side="WEST";
-					vehicle="CUP_B_US_Soldier";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
+					init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
 				};
 				class Item2
 				{
 					position[]={2319.3867,12.604083,9255.9814};
 					id=2;
 					side="WEST";
-					vehicle="CUP_B_US_Soldier";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="comment ""Exported from Arsenal by MDTorch"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  this addItemToVest ""ACE_morphine"";  this addItemToVest ""CUP_30Rnd_556x45_Stanag"";  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_morphine"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""CUP_30Rnd_556x45_Stanag"";};  this addItemToBackpack ""SmokeShell"";  this addItemToBackpack ""SmokeShellGreen"";  this addHeadgear ""rhsusf_ach_helmet_ocp"";    comment ""Add weapons"";  this addWeapon ""CUP_arifle_M16A2"";    comment ""Add items"";    comment ""Set identity"";  this setFace ""WhiteHead_11"";  this setSpeaker ""ACE_NoVoice"";  [this,""PRIVATE_SimpleRP""] call bis_fnc_setUnitInsignia;  ";
+					init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
 				};
 			};
 		};
@@ -136,28 +136,31 @@ class Mission
 					position[]={2156.2544,9.2301369,11588.836};
 					id=3;
 					side="EAST";
-					vehicle="CUP_O_RU_Soldier";
+					vehicle="O_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
+					init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
 				};
 				class Item1
 				{
 					position[]={2149.9692,8.6055422,11585.359};
 					id=4;
 					side="EAST";
-					vehicle="CUP_O_RU_Soldier";
+					vehicle="O_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
 				};
 				class Item2
 				{
 					position[]={2161.3774,10.027225,11584.488};
 					id=5;
 					side="EAST";
-					vehicle="CUP_O_RU_Soldier";
+					vehicle="O_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
 				};
 			};
 		};
