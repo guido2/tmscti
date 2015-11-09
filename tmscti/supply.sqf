@@ -11,5 +11,3 @@ _supplyobject1 = "Basecontainer";
 _list lbAdd (_supplyobject1);
 
 _list lbSetData [0, "Land_Cargo20_military_green_F"];
-
-

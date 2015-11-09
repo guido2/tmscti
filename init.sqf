@@ -37,14 +37,14 @@ if(isServer) then {
 		10*60 // seconds to delete dropped smokes/chemlights (0 means don't delete)
 	] execVM 'repetitive_cleanup.sqf';
 
-    _starttruck1west = createVehicle ["B_Truck_01_transport_F", getMarkerPos "respawn_west", [], 0, "NONE"];
-    _starttruck1west setVariable ["side", west, true];
-    _starttruck1west setVariable ["persistent",true];
-    _hq_container_west = createVehicle ["Land_Cargo20_military_green_F", [getMarkerPos "respawn_west", 10, 90] call BIS_fnc_relPos, [], 0, "NONE"];
-    _hq_container_west setVariable ["side", west, true];
-    [_hq_container_west, "Established HQ", "M1130_HQ_unfolded_Base_EP1"] call tms_init_base_container;
-    _flag_container_west = createVehicle ["Land_CargoBox_V1_F", [getMarkerPos "respawn_west", 20, 90] call BIS_fnc_relPos, [], 0, "NONE"];
-    [_flag_container_west, "Flag_Red_F", "Flag", west] call tms_init_area_control_installation_container;
+	_starttruck1west = createVehicle ["B_Truck_01_transport_F", getMarkerPos "respawn_west", [], 0, "NONE"];
+	_starttruck1west setVariable ["side", west, true];
+	_starttruck1west setVariable ["persistent",true];
+	_hq_container_west = createVehicle ["Land_Cargo20_military_green_F", [getMarkerPos "respawn_west", 10, 90] call BIS_fnc_relPos, [], 0, "NONE"];
+	_hq_container_west setVariable ["side", west, true];
+	[_hq_container_west, "Established HQ", "M1130_HQ_unfolded_Base_EP1"] call tms_init_base_container;
+	_flag_container_west = createVehicle ["Land_CargoBox_V1_F", [getMarkerPos "respawn_west", 20, 90] call BIS_fnc_relPos, [], 0, "NONE"];
+	[_flag_container_west, "Flag_Red_F", "Flag", west] call tms_init_area_control_installation_container;
 
 	_starttruck1east = createVehicle ["O_Truck_02_transport_F", getMarkerPos "respawn_east", [], 0, "NONE"];
 	_starttruck1east setVariable ["side", east, true];
@@ -56,8 +56,8 @@ if(isServer) then {
 	[_flag_container_east, "Flag_Blue_F", "Flag", east] call tms_init_area_control_installation_container;
 
 	town_center_objects = [];
-    victory_position = 0; // If this reaches 100, side west wins. If this reaches -100, side east wins
-    mission_ended = false;
+	victory_position = 0; // If this reaches 100, side west wins. If this reaches -100, side east wins
+	mission_ended = false;
 
-    [] execVM "tmscti\periodically_update_score.sqf";
+	[] execVM "tmscti\periodically_update_score.sqf";
 };
