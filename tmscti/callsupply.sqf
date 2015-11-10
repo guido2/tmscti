@@ -43,7 +43,7 @@ if (_transportcraft == "CH-47 Chinook") then {
 
 				if (_supplykind == "item") then {
 					if (isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
-						if (getNumber( configFile >> "CfgWeapons" >> _item_class_name >> "type"  in [1, 2, 4]) then {
+						if (getNumber(configFile >> "CfgWeapons" >> _item_class_name >> "type") in [1, 2, 4]) then {
 							_cargobox addWeaponCargoGlobal [_item_class_name, 1];
 							}
 						else {
