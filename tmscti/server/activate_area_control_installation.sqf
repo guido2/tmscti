@@ -74,7 +74,7 @@ if(isServer) then {
 			] call BIS_fnc_MP;
 			}
 		else {
-			_supply_location set [tms_sl_cols_side, nil];
+			_supply_location set [tms_sl_cols_side, independent];
 			[
 				format ["Supply Location %1 is now contested.", _supply_location select tms_sl_cols_display_name],
 				"systemChat",
