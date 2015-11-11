@@ -31,4 +31,3 @@ lbClear _attachlist6;
 {
     ctrlShow [_x, true];
 } forEach _open_buttons;
-

@@ -33,11 +33,16 @@ class Mission
 		"ace_sitting",
 		"ace_weather",
 		"ace_winddeflection",
-		"ace_medical"
+		"ace_medical",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Characters_F_OPFOR"
 	};
 	addOnsAuto[]=
 	{
-		"CUP_Creatures_People_Military_DummyInfantrySet",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Characters_F_OPFOR",
 		"task_force_radio_items",
 		"A3_Modules_F",
 		"ace_advanced_ballistics",

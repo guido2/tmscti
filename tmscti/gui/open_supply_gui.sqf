@@ -11,6 +11,8 @@ _installation = _this;
 _supply_location_var = [position _installation] call tms_get_nearest_supply_location;
 _supply_location = call compile _supply_location_var;
 
+tms_current_supply_location = _supply_location;
+
 if (_supply_location select tms_sl_cols_side == side player) then {
 	createDialog "HQSupply";
 	}

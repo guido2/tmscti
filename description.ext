@@ -1,6 +1,6 @@
 #include "defines.hpp"
 #include "R3F_LOG\desc_include.h"
-#include "tmscti\gui\gui_supply_menu.hpp"
+#include "tmscti\gui\supply_menu.hpp"
 #include "tmscti\gui\gui_team_management.hpp"
 
 // Respawn type, see the table below

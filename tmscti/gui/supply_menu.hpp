@@ -1,9 +1,9 @@
 class hqsupply
-   {   
-      idd = 5000;
-      movingenable = 0;
-      onLoad = [tms_idc_fob_installations + tms_idc_all_vehicles + tms_idc_all_gear + tms_idc_supply] execVM "tmscti\gui\gui_initial_prepare_dialog.sqf";
-      enableSimulation = 1;      
+	{
+	idd = 5000;
+	movingenable = 0;
+	onLoad = execVM "tmscti\gui\initialize_supply_dialog.sqf";
+	enableSimulation = 1;
 
 class ControlsBackground
 {
@@ -138,7 +138,6 @@ class ControlsBackground
 	colorBar[] = {0.456863,0.356863,0.119608,1};
 	texture = "#(argb,8,8,3)color(1,1,1,1)";
 	colorFrame[] = {1,1,1,1};
-	onLoad = "((_this select 0) displayCtrl 1008) progressSetPosition 0";
 	};
 
 	class viewport_infobox: RscText
