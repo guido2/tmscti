@@ -45,7 +45,8 @@ if(isServer) then {
 			};
 		};
 
-	_supply_location = call compile ([position _installation] call tms_get_nearest_supply_location);
+	_supply_location_variable = [position _installation] call tms_get_nearest_supply_location;
+	_supply_location = call compile _supply_location_variable;
 	_supply_location_position = getMarkerPos (_supply_location select tms_sl_cols_map_marker);
 	if (!(isNil '_supply_location' or (_supply_location_position distance _installation) > 100)) then {
 		// Check if the enemy has got any area control installations of their own in range, mark the location as contested if yes
@@ -66,6 +67,7 @@ if(isServer) then {
 
 		if (not _enemy_aci_found) then {
 			_supply_location set [tms_sl_cols_side, _side];
+			publicVariable _supply_location_variable;
 			[
 				format ["We have taken over supply location %1.", _supply_location select tms_sl_cols_display_name],
 				"systemChat",
@@ -75,6 +77,7 @@ if(isServer) then {
 			}
 		else {
 			_supply_location set [tms_sl_cols_side, independent];
+			publicVariable _supply_location_variable;
 			[
 				format ["Supply Location %1 is now contested.", _supply_location select tms_sl_cols_display_name],
 				"systemChat",
