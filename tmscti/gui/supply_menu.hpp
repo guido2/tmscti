@@ -524,7 +524,6 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Additional FOB installations in a cargo container"; //--- ToDo: Localize;
-	Action = execVM "tmscti\supply.sqf";
 	};
 	class supplyfobdef: RscButton
 	{
