@@ -10,6 +10,7 @@ tms_supply_fighter_families =	[["F/A-18 Hornet", "tms_supply_f18_types", west],
 								["F/A-22 Raptor", "tms_supply_f22_types", west],
 								["F-16 Fighting Falcon", "tms_supply_f16_types", west],
 								["F-35 Lightning II", "tms_supply_f35_types", west],
+								["AV-8B Harrier II", "tms_supply_av8bharrierii_types", west],
 								["Suchoi Su-22", "tms_supply_su22_types", east],
 								["Suchoi Su-35", "tms_supply_su35_types", east],
 								["Suchoi PAK FA T-50", "tms_supply_t50_types", east]];
@@ -25,7 +26,24 @@ tms_supply_transport_families =	[["HMMWV Humvee", "tms_supply_humvee_types", wes
 
 tms_supply_mrap_families =	[["M-ATV", "tms_supply_matv_types", west]];
 
-tms_supply_attackhelicopter_families = [["AH-64 Apache", "tms_supply_ah64apache_types", west]];
+tms_supply_attackhelicopter_families = [["AH-6 Little Bird", "tms_supply_ah6littlebird_types", west],
+										["UH-1Y Venom", "tms_supply_uh1yvenom_types", west],
+										["AH-1 Cobra", "tms_supply_ah1cobra_types", west],
+										["AH-64 Apache", "tms_supply_ah64apache_types", west],
+										["RAH-66 Comanche", "tms_supply_rah66comanche_types", west]
+										];
+
+tms_supply_transporthelicopter_families = [["MH-6 Little Bird", "tms_supply_mh6littlebird_types", west],
+										   ["UH-1 Huey", "tms_supply_uh1huey_types", west],
+										   ["UH-60 Black Hawk", "tms_supply_uh60blackhawk_types", west],
+										   ["CH-47 Chinook", "tms_supply_ch47chinook_types", west],
+										   ["CH-53 Stallion", "tms_supply_ch53stallion_types", west],
+										   ["V-22 Osprey", "tms_supply_v22osprey_types", west]
+											];
+
+tms_supply_bomber_families = [["B-1 Lancer", "tms_supply_b1lancer_types", west],
+											 ["B-2 Spirit", "tms_supply_b2spirit_types", west]
+											];
 
 // Vehicle Family List
 tms_supply_m1_types = [["M1A1 Abrams", "tms_supply_m1a1_objects"],
@@ -60,14 +78,16 @@ tms_supply_t50_types = [["Suchoi PAK FA T-50", "tms_supply_t50_objects"]];
 
 tms_supply_a10_types = [["A-10 Thunderbolt II", "tms_supply_a10_objects"],
 						["A-100 Thunderbolt II", "tms_supply_a100_objects"]];
-						
+
+tms_supply_av8bharrierii_types = [["AV-8B Harrier II", "tms_supply_av8bharrierii_objects"]];
+
 tms_supply_su25_types = [["Suchoi Su-25", "tms_supply_su25_objects"]];
 
 tms_supply_su34_types = [["Suchoi Su-34", "tms_supply_su34_objects"]];
 
 tms_supply_ac130gun_types = [["AC-130U Spooky II", "tms_supply_ac130u_objects"],
 							["AC-130E Pave Spectre", "tms_supply_ac130e_objects"]];
-					  
+ 
 tms_supply_yak130_types = 	[["YAK-130", "tms_supply_yak130_objects"]];
 
 tms_supply_humvee_types =	[["M1025A2 Humvee", "tms_supply_m1025a2_objects"],
@@ -80,6 +100,43 @@ tms_supply_matv_types =	[["M-ATV", "tms_supply_matv_objects"]];
 tms_supply_uaz3151_types =	[["UAZ-3151 Kozlik", "tms_supply_uaz3151_objects"]];
 
 tms_supply_ah64apache_types = [["AH-64D Apache Longbow", "tms_supply_ah64d_objects"]];
+
+tms_supply_ah6littlebird_types = 	[["AH-6 Little Bird", "tms_supply_ah6littlebird_objects"],
+									 ["AH-6X MELB", "tms_supply_ah6xmelb_objects"]];
+
+tms_supply_uh1yvenom_types =		[["UH-1Y Venom", "tms_supply_uh1yvenoma_objects"]];
+
+tms_supply_ah1cobra_types =		[["AH-1Z Viper", "tms_supply_ah1zviper_objects"]];
+
+tms_supply_rah66comanche_types = [["RAH-66 Comanche", "tms_supply_rah66comanche_objects"]];
+
+tms_supply_mh6littlebird_types =	[["MH-6 Little Bird", "tms_supply_mh6littlebird_objects"],
+									 ["MH-6X MELB", "tms_supply_mh6xmelb_objects"]
+									 ];
+
+tms_supply_uh1huey_types =			[["UH-1Y Venom", "tms_supply_uh1yvenomt_objects"]];
+
+tms_supply_uh60blackhawk_types =	[["UH-60L Black Hawk", "tms_supply_uh60lblackhawk_objects"],
+									 ["UH-60M Black Hawk", "tms_supply_uh60mblackhawk_objects"],
+									 ["MH-60M Black Hawk", "tms_supply_mh60mblackhawk_objects"],
+									 ["MH-60S Sea Hawk", "tms_supply_mh60sseahawk_objects"],
+									 ["HH-60G Pave Hawk", "tms_supply_hh60spavehawk_objects"],
+									 ["UH-80 Ghost Hawk", "tms_supply_uh80ghosthawk_objects"]
+									];
+
+tms_supply_ch47chinook_types =		[["CH-47F Chinook", "tms_supply_ch47fchinook_objects"],
+									 ["CH-47I Chinook", "tms_supply_ch47ichinook_objects"]
+									];
+
+tms_supply_ch53stallion_types =		[["CH-53 Stallion", "tms_supply_ch53stallion_objects"]];
+
+tms_supply_v22osprey_types = [["CV-22 Osprey", "tms_supply_cv22osprey_objects"],
+							   ["MV-22 Osprey", "tms_supply_mv22osprey_objects"]
+								];
+
+tms_supply_b1lancer_types = [["B-1B Lancer", "tms_supply_b1blancer_objects"]];
+
+tms_supply_b2spirit_types = [["B-2 Spirit", "tms_supply_b2spirit_objects"]];
 
 // Vehicle Variant List
 tms_supply_m1a1_objects = ["tms_objects_m1a1sa",
@@ -138,6 +195,8 @@ tms_supply_a10_objects = ["tms_objects_a10a",
 
 tms_supply_a100_objects = ["tms_objects_a100"];
 
+tms_supply_av8bharrierii_objects = ["tms_objects_av8bharrierii"];
+
 tms_supply_su25_objects = ["tms_objects_su25"];
 
 tms_supply_su34_objects = ["tms_objects_su34"];
@@ -170,7 +229,63 @@ tms_supply_matv_objects = ["tms_objects_matv_unarmed"];
 tms_supply_uaz3151_objects = ["tms_objects_uaz3151_open",
 							  "tms_objects_uaz3151"];
 							  
-tms_supply_ah64d_objects = ["tms_objects_ah64d_multirole"];
+tms_supply_ah64d_objects = ["tms_objects_ah64d"];
+
+tms_supply_ah6littlebird_objects = ["tms_objects_ah6littlebird"];
+
+tms_supply_ah6xmelb_objects = ["tms_objects_ah6mmelb",
+							   "tms_objects_ah6lmelb"];
+
+tms_supply_uh1yvenoma_objects = ["tms_objects_uh1yvenoma"];
+
+tms_supply_ah1zviper_objects = ["tms_objects_ah1zviper"];
+
+tms_supply_rah66comanche_objects = ["tms_objects_rah66comanche"];
+
+tms_supply_mh6littlebird_objects = ["tms_objects_mh6littlebird"];
+
+tms_supply_mh6xmelb_objects = ["tms_objects_mh6mmelb"];
+
+tms_supply_uh1yvenomt_objects = ["tms_objects_uh1yvenomtrans",
+								 "tms_objects_uh1yvenomffarmg",
+								 "tms_objects_uh1yvenommev"];
+
+tms_supply_uh60lblackhawk_objects = ["tms_objects_uh60lblackhawkunarmed",
+									 "tms_objects_uh60lblackhawkm134"
+									];
+
+tms_supply_uh60mblackhawk_objects = ["tms_objects_uh60mblackhawkunarmed",
+									 "tms_objects_uh60mblackhawkm134",
+									 "tms_objects_uh60mblackhawkesssunarmed",
+									 "tms_objects_uh60mblackhawkmev",
+									 "tms_objects_uh60mblackhawkesssmev"
+									 ];
+
+tms_supply_mh60mblackhawk_objects = ["tms_objects_mh60mblackhawkp2",
+									 "tms_objects_uh60mblackhawkp4"];
+
+tms_supply_mh60sseahawk_objects = ["tms_objects_mh60sseahawk"];
+
+tms_supply_hh60spavehawk_objects = ["tms_objects_hh60gpavehawk"];
+
+tms_supply_uh80ghosthawk_objects = ["tms_objects_uh80ghosthawk"];
+
+tms_supply_ch47fchinook_objects = ["tms_objects_ch47fchinook"];
+
+tms_supply_ch47ichinook_objects = ["tms_objects_ch47ichinookunarmed",
+								   "tms_objects_ch47ichinookm134"
+								   ];
+
+tms_supply_ch53stallion_objects = ["tms_objects_ch53esuperstallion"];
+
+tms_supply_cv22osprey_objects = ["tms_objects_cv22osprey",
+								 "tms_objects_cv22ospreyidws"];
+
+tms_supply_mv22osprey_objects = ["tms_objects_mv22bosprey"];
+
+tms_supply_b1blancer_objects = ["tms_objects_b1blancer"];
+
+tms_supply_b2spirit_objects = ["tms_objects_b2spirit"];
 
 // Vehicle Definitions
 
@@ -552,7 +667,7 @@ tms_objects_f16c = 		["F-16C Fighting Falcon",
 						];
 
 tms_objects_f35a = 		["F-35A Lightning II",
-						"USAF_F35A_Base",// Classname
+						"USAF_F35A",// Classname
 						"\USAF_F35A\USAF_F35A.p3d",// P3D model
 						0.017,//Scale factor
 						[1.190, 0.25, 0.230],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
@@ -618,6 +733,19 @@ tms_objects_a10c = 		["A-10C Thunderbolt II",
 
 tms_objects_a100 = 		["A-100 Thunderbolt II",
 						"B_Plane_CAS_01_F",// Classname
+						"\A3\Air_F_EPC\Plane_CAS_01\Plane_cas_01_F.p3d",// P3D model
+						0.0115,//Scale factor
+						[1.235, 0.25, 0.265],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						20, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_av8bharrierii = ["AV-8B Harrier II",
+						"CUP_B_AV8B_Hydra19",// Classname
 						"\A3\Air_F_EPC\Plane_CAS_01\Plane_cas_01_F.p3d",// P3D model
 						0.0115,//Scale factor
 						[1.235, 0.25, 0.265],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
@@ -902,13 +1030,429 @@ tms_objects_uaz3151 =  ["UAZ-3151 Kozlik",
 						nil // Initialization function to run on this vehicle after it is spawned
 						];
 
-tms_objects_ah64d_multirole =  ["AH-64D Apache Longbow Multirole",
+tms_objects_ah64d =  ["AH-64D Apache Longbow",
 						"RHS_AH64D",// Classname
 						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
 						0.019,//Scale factor
 						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
 						100, // Supply points used
 						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ah6littlebird =  ["AH-6 Little Bird",
+						"B_Heli_Light_01_armed_F",// Classname
+						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
+						0.019,//Scale factor
+						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ah6mmelb =  ["AH-6M M MELB",
+						"MELB_AH6M_M",// Classname
+						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
+						0.019,//Scale factor
+						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ah6lmelb =  ["AH-6M L MELB",
+						"MELB_AH6M_L",// Classname
+						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
+						0.019,//Scale factor
+						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_uh1yvenoma = ["UH-1Y Venom",
+						"CUP_B_UH1Y_GUNSHIP_F",// Classname
+						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
+						0.019,//Scale factor
+						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ah1zviper =  ["AH-1Z Viper",
+						"RHS_AH1Z",// Classname
+						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
+						0.019,//Scale factor
+						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_rah66comanche =  ["RAH-66 Comanche",
+						"B_Heli_Attack_01_F",// Classname
+						"\rhsusf\addons\rhsusf_a2port_air\AH64\AH64D",// P3D model
+						0.019,//Scale factor
+						[1.250, 0.25, 0.414],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						0, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_mh6littlebird = ["MH-6 Little Bird", // Name of the vehicle
+						  "B_Heli_Light_01_F",// Classname
+						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
+						  0.028,//Scale factor
+						  [1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_mh6mmelb = ["MH-6M MELB", // Name of the vehicle
+						  "MELB_H6M",// Classname
+						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_tuski_d",// P3D model
+						  0.027,//Scale factor
+						  [1.302, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh1yvenomtrans = ["UH-1Y Venom Transport", // Name of the vehicle
+						  "CUP_B_UH1Y_UNA_F",// Classname
+						  "\rhsusf\addons\rhsusf_m1a1\m1a1hc_d",// P3D model
+						  0.028,//Scale factor
+						  [1.28, 0.25, 0.009],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh1yvenomffarmg = ["UH-1Y Venom FFAR/MG", // Name of the vehicle
+						  "RHS_UH1Y",// Classname
+						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_d",// P3D model
+						  0.027,//Scale factor
+						  [1.28, 0.25, 0.025],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh1yvenommev = ["UH-1Y Venom MEV", // Name of the vehicle
+						  "CUP_B_UH1Y_MEV_F",// Classname
+						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_tuski_d",// P3D model
+						  0.027,//Scale factor
+						  [1.28, 0.25, 0.025],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh60lblackhawkunarmed = ["UH-60L Black Hawk Unarmed", // Name of the vehicle
+						  "CUP_B_UH60L_Unarmed_FFV_US",// Classname
+						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_tuskii_d",// P3D model
+						  0.027,//Scale factor
+						  [1.28, 0.25, 0.025],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh60lblackhawkm134 =["UH-60L Black Hawk M134",
+						"CUP_B_UH60L_FFV_US",// Classname
+						"\rhsafrf\addons\rhs_t72\rhs_t72b_a",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.123],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_uh60mblackhawkunarmed = ["UH-60M Black Hawk Unarmed",
+						"CUP_B_UH60M_Unarmed_FFV_US",// Classname
+						"\rhsafrf\addons\rhs_t72\rhs_t72b_b",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.123],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_uh60mblackhawkm134 = ["UH-60M Black Hawk M134",
+						"CUP_B_UH60M_FFV_US",// Classname
+						"\rhsafrf\addons\rhs_t72\rhs_t72b_c",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.123],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_uh60mblackhawkesssunarmed = ["UH-60M Black Hawk ESSS Unarmed",
+						"ej_UH60M_UT",// Classname
+						"\rhsafrf\addons\rhs_t72\rhs_t72b3test",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.123],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_uh60mblackhawkmev = ["UH-60M Black Hawk MEV", // Name of the vehicle
+						  "RHS_UH60M_MEV2_d",// Classname
+						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
+						  0.028,//Scale factor
+						  [1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh60mblackhawkesssmev = ["UH-60M Black Hawk ESSS MEV", // Name of the vehicle
+						  "RHS_UH60M_MEV_d",// Classname
+						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_tuski_d",// P3D model
+						  0.027,//Scale factor
+						  [1.302, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_mh60mblackhawkp2 = ["UH-60M Black Hawk Armed 2 Pylons", // Name of the vehicle
+						  "ej_MH60MDAP",// Classname
+						  "\rhsusf\addons\rhsusf_m1a1\m1a1hc_d",// P3D model
+						  0.028,//Scale factor
+						  [1.28, 0.25, 0.009],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh60mblackhawkp4 =["UH-60M Black Hawk Armed 4 Pylons", // Name of the vehicle
+						  "ej_MH60MDAP8H",// Classname
+						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_d",// P3D model
+						  0.027,//Scale factor
+						  [1.28, 0.25, 0.025],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_mh60sseahawk = ["MH-60S Sea Hawk M240", // Name of the vehicle
+						  "CUP_B_MH60S_FFV_USMC",// Classname
+						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_tuski_d",// P3D model
+						  0.027,//Scale factor
+						  [1.28, 0.25, 0.025],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_hh60gpavehawk = ["HH-60G Pave Hawk", // Name of the vehicle
+						  "USAF_HH60G",// Classname
+						  "\rhsusf\addons\rhsusf_m1a2\m1a2v1_tuskii_d",// P3D model
+						  0.027,//Scale factor
+						  [1.28, 0.25, 0.025],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						  100, // Supply points used
+						  3, // Size of the vehicle
+						  "vehicle",//item or vehicle
+						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						  nil // Initialization function to run on this vehicle after it is spawned
+						  ];
+
+tms_objects_uh80ghosthawk =	["UH-80 Ghost Hawk",
+						"B_Heli_Transport_01_F",// Classname
+						"\rhsafrf\addons\rhs_t72\rhs_t72b_a",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.123],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ch47fchinook = ["CH-47F Chinook",
+						"RHS_CH_47F",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_2dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.040],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ch47Ichinookunarmed = ["CH-47I Chinook Unarmed",
+						"B_Heli_Transport_03_unarmed_F",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ch47ichinookm134 = ["CH-47I Chinook M134",
+						"B_Heli_Transport_03_F",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_ch53esuperstallion = ["CH-53E Super Stallion",
+						"CUP_B_CH53E_USMC",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_cv22osprey = ["CV-22 Osprey",
+						"USAF_CV22",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_cv22ospreyidws = ["CV-22 Osprey IDWS",
+						"USAF_CV22IDWS",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_mv22bosprey = ["MV-22B Osprey",
+						"CUP_B_MV22_USMC",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_b1blancer = ["B-1B Lancer",
+						"usaf_b1b",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
+						nil // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_b2spirit = ["B-2 Spirit",
+						"usaf_b2",// Classname
+						"\rhsusf\addons\rhsusf_hmmwv\rhsusf_m998_4dr",// P3D model
+						0.038,//Scale factor
+						[1.300, 0.25, 0.409],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
 						"vehicle",//item or vehicle
 						["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
