@@ -728,6 +728,7 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Light, medium and heavy transport helicopters"; //--- ToDo: Localize;
+	action = [tms_supply_transporthelicopter_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplyfighterjets: RscButton
 	{
@@ -769,6 +770,7 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Heavy bomber"; //--- ToDo: Localize;
+	action = [tms_supply_bomber_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplycargoplanes: RscButton
 	{
