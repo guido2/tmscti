@@ -21,7 +21,10 @@ tms_init_base_container = compile preprocessFileLineNumbers "tmscti\init_base_co
 tms_init_area_control_installation_container = compile preprocessFileLineNumbers "tmscti\init_area_control_installation_container.sqf";
 tms_get_nearest_object = compile preprocessFileLineNumbers "tmscti\helper_functions\get_nearest_object.sqf";
 tms_get_nearest_supply_location = compile preprocessFileLineNumbers "tmscti\helper_functions\get_nearest_supply_location.sqf";
+tms_get_near_supply_locations = compile preprocessFileLineNumbers "tmscti\helper_functions\get_near_supply_locations.sqf";
+tms_get_range_of_aci_type = compile preprocessFileLineNumbers "tmscti\helper_functions\get_range_of_aci_type.sqf";
 tms_activate_area_control_installation = compile preprocessFileLineNumbers "tmscti\activate_area_control_installation.sqf";
+tms_update_supply_location_side = compile preprocessFileLineNumbers "tmscti\update_supply_location_side.sqf";
 
 // TODO: Make configurable
 setViewDistance 4000;
