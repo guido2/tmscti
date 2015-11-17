@@ -1,5 +1,5 @@
 /*
-This file lists the class names of objects that will counts area control installations for both sides.
+This file lists the class names of objects that will count as area control installations for both sides.
 */
 
 /*
@@ -39,19 +39,19 @@ tms_aci_types_west = [
 Russia:
 
 FOB command post:
-Kommandozentrale (Hauptgebäude) / Aus Container ausgeklappt.
+Command Center (HQ) / Unpacked from shipping container
 BMP2_HQ_TK_unfolded_Base_EP1
 
 Mobile command post:
-Mobiler Kommandoposten / Muss ausgeklappt werden, wird dadurch immobil.
+Must be deployed / unfolded, becomes immobilised through that.
 rhs_gaz66_r142_vmf
 
 Mobile command vehicle:
-Mobiles Kommandofahrzeug, muss Antenne ausklappen, bleibt mobil.
+Must unfold antenna to be deployed, stays mobile after deploying
 CUP_O_BTR90_HQ_RU
 
 Field command post:
-Kleiner Kommandoposten / Aus Container ausgeklappt.
+Small command post / Unpacked from shipping containers
 Land_Cargo_HQ_V1_F
 */
 
