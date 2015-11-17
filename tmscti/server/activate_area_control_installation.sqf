@@ -45,48 +45,13 @@ if(isServer) then {
 			};
 		};
 
-	_supply_location_variable = [position _installation] call tms_get_nearest_supply_location;
-	_supply_location = call compile _supply_location_variable;
-	_supply_location_position = getMarkerPos (_supply_location select tms_sl_cols_map_marker);
-	if (!(isNil '_supply_location' or (_supply_location_position distance _installation) > 100)) then {
-		// Check if the enemy has got any area control installations of their own in range, mark the location as contested if yes
-		_enemy_aci_types = nil;
-		if (_side == west) then {
-			_enemy_aci_types = tms_aci_types_east;
-			}
-		else {
-			_enemy_aci_types = tms_aci_types_west;
-		};
-		_enemy_aci_found = false; // Whether there is an enemy aci in range of this supply location
+	_aci_classname = typeOf _installation;
+	_aci_range = [_aci_classname] call tms_get_range_of_aci_type;
+	_supply_location_variables = [position _installation, _aci_range] call tms_get_near_supply_locations;
 		{
-			_enemy_acis = _supply_location_position nearObjects [_x select 0, _x select 1];
-			if (count _enemy_acis > 0) then {
-				_enemy_aci_found = true;
-				};
-		} foreach _enemy_aci_types;
-
-		if (not _enemy_aci_found) then {
-			_supply_location set [tms_sl_cols_side, _side];
-			publicVariable _supply_location_variable;
-			[
-				format ["We have taken over supply location %1.", _supply_location select tms_sl_cols_display_name],
-				"systemChat",
-				_side,
-				false
-			] call BIS_fnc_MP;
-			}
-		else {
-			_supply_location set [tms_sl_cols_side, independent];
-			publicVariable _supply_location_variable;
-			[
-				format ["Supply Location %1 is now contested.", _supply_location select tms_sl_cols_display_name],
-				"systemChat",
-				true,
-				false
-			] call BIS_fnc_MP;
-			};
-		};
-    }
+		[_x] call tms_update_supply_location_side;
+		} forEach _supply_location_variables;
+	}
 else {
 	hint "Tried to run server-side only function on non-server";
 	};
