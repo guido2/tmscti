@@ -784,6 +784,7 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Transport and cargo planes"; //--- ToDo: Localize;
+	action = [tms_supply_transportplane_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplyUAVs: RscButton
 	{
@@ -797,6 +798,7 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Unmanned aerial vehicles"; //--- ToDo: Localize;
+	action = [tms_supply_uav_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplyspjets: RscButton
 	{
@@ -810,6 +812,7 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "AWACs, strato tanker and other special purpose planes"; //--- ToDo: Localize;
+	action = [tms_supply_utilityplane_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>NAVAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	class supplynaval: RscButton
