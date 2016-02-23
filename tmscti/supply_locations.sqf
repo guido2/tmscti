@@ -20,5 +20,5 @@ tms_sl_saltlake_beachhead = ["Salt Lake Beachhead", // Display name of the locat
 	false, // ID of attached airstrip for airplane deliveries, false if not airstrip attached
 	independent, // Side this location belongs to, independent means contested
 	[500, 500], // Current amount of supply points for this location, for east and west, respectively
-	"beachhead" // Type of this supply location, one of "heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2" or "airport"
+	"beachhead3" // Type of this supply location, one of "heli1", "heli2", "heli3", "beachhead1", "beachhead2", "beachhead3", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2" or "airport"
 	];
