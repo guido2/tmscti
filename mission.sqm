@@ -36,7 +36,9 @@ class Mission
 		"ace_medical",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"A3_Characters_F_OPFOR"
+		"A3_Characters_F_OPFOR",
+		"cup_castructures_e_misc_misc_interier",
+		"cup_camisc"
 	};
 	addOnsAuto[]=
 	{
@@ -61,11 +63,12 @@ class Mission
 		"ace_medical",
 		"A3_Structures_F_Mil_Helipads",
 		"CAStructures_E_Misc_Misc_Interier",
+		"cup_castructures_e_misc_misc_interier",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Supplies_F_Heli_CargoNets",
 		"ace_ballistics",
 		"CAMisc",
-		"aia_misc_config",
+		"cup_camisc",
 		"a3_map_altis"
 	};
 	randomSeed=8463124;
@@ -1079,7 +1082,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=19;
+		items=22;
 		class Item0
 		{
 			position[]={24109.932,3.1740577,17965.543};
@@ -1194,6 +1197,24 @@ class Mission
 			name="salt_lake_beachhead";
 			text="Salt Lake Beachhead";
 			type="mil_flag";
+		};
+		class Item19
+		{
+			position[]={24327.576,0.5489136,18041.33};
+			name="salt_lake_beachhead_lc_pos";
+			type="Empty";
+		};
+		class Item20
+		{
+			position[]={24228.061,3.279243,18068.623};
+			name="salt_lake_beachhead_sl_pos";
+			type="Empty";
+		};
+		class Item21
+		{
+			position[]={24280.945,2.8286328,18129.473};
+			name="salt_lake_beachhead_heli_pos";
+			type="Empty";
 		};
 	};
 };
