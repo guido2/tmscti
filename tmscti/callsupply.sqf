@@ -1,119 +1,25 @@
+disableSerialization;
+
 hint "Your selected supply is on the way";
 
-_chosencraft = lbCurSel 2100;
-_transportcraft = lbData [2100, _chosencraft];
+_transportcraft_index = lbCurSel 2100;
+_transportcraft = lbData [2100, _transportcraft_index];
+
+// TODO Get rid of magic numbers
+_num_items = lbSize 1507;
+
+_items_ordered = [];
+for "_i" from 0 to (_num_items - 1) do {
+	_items_ordered pushBack lbData [1507, _i];
+	};
 
 if (_transportcraft == "CH-47 Chinook") then {
-	_droppoint_pos = getmarkerpos "hqdrop1"; // TODO: Get the correct droppoint
-
-	_spawnpos = getmarkerpos "sp_e";
-	_supply_item_data_string = lbData [1507, 0];
-	_supply_item_data = call compile _supply_item_data_string;
-
-	// Create the helicopter and its cargo
-	_CH47F = createVehicle ["RHS_CH_47F", _spawnpos, [], 0, "FLY"];
-	createVehicleCrew (_CH47F);
-	_CH47F setPosASL [_spawnpos select 0, _spawnpos select 1, 200];
-
-	_number_of_items = lbSize 1507;
-	_counter = 0;
-	_dynamic_index = 0;
-	_scans = 0;
-
-	while { _scans < _number_of_items} do {
-		_cargo_factor_data_string = lbData [1507, _dynamic_index];
-		_cargo_factor_data = call compile _cargo_factor_data_string;
-		_supplykind = _cargo_factor_data select 7;
-
-		if (_supplykind == "item") then {
-			_cargobox = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
-
-			clearItemCargoGlobal _cargobox;
-			clearMagazineCargoGlobal _cargobox;
-			clearWeaponCargoGlobal _cargobox;
-			clearBackpackCargoGlobal  _cargobox;
-
-			_scans = _number_of_items;
-
-			while {_counter < _number_of_items} do {
-				_cargo_factor_data_string = lbData [1507, _dynamic_index];
-				_cargo_factor_data = call compile _cargo_factor_data_string;
-				_supplykind = _cargo_factor_data select 7;
-				_item_class_name = _cargo_factor_data select 1;
-
-				if (_supplykind == "item") then {
-					if (isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
-						if (getNumber(configFile >> "CfgWeapons" >> _item_class_name >> "type") in [1, 2, 4]) then {
-							_cargobox addWeaponCargoGlobal [_item_class_name, 1];
-							}
-						else {
-							_cargobox addItemCargoGlobal [_item_class_name, 1];
-							};
-						}
-					else {
-						if (isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
-							_cargobox addMagazineCargoGlobal [_item_class_name, 1];
-							}
-						else {
-							_cargobox additemCargoGlobal [_item_class_name, 1];
-							};
-						};
-
-					_dynamic_index = _dynamic_index + 1;
-					_counter = _counter + 1;
-					};
-				};
-
-			_cargo = _cargobox;
-			_CH47F setSlingLoad _cargo;
-			}
-		else {
-			_scans = _number_of_items;
-			_cargo_classname = _supply_item_data select 1;
-			_cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
-			_cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
-
-			// For basecontainers and other offcially "not slingloadable" objects:
-			if(_cargo_classname == "Land_Cargo20_military_green_F") then {
-				_cargo setMass [5000, 0];
-
-				containerrope1 = ropeCreate [_CH47F, "slingload0", _cargo, [0, 1.0, 1], 10];
-				containerrope2 = ropeCreate [_CH47F, "slingload0", _cargo, [0, -1.0, 1], 10];
-				containerrope3 = ropeCreate [_CH47F, "slingload0", _cargo, [3.0, 0, 1], 10];
-				containerrope4 = ropeCreate [_CH47F, "slingload0", _cargo, [-3.0, 0, 1], 10];
-				}
-			else {
-				_CH47F setSlingLoad _cargo;
-				};
-			};
-		};
-
-	_CH47F setVehicleLock "LOCKED";
-	_cargo_classname = _supply_item_data select 1;
-
-	_group = group _CH47F;
-	_group setBehaviour "CARELESS";
-
-	// Set an interim waypoint 800 meters before the drop point, to allow the helicopter to slow down
-	_direction = [_droppoint_pos, _spawnpos] call BIS_fnc_dirTo;
-	_additional_wp_pos = [_droppoint_pos, 800, _direction] call BIS_fnc_relPos;
-	_wp1 =_group addWaypoint [_additional_wp_pos, 0]; //Interimpoint
-	_wp1 setWaypointType "MOVE";
-	_wp1 setWaypointCompletionRadius 0;
-	_wp1 setWaypointSpeed "FULL";
-	_wp1 setWaypointStatements ["true", "vehicle this flyinheight 13;"];
-
-	_wp2 =_group addWaypoint [_droppoint_pos, 0];
-	_wp2 setWaypointType "MOVE";
-	_wp2 setWaypointCompletionRadius 0.1;
-	_wp2 setWaypointSpeed "LIMITED";
-	_wp2 setWaypointTimeout [12, 13, 14];
-	if(_cargo_classname == "Land_Cargo20_military_green_F") then {
-		_wp2 setWaypointStatements ["true", "vehicle this flyinheight 15; ropeDestroy containerrope1; ropeDestroy containerrope2; ropeDestroy containerrope3; ropeDestroy containerrope4; hint 'Your supply has arrived';"];
-		}
-	else {
-		_wp2 setWaypointStatements ["true", "[vehicle this, getMarkerPos 'sp_e'] execVM 'tmscti\drop_slingload_cargo_and_rtb.sqf';"];
-		};
+	[
+		[["RHS_CH_47F", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
+		"BIS_fnc_execVM",
+		true,
+		false
+	] call BIS_fnc_MP;
 	};
 
 if (_transportcraft == "C-17 Globemaster III") then {
