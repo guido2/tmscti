@@ -2,7 +2,7 @@ _helicopter = _this select 0;
 _rtb_pos = _this select 1;
 
 _helicopter flyinheight 8;
-sleep 6;
+sleep 8;
 _helicopter setSlingLoad objNull;
 hint 'Cargo has been dropped';
 _helicopter flyinheight 35;
