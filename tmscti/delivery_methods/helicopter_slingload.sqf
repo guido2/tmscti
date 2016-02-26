@@ -35,7 +35,7 @@ for "_i" from 0 to ((count _items) - 1) do {
 	_item_data = call compile _item_data_var;
 	_item_type = _item_data select 7;
 
-	if(_item_type == "item") then {
+	if(_item_type == "gear") then {
 		if(_box_created == false) then {
 			_cargobox = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
 			_box_created = true;
