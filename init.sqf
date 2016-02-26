@@ -27,8 +27,8 @@ tms_activate_area_control_installation = compile preprocessFileLineNumbers "tmsc
 tms_update_supply_location_side = compile preprocessFileLineNumbers "tmscti\update_supply_location_side.sqf";
 
 // TODO: Make configurable
-setViewDistance 4000;
-setObjectViewDistance [1800, 150];
+setViewDistance 6000;
+setObjectViewDistance [4000, 150];
 
 if(isServer) then {
 	[
