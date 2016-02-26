@@ -20,7 +20,7 @@ _item_name = _supply_item_data select 0;
 _item_classname = _supply_item_data select 1;
 _supplykind = _supply_item_data select 7;
 
-if (_supplykind == "item") then {
+if (_supplykind == "gear") then {
 
 _3dmodel = getText(configFile >> "CfgWeapons" >> _item_classname >> "model");
 
@@ -75,7 +75,7 @@ _infobox ctrlSetText _item_name;
 //	_viewport ctrlSetModelDirAndUp [[0.65,1,0.05],[0,0,1]];
 //	_viewport ctrlSetPosition [1.15, 0.25, -0.04];
 
-if (_supplykind == "item") then {
+if (_supplykind == "gear") then {
 
 	tms_list_attachments_script = [] execVM "tmscti\gui\list_attachments.sqf";
 };

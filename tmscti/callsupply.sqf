@@ -47,7 +47,7 @@ if (_transportcraft == "C-17 Globemaster III") then {
 		_supplykind = _cargo_factor_data select 7;
 		_item_class_name = _cargo_factor_data select 1;
 
-		if (_supplykind == "item") then {
+		if (_supplykind == "gear") then {
 			if ( isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
 				_cargobox addWeaponCargoGlobal [_item_class_name, 1] ;
 				}
@@ -211,7 +211,7 @@ if (_transportcraft == "D-41 Transport Ship") then {
 		_supplykind = _cargo_factor_data select 7;
 		_item_class_name = _cargo_factor_data select 1;
 
-		if (_supplykind == "item") then {
+		if (_supplykind == "gear") then {
 			if ( isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
 				_cargobox addWeaponCargoGlobal [_item_class_name, 1] ;
 				}

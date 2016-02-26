@@ -1,3 +1,5 @@
+disableSerialization;
+
 _index = lbCurSel 1502;
 _supply_item_data_string = lbData [1502, _index];
 _supply_item_data = call compile _supply_item_data_string;

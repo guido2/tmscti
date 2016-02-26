@@ -30,7 +30,7 @@ _available_delivery_modes = [];
 lbClear _object_list;
 	{
 	_object = call compile _x;
-	if (_supply_location_type in (_object select 8)) then {
+	if ((_supply_location_type in (_object select 8)) or (_object select 7) == "gear") then {
 		_index = _object_list lbAdd (_object select 0);
 		_gear = _object select 1;
 		_icon_v = getText (configFile / "CfgVehicles" / _gear / "picture");
