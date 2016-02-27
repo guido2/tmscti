@@ -8,7 +8,7 @@ _cargo_list = _display displayCtrl 1507;
 
 _itemtype = _object_struct select 7;
 
-if (_itemtype == "item") then {
+if (_itemtype == "gear") then {
 _cargolist_index = _cargo_list lbAdd (_object_struct select 0);
 _cargo_list lbSetData [_cargolist_index, _selected_data];
 
