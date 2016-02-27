@@ -30,6 +30,10 @@ tms_update_supply_location_side = compile preprocessFileLineNumbers "tmscti\upda
 setViewDistance 6000;
 setObjectViewDistance [4000, 150];
 
+if hasInterface then {
+	("victorypoints_display" call BIS_fnc_rscLayer) cutRsc ["victorypoints_display","PLAIN"];
+	};
+
 if(isServer) then {
 	[
 		5*60, // seconds to delete dead bodies (0 means don't delete)
