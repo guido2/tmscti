@@ -17,7 +17,6 @@ _items = _this select 2;
 
 _supply_location = call compile _supply_location_var;
 _droppoint_marker = (_supply_location select tms_sl_cols_delivery_positions) select 3;
-systemChat format ["droppoint marker: %1", _droppoint_marker];
 _droppoint_pos = getmarkerpos _droppoint_marker;
 
 _spawnpos = getmarkerpos "sp_e"; // TODO Get fitting spawn position
@@ -30,22 +29,24 @@ _helicopter setPosASL [_spawnpos select 0, _spawnpos select 1, 200];
 _box_created = false;
 _item_class_name = "";
 
+_cargobox = false;
+
 for "_i" from 0 to ((count _items) - 1) do {
 	_item_data_var = _items select _i;
 	_item_data = call compile _item_data_var;
 	_item_type = _item_data select 7;
 
 	if(_item_type == "gear") then {
-		if(_box_created == false) then {
+		if(_box_created isEqualTo false) then {
+			systemChat format ["Creating box"];
 			_cargobox = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
-			_box_created = true;
 			_helicopter setSlingLoad _cargobox;
+			_box_created = true;
+			clearItemCargoGlobal _cargobox;
+			clearMagazineCargoGlobal _cargobox;
+			clearWeaponCargoGlobal _cargobox;
+			clearBackpackCargoGlobal _cargobox;
 			};
-
-		clearItemCargoGlobal _cargobox;
-		clearMagazineCargoGlobal _cargobox;
-		clearWeaponCargoGlobal _cargobox;
-		clearBackpackCargoGlobal _cargobox;
 
 		_item_class_name = _item_data select 1;
 

@@ -34,7 +34,7 @@ if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Tra
         _item_class_name = _item_data select 1;
         _item_type = _item_data select 7;
 
-        if (_item_type == "item") then {
+        if (_item_type == "gear") then {
             if (_num_gear_boxes == 0) then {
                 _num_gear_boxes = 1;
             };
@@ -96,7 +96,7 @@ if (_transportcraft == "CH-47 Chinook") then {
         _item_type = _item_data select 7;
         _item_size = _item_data select 6;
 
-        if (_item_type == "item") then {
+        if (_item_type == "gear") then {
             _cargobar progressSetPosition 1.0;
             _acceptbutton ctrlEnable true;
             _item_class_name = _item_data select 1;
