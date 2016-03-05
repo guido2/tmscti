@@ -17,7 +17,7 @@ if (_transportcraft == "CH-47 Chinook") then {
 	[
 		[["RHS_CH_47F", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
 		"BIS_fnc_execVM",
-		true,
+		false,
 		false
 	] call BIS_fnc_MP;
 	};
