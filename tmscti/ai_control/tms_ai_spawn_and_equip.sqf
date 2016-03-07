@@ -91,7 +91,7 @@ if(isServer) then {
 				_nearest_buildings = nearestObjects [_active_location, ["House"], 100];
 				_number_of_buildings = count _nearest_buildings;
 				
-				if (_number_of_buildings < 0) then {
+				if (_number_of_buildings > 0) then {
 					_random_building = selectRandom _nearest_buildings;
 					_building_positions = _random_building call BIS_fnc_buildingPositions;
 					_number_of_positions = count _building_positions;
