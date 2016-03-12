@@ -16,4 +16,3 @@ tms_greenfor_medium_vehicles_pool = ["RHS_Ural_Open_Civ_01"];
 tms_greenfor_heavy_vehicles_pool = ["CUP_I_T34_NAPA", "pook_ZSU57_CDF", "CUP_I_T55_TK_GUE"];
 tms_greenfor_airborne_vehicles_pool = ["C_Heli_Light_01_civil_F"];
 tms_greenfor_static_weapons_pool = [];
-
