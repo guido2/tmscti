@@ -34,7 +34,7 @@ _ai_soldier linkItem "tf_anprc148jem_3";
 
 // Chances of how often Special Weapons and Launchers will be spawned
 
-if (_iterations == 4) then {
+if ((_iterations == 4) or (_iterations == 9)) then {
 	_special_weapon = selectRandom tms_greenfor_special_weapons_pool;
 	_special_weapon_magazine_pool = (configFile >> "CfgWeapons" >> _special_weapon >> "magazines") call BIS_fnc_getCfgData;
 	_special_weapon_magazine = selectRandom _special_weapon_magazine_pool;
@@ -43,7 +43,7 @@ if (_iterations == 4) then {
 	_ai_soldier addWeapon _special_weapon;
 };
 
-if (_iterations == 5) then {
+if ((_iterations == 5) or (_iterations == 10)) then {
 	_launcher = selectRandom tms_greenfor_launchers_pool;
 	_launcher_magazines_pool = (configFile >> "CfgWeapons" >> _launcher >> "magazines") call BIS_fnc_getCfgData;
 	_launcher_magazines = selectRandom _launcher_magazines_pool;
