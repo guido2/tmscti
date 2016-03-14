@@ -10,12 +10,16 @@ call compile preprocessFileLineNumbers "tmscti\items\bipod_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\magazine_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\railobject_definitions.sqf";
 call compile preprocessFileLineNumbers "tmscti\items\silencer_definitions.sqf";
+call compile preprocessFileLineNumbers "tmscti\ai_control\tms_resistance_gear_pool.sqf";
 
 // Load definitions of supply locations
 call compile preprocessFileLineNumbers "tmscti\supply_locations.sqf";
 
 // Load definitions of area control installations
 call compile preprocessFileLineNumbers "tmscti\area_control_installations.sqf";
+
+// Load townlocations
+execVM "tmscti\ai_control\tms_defense_locations.sqf";
 
 tms_init_base_container = compile preprocessFileLineNumbers "tmscti\init_base_container.sqf";
 tms_init_area_control_installation_container = compile preprocessFileLineNumbers "tmscti\init_area_control_installation_container.sqf";
