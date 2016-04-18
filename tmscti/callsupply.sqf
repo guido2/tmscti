@@ -23,117 +23,12 @@ if (_transportcraft == "CH-47 Chinook") then {
 	};
 
 if (_transportcraft == "C-17 Globemaster III") then {
-	_spawnpos = getmarkerpos "sp_e";
-
-	_number_of_items = lbSize 1507;
-	_transportcapacity = 6;
-
-	_counter = 0;
-	_dynamic_index = 0;
-	_totalcargofactor = 0;
-	_boxfactor = 0;
-
-	_cargobox = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
-
-	clearItemCargoGlobal _cargobox;
-	clearMagazineCargoGlobal _cargobox;
-	clearWeaponCargoGlobal _cargobox;
-	clearBackpackCargoGlobal  _cargobox;
-
-	while {_counter < _number_of_items} do {
-		_cargo_factor_data_string = lbData [1507, _dynamic_index];
-		_cargo_factor_data = call compile _cargo_factor_data_string;
-		_cargofactor = _cargo_factor_data select 6;
-		_supplykind = _cargo_factor_data select 7;
-		_item_class_name = _cargo_factor_data select 1;
-
-		if (_supplykind == "gear") then {
-			if ( isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
-				_cargobox addWeaponCargoGlobal [_item_class_name, 1] ;
-				}
-			else {
-				if (isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
-					_cargobox addMagazineCargoGlobal [_item_class_name, 1];
-					}
-				else {
-					_cargobox additemCargoGlobal [_item_class_name, 1];
-					};
-				};
-
-			_boxfactor = 1;
-			};
-
-		_totalcargofactor = _totalcargofactor + _cargofactor;
-
-		_dynamic_index = _dynamic_index + 1;
-		_counter = _counter + 1;
-		};
-
-	_totalcargofactor = _totalcargofactor + _boxfactor;
-
-	if (_totalcargofactor <= _transportcapacity) then {
-		_transC17 = createVehicle ["USAF_C17", getMarkerPos "sp_e", [], 0, "FLY"];
-		createVehicleCrew (_transC17);
-
-		_cargo_bay = 0;
-
-		while {_cargo_bay < _dynamic_index} do {
-			_cargo_factor_data_string = lbData [1507, _cargo_bay];
-			_cargo_factor_data = call compile _cargo_factor_data_string;
-			_supplykind = _cargo_factor_data select 7;
-
-			if (_supplykind == "vehicle") then {
-				_supply_item_data_string = lbData [1507, _cargo_bay];
-				_supply_item_data = call compile _supply_item_data_string;
-				_cargo_classname = _supply_item_data select 1;
-
-				_cargo = _cargo_classname createVehicle getmarkerpos "vehiclespawn";
-				_cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
-				[_transC17, _cargo] call Lala_C17_fnc_forceLoadCargo;
-				};
-			_cargo_bay = _cargo_bay + 1;
-			};
-
-		if ( _boxfactor > 0 ) then {
-			[_transC17, _cargobox] call Lala_C17_fnc_forceLoadCargo;
-			}
-		else {
-			deleteVehicle _cargobox;
-			};
-
-		_transC17 setVehicleLock "LOCKED";
-		_groupc17 = group _transC17;
-		_groupc17 setBehaviour "CARELESS";
-
-		_transC17 landAt 5;
-
-		[[(driver _transC17), "C-17 Transport approaching sand airfield, clear runway!"], "sideChat", west, false, false] call BIS_fnc_MP;
-
-		_transC17 addEventHandler ["LandedStopped", {
-			hint "Your supply has arrived";
-			{deleteVehicle _x} forEach crew (_this select 0);
-			(_this select 0) addAction ["<t color='#FFFF00'>Return C-17 to home base</t>", {
-				_transC17 = _this select 0;
-				createVehicleCrew _transC17;
-				_transC17 animate ["back_ramp", 0];
-				_transC17 animate ["back_ramp_st", 0];
-				_transC17 animate ["back_ramp_p", 0];
-				_transC17 animate ["back_ramp_p_2", 0];
-				_transC17 animate ["back_ramp_door_main", 0];
-
-				[[(driver _transC17), "C-17 Transport RTB - clear taxi- and runway!"], "sideChat", west, false, false] call BIS_fnc_MP;
-				_grpC17 = group _transC17;
-				_wp0 =_grpC17 addWaypoint [getMarkerPos "sp_e", 0];
-				_wp0 setWaypointType "MOVE";
-				_wp0 setWaypointSpeed "FULL";
-				_wp0 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
-				}];
-			}];
-
-		}
-	else {
-		hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!"
-		};
+	[
+		[["USAF_C17", tms_current_supply_location_var, _items_ordered, tms_cargoplane_c17], "tmscti\delivery_methods\deliver_by_cargoplane.sqf"],
+		"BIS_fnc_execVM",
+		false,
+		false
+	] call BIS_fnc_MP;
 	};
 
 if (_transportcraft == "Self Delivery (Jet)") then {

@@ -15,6 +15,9 @@ call compile preprocessFileLineNumbers "tmscti\ai_control\tms_resistance_gear_po
 // Load definitions of supply locations
 call compile preprocessFileLineNumbers "tmscti\supply_locations.sqf";
 
+// Load definitions of cargoplanes
+call compile preprocessFileLineNumbers "tmscti\delivery_methods\cargoplane_definitions.sqf";
+
 // Load definitions of area control installations
 call compile preprocessFileLineNumbers "tmscti\area_control_installations.sqf";
 
