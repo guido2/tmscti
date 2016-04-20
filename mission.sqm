@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=74;
+		nextID=322;
 	};
 	class MarkerIDProvider
 	{
-		nextID=23;
+		nextID=197;
 	};
 	class Camera
 	{
-		pos[]={24381.141,414.85065,18975.729};
-		dir[]={-0.66940868,-0.47101945,-0.57451433};
-		up[]={-0.35743803,0.88211793,-0.30676886};
-		aside[]={-0.65128338,3.2573007e-007,0.75885677};
+		pos[]={20093.758,502.62057,19897.17};
+		dir[]={-0.67653364,-0.7236762,-0.13676377};
+		up[]={-0.70936906,0.69009185,-0.14340296};
+		aside[]={-0.19815825,-5.8817386e-007,0.98022407};
 	};
 };
 binarizationWanted=0;
@@ -55,17 +55,48 @@ addons[]=
 	"ace_medical",
 	"ace_medical_menu",
 	"task_force_radio_items",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Supplies_F_Heli_CargoNets",
+	"ace_fastroping"
 };
 randomSeed=256192;
 class ScenarioData
 {
-	author="MDTorch";
+	overviewText="Tmsctitest";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="TMSCTIAITEST";
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -84,7 +115,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=58;
+		items=243;
 		class Item0
 		{
 			dataType="Marker";
@@ -193,7 +224,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={15422.532,0.031564996,15793.922};
-			name="port1";
+			name="altis_cargo_harbor_port";
 			type="Empty";
 			id=13;
 		};
@@ -201,7 +232,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={15438.124,0.10285374,15796.307};
-			name="dock1";
+			name="altis_cargo_harbor_dock";
 			type="Empty";
 			id=14;
 		};
@@ -374,8 +405,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2156.2544,9.2256432,11588.936};
-						angles[]={0.11942901,0,0.1167993};
+						position[]={2156.2539,9.2255888,11588.936};
+						angles[]={0.11943288,0,0.11679743};
 					};
 					side="East";
 					flags=2;
@@ -383,10 +414,72 @@ class Mission
 					{
 						skill=0.60000002;
 						init="null = [this] execVM ""tmscti\tms_loadout.sqf"";   this addeventhandler [""respawn"",""_this execVM 'tmscti\tms_loadout.sqf'""];";
+						name="s2";
 						isPlayable=1;
 					};
 					id=30;
 					type="O_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="s2";
+								};
+							};
+						};
+						nAttributes=3;
+					};
 				};
 				class Item1
 				{
@@ -1970,7 +2063,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8401.8584,73.2612,25265.379};
+				position[]={8376.041,66.398125,25264.76};
+				angles[]={6.1427827,0,0.17292169};
 			};
 			id=54;
 			type="ACE_moduleCargoSettings";
@@ -2003,7 +2097,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8428.0732,78.057999,25267.633};
+				position[]={8402.2559,73.260834,25267.014};
+				angles[]={0.069222413,0,0.1999591};
 			};
 			id=55;
 			type="ACE_moduleRearmSettings";
@@ -2036,7 +2131,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8455.6963,83.03643,25266.227};
+				position[]={8429.8789,78.870735,25265.607};
+				angles[]={0.1973955,0,0.22416797};
 			};
 			id=56;
 			type="ACE_moduleRefuelSettings";
@@ -2069,7 +2165,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8483.3193,87.249977,25266.506};
+				position[]={8457.502,83.734261,25265.887};
+				angles[]={0.11942901,0,0.34909165};
 			};
 			id=57;
 			type="ACE_moduleRepairSettings";
@@ -2254,7 +2351,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8510.6611,85.344109,25265.943};
+				position[]={8484.8438,87.371414,25265.324};
+				angles[]={0.10626435,0,0.0040116427};
 			};
 			id=58;
 			type="ACE_moduleAdvancedMedicalSettings";
@@ -2515,7 +2613,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8533.7754,84.610909,25264.535};
+				position[]={8507.958,85.771927,25263.916};
+				angles[]={0.28900898,0,6.2245846};
 			};
 			id=59;
 			type="ACE_moduleMedicalMenuSettings";
@@ -2868,7 +2967,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -3361,7 +3460,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=2;
+							value=3;
 						};
 					};
 				};
@@ -3370,11 +3469,1855 @@ class Mission
 		};
 		class Item57
 		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={22938.855,2.8947217,18781.977};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=75;
+			type="HeliHEmpty";
+		};
+		class Item58
+		{
 			dataType="Marker";
-			position[]={23199.672,13.868945,19957.771};
+			position[]={22928.734,2.8997998,18773.281};
+			name="salt_lake_airfield_sl_pos";
+			type="Empty";
+			id=76;
+		};
+		class Item59
+		{
+			dataType="Marker";
+			position[]={22938.926,2.8955348,18781.971};
+			name="salt_lake_airfield_heli_pos";
+			type="Empty";
+			id=77;
+		};
+		class Item60
+		{
+			dataType="Marker";
+			position[]={22980.551,1.534668,18854.795};
+			name="salt_lake_airfield";
+			text="Almyra Salt Lake Airstrip";
+			type="respawn_plane";
+			id=78;
+		};
+		class Item61
+		{
+			dataType="Marker";
+			position[]={14275.139,20.795923,16157.663};
+			name="airbase_airfield_sl_pos";
+			type="Empty";
+			id=80;
+		};
+		class Item62
+		{
+			dataType="Marker";
+			position[]={14352.334,20.224251,16245.686};
+			name="airbase_airfield_heli_pos";
+			type="Empty";
+			id=81;
+		};
+		class Item63
+		{
+			dataType="Marker";
+			position[]={14432.085,18.720236,16267.425};
+			name="airbase_airfield";
+			text="Altis Airbase";
+			type="respawn_plane";
+			id=82;
+		};
+		class Item64
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14352.872,20.221388,16245.828};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=83;
+			type="HeliHEmpty";
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={11704.355,29.554893,11864.512};
+			name="aac_airfield_sl_pos";
+			type="Empty";
+			id=84;
+		};
+		class Item66
+		{
+			dataType="Marker";
+			position[]={11576.125,24.68784,11906.568};
+			name="aac_airfield_heli_pos";
+			type="Empty";
+			id=85;
+		};
+		class Item67
+		{
+			dataType="Marker";
+			position[]={11610.998,27.183994,11939.973};
+			name="aac_airfield";
+			text="AAC Airfield";
+			type="respawn_plane";
+			id=86;
+		};
+		class Item68
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11576.663,24.672468,11906.711};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=87;
+			type="HeliHEmpty";
+		};
+		class Item69
+		{
+			dataType="Marker";
+			position[]={26684.242,26.281494,24568.223};
+			name="molos_airfield_sl_pos";
+			type="Empty";
+			id=88;
+		};
+		class Item70
+		{
+			dataType="Marker";
+			position[]={26765.531,19.348331,24691.084};
+			name="molos_airfield_heli_pos";
+			type="Empty";
+			id=89;
+		};
+		class Item71
+		{
+			dataType="Marker";
+			position[]={26791.859,25.049194,24624.234};
+			name="molos_airfield";
+			text="Molos Airfield";
+			type="respawn_plane";
+			id=90;
+		};
+		class Item72
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26766.068,19.326145,24691.227};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=91;
+			type="HeliHEmpty";
+		};
+		class Item73
+		{
+			dataType="Marker";
+			position[]={9260.2432,21.017086,21669.836};
+			name="krya_nera_airfield_sl_pos";
+			type="Empty";
+			id=92;
+		};
+		class Item74
+		{
+			dataType="Marker";
+			position[]={9143.5166,15.224003,21602.268};
+			name="krya_nera_airfield_heli_pos";
+			type="Empty";
+			id=93;
+		};
+		class Item75
+		{
+			dataType="Marker";
+			position[]={9194.6279,18.646187,21629.016};
+			name="krya_nera_airfield";
+			text="Krya Nera Airstrip";
+			type="respawn_plane";
+			id=94;
+		};
+		class Item76
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9144.0547,15.208008,21602.41};
+				angles[]={0.014664836,0,6.272521};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=95;
+			type="HeliHEmpty";
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={20852.9,35.097565,7293.7754};
+			name="selakano_airfield_sl_pos";
+			type="Empty";
+			id=96;
+		};
+		class Item78
+		{
+			dataType="Marker";
+			position[]={20820.039,27.925983,7271.4243};
+			name="selakano_airfield_heli_pos";
+			type="Empty";
+			id=97;
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={20789.846,33.734169,7228.7979};
+			name="selakano_airfield";
+			text="Selakano Airfield";
+			type="respawn_plane";
+			id=98;
+		};
+		class Item80
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={20820.578,27.916691,7271.5669};
+				angles[]={0.0080009829,0,6.2818484};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=99;
+			type="HeliHEmpty";
+		};
+		class Item81
+		{
+			dataType="Marker";
+			position[]={12834.063,110.78094,16736.371};
+			name="military_hill_helipad_sl_pos";
+			type="Empty";
+			id=104;
+		};
+		class Item82
+		{
+			dataType="Marker";
+			position[]={12876.818,84.663612,16739.949};
+			name="military_hill_helipad_heli_pos";
+			type="Empty";
+			id=105;
+		};
+		class Item83
+		{
+			dataType="Marker";
+			position[]={12804.502,87.706802,16663.055};
+			name="military_hill_helipad";
+			text="Military Hill Outpost";
+			type="respawn_air";
+			id=106;
+		};
+		class Item84
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12876.808,84.664642,16739.945};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=107;
+			type="HeliHEmpty";
+		};
+		class Item85
+		{
+			dataType="Marker";
+			position[]={16068.846,13.59091,16869.578};
+			name="telos_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=112;
+		};
+		class Item86
+		{
+			dataType="Marker";
+			position[]={16098.622,13.421267,16865.465};
+			name="telos_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=113;
+		};
+		class Item87
+		{
+			dataType="Marker";
+			position[]={16085.717,10.45459,16980.498};
+			name="telos_military_outpost_helipad";
+			text="Telos Military Outpost";
+			type="respawn_air";
+			id=114;
+		};
+		class Item88
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16098.589,13.640356,16865.471};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=115;
+			type="HeliHEmpty";
+		};
+		class Item89
+		{
+			dataType="Marker";
+			position[]={15166.905,21.189495,17254.568};
+			name="altis_military_base_helipad_sl_pos";
+			type="Empty";
+			id=120;
+		};
+		class Item90
+		{
+			dataType="Marker";
+			position[]={15120.044,20.56004,17294.654};
+			name="altis_military_base_helipad_heli_pos";
+			type="Empty";
+			id=121;
+		};
+		class Item91
+		{
+			dataType="Marker";
+			position[]={15174.904,17.894943,17348.803};
+			name="altis_military_base_helipad";
+			text="Altis Military Base";
+			type="respawn_air";
+			id=122;
+		};
+		class Item92
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15120.011,20.780073,17294.66};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=123;
+			type="HeliHEmpty";
+		};
+		class Item93
+		{
+			dataType="Marker";
+			position[]={20585.516,48.866699,20111.152};
+			name="pefkas_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=126;
+		};
+		class Item94
+		{
+			dataType="Marker";
+			position[]={20596.811,56.919472,20075.52};
+			name="pefkas_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=127;
+		};
+		class Item95
+		{
+			dataType="Marker";
+			position[]={20598.998,34.486328,20109.395};
+			name="pefkas_military_outpost_helipad";
+			text="Pefkas Military Outpost";
+			type="respawn_air";
+			id=128;
+		};
+		class Item96
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={20596.777,57.137081,20075.525};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=129;
+			type="HeliHEmpty";
+		};
+		class Item97
+		{
+			dataType="Marker";
+			position[]={21046.713,31.56012,19235.701};
+			name="agios_georgios_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=134;
+		};
+		class Item98
+		{
+			dataType="Marker";
+			position[]={21047.246,17.620941,19187.678};
+			name="agios_georgios_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=135;
+		};
+		class Item99
+		{
+			dataType="Marker";
+			position[]={20940.908,18.62685,19260.322};
+			name="agios_georgios_military_outpost_helipad";
+			text="Agios Georgios Military Outpost";
+			type="respawn_air";
+			id=136;
+		};
+		class Item100
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={21047.213,17.842506,19187.684};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=137;
+			type="HeliHEmpty";
+		};
+		class Item101
+		{
+			dataType="Marker";
+			position[]={17409.031,16.252441,13175.182};
+			name="pyrgos_military_base_helipad_sl_pos";
+			type="Empty";
+			id=142;
+		};
+		class Item102
+		{
+			dataType="Marker";
+			position[]={17551.545,16.464876,13239.379};
+			name="pyrgos_military_base_helipad_heli_pos";
+			type="Empty";
+			id=143;
+		};
+		class Item103
+		{
+			dataType="Marker";
+			position[]={17434.832,17.843292,13165.943};
+			name="pyrgos_military_base_helipad";
+			text="Pyrgos Military Base";
+			type="respawn_air";
+			id=144;
+		};
+		class Item104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17551.143,13.953936,13239.638};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=145;
+			type="HeliHEmpty";
+		};
+		class Item105
+		{
+			dataType="Marker";
+			position[]={11163.34,176.85059,8714.9258};
+			name="fort_vikos_helipad_sl_pos";
+			type="Empty";
+			id=146;
+		};
+		class Item106
+		{
+			dataType="Marker";
+			position[]={11199.944,187.30733,8728.0459};
+			name="fort_vikos_helipad_heli_pos";
+			type="Empty";
+			id=147;
+		};
+		class Item107
+		{
+			dataType="Marker";
+			position[]={11204.367,185.55534,8711.958};
+			name="fort_vikos_helipad";
+			text="Fort Vikos";
+			type="respawn_air";
+			id=148;
+		};
+		class Item108
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11199.911,187.51759,8728.0518};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=149;
+			type="HeliHEmpty";
+		};
+		class Item109
+		{
+			dataType="Marker";
+			position[]={12283.056,121.62012,8926.2188};
+			name="vikos_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=158;
+		};
+		class Item110
+		{
+			dataType="Marker";
+			position[]={12282.209,124.40794,8895.1074};
+			name="vikos_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=159;
+		};
+		class Item111
+		{
+			dataType="Marker";
+			position[]={12291.271,124.41055,8905.1406};
+			name="Vikos_military_outpost_helipad";
+			text="Vikos Military Outpost";
+			type="respawn_air";
+			id=160;
+		};
+		class Item112
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12282.176,124.63394,8895.1133};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=161;
+			type="HeliHEmpty";
+		};
+		class Item113
+		{
+			dataType="Marker";
+			position[]={8336.6348,75.626221,10126.823};
+			name="zaros_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=166;
+		};
+		class Item114
+		{
+			dataType="Marker";
+			position[]={8357.8818,75.63578,10091.713};
+			name="zaros_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=167;
+		};
+		class Item115
+		{
+			dataType="Marker";
+			position[]={8299.4922,79.371521,10078.71};
+			name="zaros_military_outpost_helipad";
+			text="Zaros Military Outpost";
+			type="respawn_air";
+			id=168;
+		};
+		class Item116
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8357.8486,75.854591,10091.719};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=169;
+			type="HeliHEmpty";
+		};
+		class Item117
+		{
+			dataType="Marker";
+			position[]={15468.81,4.3229442,15873.382};
+			name="altis_cargo_harbor_harbor";
+			text="Altis Cargo Harbor";
+			type="respawn_naval";
+			id=172;
+		};
+		class Item118
+		{
+			dataType="Marker";
+			position[]={16546.729,-2.3952539,15526.75};
+			name="anthrakia_docks_port";
+			type="Empty";
+			id=176;
+		};
+		class Item119
+		{
+			dataType="Marker";
+			position[]={16541.797,-2.0691237,15529.574};
+			name="anthrakia_docks_dock";
+			type="Empty";
+			id=177;
+		};
+		class Item120
+		{
+			dataType="Marker";
+			position[]={16557.463,2.0898829,15561.827};
+			name="anthrakia_docks_harbor";
+			text="Anthrakia Docks";
+			type="respawn_naval";
+			id=178;
+		};
+		class Item121
+		{
+			dataType="Marker";
+			position[]={16384.785,-9.6718063,12439.498};
+			name="pyrgos_cargo_harbor_port";
+			type="Empty";
+			id=179;
+		};
+		class Item122
+		{
+			dataType="Marker";
+			position[]={16384.617,-5.7462358,12459.087};
+			name="pyrgos_cargo_harbor_dock";
+			type="Empty";
+			id=180;
+		};
+		class Item123
+		{
+			dataType="Marker";
+			position[]={16547.578,2.387954,12474.158};
+			name="pyrgos_cargo_harbor_harbor";
+			text="Pyrgos Cargo Harbor";
+			type="respawn_naval";
+			id=181;
+		};
+		class Item124
+		{
+			dataType="Marker";
+			position[]={21927.813,-8.8058062,5962.2231};
+			name="mazi_docks_port";
+			type="Empty";
+			id=182;
+		};
+		class Item125
+		{
+			dataType="Marker";
+			position[]={21921.641,-2.9158802,5947.8315};
+			name="mazi_docks_dock";
+			type="Empty";
+			id=183;
+		};
+		class Item126
+		{
+			dataType="Marker";
+			position[]={21821.744,7.4372559,5992.3125};
+			name="mazi_docks_harbor";
+			text="Mazi Docks";
+			type="respawn_naval";
+			id=184;
+		};
+		class Item127
+		{
+			dataType="Marker";
+			position[]={22248.684,17.007969,8585.8975};
+			name="trachia_docks_port";
+			type="Empty";
+			id=185;
+		};
+		class Item128
+		{
+			dataType="Marker";
+			position[]={22239.391,22.897896,8575.3027};
+			name="trachia_docks_dock";
+			type="Empty";
+			id=186;
+		};
+		class Item129
+		{
+			dataType="Marker";
+			position[]={22279.193,39.262695,8525.9746};
+			name="trachia_docks_harbor";
+			text="Trachia Docks";
+			type="respawn_naval";
+			id=187;
+		};
+		class Item130
+		{
+			dataType="Marker";
+			position[]={21849.277,-2.2960205,10886.14};
+			name="aktinarki_docks_port";
+			type="Empty";
+			id=188;
+		};
+		class Item131
+		{
+			dataType="Marker";
+			position[]={21849.68,-1.1854844,10892.585};
+			name="aktinarki_docks_dock";
+			type="Empty";
+			id=189;
+		};
+		class Item132
+		{
+			dataType="Marker";
+			position[]={21854.621,12.678223,10943.137};
+			name="aktinarki_docks_harbor";
+			text="Aktinarki Docks";
+			type="respawn_naval";
+			id=190;
+		};
+		class Item133
+		{
+			dataType="Marker";
+			position[]={22752.768,-3.2423694,13842.706};
+			name="cap_kategidis_docks_port";
+			type="Empty";
+			id=191;
+		};
+		class Item134
+		{
+			dataType="Marker";
+			position[]={22748.707,-2.6195726,13837.899};
+			name="cap_kategidis_docks_dock";
+			type="Empty";
+			id=192;
+		};
+		class Item135
+		{
+			dataType="Marker";
+			position[]={22794.813,7.1281738,13792.299};
+			name="cap_kadegidis_docks_harbor";
+			text="Cap Kategidis Docks";
+			type="respawn_naval";
+			id=193;
+		};
+		class Item136
+		{
+			dataType="Marker";
+			position[]={27943.514,-5.4458275,23754.848};
+			name="polemistia_docks_port";
+			type="Empty";
+			id=194;
+		};
+		class Item137
+		{
+			dataType="Marker";
+			position[]={27955.227,-5.1156864,23758.936};
+			name="polemistia_docks_dock";
+			type="Empty";
+			id=195;
+		};
+		class Item138
+		{
+			dataType="Marker";
+			position[]={27940.9,3.0425196,23676.701};
+			name="polemistia_docks_harbor";
+			text="Polemistia Docks";
+			type="respawn_naval";
+			id=196;
+		};
+		class Item139
+		{
+			dataType="Marker";
+			position[]={27707.348,-4.7442923,24508.092};
+			name="molos_harbor_port";
+			type="Empty";
+			id=197;
+		};
+		class Item140
+		{
+			dataType="Marker";
+			position[]={27695.701,6.0753412,24504.063};
+			name="molos_harbor_dock";
+			type="Empty";
+			id=198;
+		};
+		class Item141
+		{
+			dataType="Marker";
+			position[]={27604.439,17.153809,24590.975};
+			name="molos_harbor_harbor";
+			text="Molos Harbor";
+			type="respawn_naval";
+			id=199;
+		};
+		class Item142
+		{
+			dataType="Marker";
+			position[]={23280.41,-4.8304076,24184.74};
+			name="sideras_docks_port";
+			type="Empty";
+			id=200;
+		};
+		class Item143
+		{
+			dataType="Marker";
+			position[]={23280.977,9.1806641,24190.07};
+			name="sideras_docks_dock";
+			type="Empty";
+			id=201;
+		};
+		class Item144
+		{
+			dataType="Marker";
+			position[]={23345.91,21.140625,24187.914};
+			name="sideras_docks_harbor";
+			text="Sideras Docks";
+			type="respawn_naval";
+			id=202;
+		};
+		class Item145
+		{
+			dataType="Marker";
+			position[]={21647.121,-4.4288549,20832.922};
+			name="iraklia_docks_port";
+			type="Empty";
+			id=203;
+		};
+		class Item146
+		{
+			dataType="Marker";
+			position[]={21640.543,15.538086,20833.42};
+			name="iraklia_docks_dock";
+			type="Empty";
+			id=204;
+		};
+		class Item147
+		{
+			dataType="Marker";
+			position[]={21631.752,28.687012,20873.572};
+			name="iraklia_docks_harbor";
+			text="Iraklia Docks";
+			type="respawn_naval";
+			id=205;
+		};
+		class Item148
+		{
+			dataType="Marker";
+			position[]={21063.223,-3.7561743,19950.938};
+			name="pefkas_docks_port";
+			type="Empty";
+			id=206;
+		};
+		class Item149
+		{
+			dataType="Marker";
+			position[]={21072.418,-2.3701837,19953.277};
+			name="pefkas_docks_dock";
+			type="Empty";
+			id=207;
+		};
+		class Item150
+		{
+			dataType="Marker";
+			position[]={21085.16,36.746582,19887.445};
+			name="pefkas_docks_harbor";
+			text="Pefkas Docks";
+			type="respawn_naval";
+			id=208;
+		};
+		class Item151
+		{
+			dataType="Marker";
+			position[]={20651.438,-2.4825292,19519.891};
+			name="agios_georgios_docks_port";
+			type="Empty";
+			id=209;
+		};
+		class Item152
+		{
+			dataType="Marker";
+			position[]={20658.131,5.3496203,19526.387};
+			name="agios_georgios_docks_dock";
+			type="Empty";
+			id=210;
+		};
+		class Item153
+		{
+			dataType="Marker";
+			position[]={20665.018,22.843628,19408.689};
+			name="agios_georgios_docks_harbor";
+			text="Agios Georgios Docks";
+			type="respawn_naval";
+			id=211;
+		};
+		class Item154
+		{
+			dataType="Marker";
+			position[]={17787.605,-3.5155983,18229.686};
+			name="kalithea_harbor_port";
+			type="Empty";
+			id=212;
+		};
+		class Item155
+		{
+			dataType="Marker";
+			position[]={17784.393,-3.5867336,18225.916};
+			name="kalithea_harbor_dock";
+			type="Empty";
+			id=213;
+		};
+		class Item156
+		{
+			dataType="Marker";
+			position[]={17827.596,8.2425919,18141.477};
+			name="kalithea_harbor_harbor";
+			text="Kalithea Harbor";
+			type="respawn_naval";
+			id=214;
+		};
+		class Item157
+		{
+			dataType="Marker";
+			position[]={17628.506,-3.337549,18912.412};
+			name="cap_zefyris_docks_port";
+			type="Empty";
+			id=215;
+		};
+		class Item158
+		{
+			dataType="Marker";
+			position[]={17615.461,-3.3717506,18909.006};
+			name="cap_zefyris_docks_dock";
+			type="Empty";
+			id=216;
+		};
+		class Item159
+		{
+			dataType="Marker";
+			position[]={17554.852,13.729614,18972.416};
+			name="cap_zefyris_docks_harbor";
+			text="Cap Zefyris Docks";
+			type="respawn_naval";
+			id=217;
+		};
+		class Item160
+		{
+			dataType="Marker";
+			position[]={16755.521,-2.8537254,20522.484};
+			name="agia_triada_docks_port";
+			type="Empty";
+			id=218;
+		};
+		class Item161
+		{
+			dataType="Marker";
+			position[]={16752.529,1.5730203,20519.629};
+			name="agia_triada_docks_dock";
+			type="Empty";
+			id=219;
+		};
+		class Item162
+		{
+			dataType="Marker";
+			position[]={16716.756,12.162323,20554.16};
+			name="agia_triada_docks_harbor";
+			text="Agia Triada Docks";
+			type="respawn_naval";
+			id=220;
+		};
+		class Item163
+		{
+			dataType="Marker";
+			position[]={16710.422,-1.6176759,21889.586};
+			name="nychi_docks_port";
+			type="Empty";
+			id=221;
+		};
+		class Item164
+		{
+			dataType="Marker";
+			position[]={16712.947,5.1929946,21888.172};
+			name="nychi_docks_dock";
+			type="Empty";
+			id=222;
+		};
+		class Item165
+		{
+			dataType="Marker";
+			position[]={16740.285,13.522591,21920.553};
+			name="nychi_docks_harbor";
+			text="Nychi Docks";
+			type="respawn_naval";
+			id=223;
+		};
+		class Item166
+		{
+			dataType="Marker";
+			position[]={3305.0583,-3.1927538,14061.43};
+			name="aggelochori_docks_port";
+			type="Empty";
+			id=227;
+		};
+		class Item167
+		{
+			dataType="Marker";
+			position[]={3310.0271,-1.7672031,14065.586};
+			name="aggelochori_docks_dock";
+			type="Empty";
+			id=228;
+		};
+		class Item168
+		{
+			dataType="Marker";
+			position[]={3286.6892,15.655762,14120.803};
+			name="aggelochori_docks_harbor";
+			text="Aggelochori Docks";
+			type="respawn_naval";
+			id=229;
+		};
+		class Item169
+		{
+			dataType="Marker";
+			position[]={3224.9702,-6.8449583,12865.408};
+			name="kavala_harbor_port";
+			type="Empty";
+			id=230;
+		};
+		class Item170
+		{
+			dataType="Marker";
+			position[]={3218.3286,0.97231138,12866.125};
+			name="kavala_harbor_dock";
+			type="Empty";
+			id=231;
+		};
+		class Item171
+		{
+			dataType="Marker";
+			position[]={3187.2424,8.9477539,12902.688};
+			name="kavala_harbor_harbor";
+			text="Kavala Harbor";
+			type="respawn_naval";
+			id=232;
+		};
+		class Item172
+		{
+			dataType="Marker";
+			position[]={2937.4268,-7.1111588,12608.242};
+			name="kavala_pier_port";
+			type="Empty";
+			id=233;
+		};
+		class Item173
+		{
+			dataType="Marker";
+			position[]={2934.7717,-5.7783155,12600.788};
+			name="kavala_pier_dock";
+			type="Empty";
+			id=234;
+		};
+		class Item174
+		{
+			dataType="Marker";
+			position[]={3047.9087,16.228149,12521.355};
+			name="kavala_pier_harbor";
+			text="Kavala Pier";
+			type="respawn_naval";
+			id=235;
+		};
+		class Item175
+		{
+			dataType="Marker";
+			position[]={3608.281,-0.96011734,10912.404};
+			name="athanos_docks_port";
+			type="Empty";
+			id=236;
+		};
+		class Item176
+		{
+			dataType="Marker";
+			position[]={3603.2297,21.604279,10916.799};
+			name="athanos_docks_dock";
+			type="Empty";
+			id=237;
+		};
+		class Item177
+		{
+			dataType="Marker";
+			position[]={3634.0991,28.165771,10848.943};
+			name="athanos_docks_harbor";
+			text="Athanos Docks";
+			type="respawn_naval";
+			id=238;
+		};
+		class Item178
+		{
+			dataType="Marker";
+			position[]={5027.9087,-5.0377774,9893.8574};
+			name="iremi_docks_port";
+			type="Empty";
+			id=239;
+		};
+		class Item179
+		{
+			dataType="Marker";
+			position[]={5030.2012,-2.5259333,9899.4805};
+			name="iremi_docks_dock";
+			type="Empty";
+			id=240;
+		};
+		class Item180
+		{
+			dataType="Marker";
+			position[]={5092.4258,8.6639404,9968.168};
+			name="iremi_docks_harbor";
+			text="Iremi Docks";
+			type="respawn_naval";
+			id=241;
+		};
+		class Item181
+		{
+			dataType="Marker";
+			position[]={9285.752,0,10860.293};
+			name="zaros_docks_port";
+			type="Empty";
+			id=242;
+		};
+		class Item182
+		{
+			dataType="Marker";
+			position[]={9280.083,3.1894531,10859.706};
+			name="zaros_docks_dock";
+			type="Empty";
+			id=243;
+		};
+		class Item183
+		{
+			dataType="Marker";
+			position[]={9265.1445,18.673462,10904.246};
+			name="zaros_docks_harbor";
+			text="Zaros Docks";
+			type="respawn_naval";
+			id=244;
+		};
+		class Item184
+		{
+			dataType="Marker";
+			position[]={12551.819,-6.1990976,12808.083};
+			name="therisa_docks_port";
+			type="Empty";
+			id=245;
+		};
+		class Item185
+		{
+			dataType="Marker";
+			position[]={12544.229,0.90559983,12805.729};
+			name="therisa_docks_dock";
+			type="Empty";
+			id=246;
+		};
+		class Item186
+		{
+			dataType="Marker";
+			position[]={12471.75,8.5752583,12714.437};
+			name="therisa_docks_harbor";
+			text="Therisa Docks";
+			type="respawn_naval";
+			id=247;
+		};
+		class Item187
+		{
+			dataType="Marker";
+			position[]={14278.277,-5.0304675,13120.418};
+			name="sagonisi_docks_port";
+			type="Empty";
+			id=248;
+		};
+		class Item188
+		{
+			dataType="Marker";
+			position[]={14276.317,-4.9807277,13120.15};
+			name="sagonisi_docks_dock";
+			type="Empty";
+			id=249;
+		};
+		class Item189
+		{
+			dataType="Marker";
+			position[]={14288.663,3.3975527,13050.278};
+			name="sagonisi_docks_harbor";
+			text="Sagonisi Docks";
+			type="respawn_naval";
+			id=250;
+		};
+		class Item190
+		{
+			dataType="Marker";
+			position[]={11907.688,-3.9629309,13554.67};
+			name="katalaki_docks_port";
+			type="Empty";
+			id=251;
+		};
+		class Item191
+		{
+			dataType="Marker";
+			position[]={11900.408,-3.8488576,13550.913};
+			name="katalaki_docks_dock";
+			type="Empty";
+			id=252;
+		};
+		class Item192
+		{
+			dataType="Marker";
+			position[]={11855.233,10.504761,13626.969};
+			name="katalaki_docks_harbor";
+			text="Katalaki Docks";
+			type="respawn_naval";
+			id=253;
+		};
+		class Item193
+		{
+			dataType="Marker";
+			position[]={12772.353,-14.47506,14112.456};
+			name="neochori_harbor_port";
+			type="Empty";
+			id=254;
+		};
+		class Item194
+		{
+			dataType="Marker";
+			position[]={12771.765,-14.194146,14111.074};
+			name="neochori_harbor_dock";
+			type="Empty";
+			id=255;
+		};
+		class Item195
+		{
+			dataType="Marker";
+			position[]={12660.346,2.9161718,14210.39};
+			name="neochori_harbor_harbor";
+			text="Neochori Harbor";
+			type="respawn_naval";
+			id=256;
+		};
+		class Item196
+		{
+			dataType="Marker";
+			position[]={13316.567,-3.4860926,14453.847};
+			name="stavros_docks_port";
+			type="Empty";
+			id=257;
+		};
+		class Item197
+		{
+			dataType="Marker";
+			position[]={13317.043,2.3916593,14457.271};
+			name="stavros_docks_dock";
+			type="Empty";
+			id=258;
+		};
+		class Item198
+		{
+			dataType="Marker";
+			position[]={13333.536,18.547707,14540.453};
+			name="stavros_docks_harbor";
+			text="Stavros Docks";
+			type="respawn_naval";
+			id=259;
+		};
+		class Item199
+		{
+			dataType="Marker";
+			position[]={12480.057,103.61639,15173.649};
+			name="lakka_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=260;
+		};
+		class Item200
+		{
+			dataType="Marker";
+			position[]={12495.798,80.800041,15195.35};
+			name="lakka_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=261;
+		};
+		class Item201
+		{
+			dataType="Marker";
+			position[]={12473.154,74.579575,15189.778};
+			name="lakka_military_outpost_helipad";
+			text="Lakka Military Outpost";
+			type="respawn_air";
+			id=262;
+		};
+		class Item202
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12495.787,80.798454,15195.346};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=263;
+			type="HeliHEmpty";
+		};
+		class Item203
+		{
+			dataType="Marker";
+			position[]={9944.627,16.969116,12182.381};
+			name="zaros_drop_zone_para";
+			text="Zaros Drop Zone";
+			type="respawn_para";
+			id=268;
+		};
+		class Item204
+		{
+			dataType="Marker";
+			position[]={9439.2539,92.668182,16245.305};
+			name="agios_dionysios_drop_zone_para";
+			text="Agios Dionysios Drop Zone";
+			type="respawn_para";
+			id=270;
+		};
+		class Item205
+		{
+			dataType="Marker";
+			position[]={12695.719,45.427589,19713.367};
+			name="ifestiona_drop_zone_para";
+			text="Ifestiona Drop Zone";
+			type="respawn_para";
+			id=271;
+		};
+		class Item206
+		{
+			dataType="Marker";
+			position[]={15429.105,27.136915,20844.887};
+			name="frini_drop_zone_para";
+			text="Frini Drop Zone";
+			type="respawn_para";
+			id=272;
+		};
+		class Item207
+		{
+			dataType="Marker";
+			position[]={4730.4028,323.39346,21888.824};
+			name="thronos_drop_zone_para";
+			text="Thronos Drop Zone";
+			type="respawn_para";
+			id=273;
+		};
+		class Item208
+		{
+			dataType="Marker";
+			position[]={5466.1694,56.336819,14983.729};
+			name="stadium_landing_zone_helipad_sl_pos";
+			type="Empty";
+			id=274;
+		};
+		class Item209
+		{
+			dataType="Marker";
+			position[]={5484.9321,33.520271,15005.891};
+			name="stadium_landing_zone_helipad_heli_pos";
+			type="Empty";
+			id=275;
+		};
+		class Item210
+		{
+			dataType="Marker";
+			position[]={5474.9063,27.299999,14995.363};
+			name="stadium_landing_zone_helipad";
+			text="Stadium Landing Zone";
+			type="respawn_air";
+			id=276;
+		};
+		class Item211
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5484.9214,33.518684,15005.887};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=277;
+			type="HeliHEmpty";
+		};
+		class Item212
+		{
+			dataType="Marker";
+			position[]={9188.4941,62.605186,13777.077};
+			name="xirolimni_landing_zone_helipad_sl_pos";
+			type="Empty";
+			id=278;
+		};
+		class Item213
+		{
+			dataType="Marker";
+			position[]={9242.9873,35.419018,13777.627};
+			name="xirolimni_landing_zone_helipad_heli_pos";
+			type="Empty";
+			id=279;
+		};
+		class Item214
+		{
+			dataType="Marker";
+			position[]={9259.8652,37.062515,13705.801};
+			name="xirolimni_landing_zone_helipad";
+			text="Xirolimni Landing Zone";
+			type="respawn_air";
+			id=280;
+		};
+		class Item215
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9242.9766,35.41814,13777.623};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=281;
+			type="HeliHEmpty";
+		};
+		class Item216
+		{
+			dataType="Marker";
+			position[]={5906.8398,231.66353,20252.295};
+			name="hill215_landing_zone_helipad_sl_pos";
+			type="Empty";
+			id=282;
+		};
+		class Item217
+		{
+			dataType="Marker";
+			position[]={5887.2354,212.9502,20252.889};
+			name="hill215_landing_zone_helipad_heli_pos";
+			type="Empty";
+			id=283;
+		};
+		class Item218
+		{
+			dataType="Marker";
+			position[]={5883.8877,207.47823,20268.424};
+			name="hill215_landing_zone_helipad";
+			text="Hill 215 Landing Zone";
+			type="respawn_air";
+			id=284;
+		};
+		class Item219
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5887.2246,212.9502,20252.885};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=285;
+			type="HeliHEmpty";
+		};
+		class Item220
+		{
+			dataType="Marker";
+			position[]={7375.7974,168.49854,17935.535};
+			name="agios_minas_drop_zone_para";
+			text="Agios Minas Drop Zone";
+			type="respawn_para";
+			id=286;
+		};
+		class Item221
+		{
+			dataType="Marker";
+			position[]={13822.744,46.571735,18973.223};
+			name="athira_military_outpost_helipad_sl_pos";
+			type="Empty";
+			id=287;
+		};
+		class Item222
+		{
+			dataType="Marker";
+			position[]={13777.046,20.263191,18932.881};
+			name="athira_military_outpost_helipad_heli_pos";
+			type="Empty";
+			id=288;
+		};
+		class Item223
+		{
+			dataType="Marker";
+			position[]={13826.894,22.175781,18976.762};
+			name="athira_military_outpost_helipad";
+			text="Athira Military Outpost";
+			type="respawn_air";
+			id=289;
+		};
+		class Item224
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13777.035,20.263674,18932.877};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=290;
+			type="HeliHEmpty";
+		};
+		class Item225
+		{
+			dataType="Marker";
+			position[]={21016.428,1.6055591,14730.652};
+			name="limni_drop_zone_para";
+			text="Limni Drop Zone";
+			type="respawn_para";
+			id=292;
+		};
+		class Item226
+		{
+			dataType="Marker";
+			position[]={18695.607,72.628677,10939.034};
+			name="shalkeia_drop_zone_para";
+			text="Shalkeia Drop Zone";
+			type="respawn_para";
+			id=293;
+		};
+		class Item227
+		{
+			dataType="Marker";
+			position[]={14796.406,1.9341321,11032.621};
+			name="faronaki_beachhead";
+			text="Faronaki Beachhead";
+			type="respawn_inf";
+			id=295;
+		};
+		class Item228
+		{
+			dataType="Marker";
+			position[]={16380.165,1.882533,9823.9014};
+			name="ekali_beachhead";
+			text="Ekali Beachhead";
+			type="respawn_inf";
+			id=296;
+		};
+		class Item229
+		{
+			dataType="Marker";
+			position[]={22125.715,2.0652156,4907.7705};
+			name="selakano_beachhead";
+			text="Selakano Beachhead";
+			type="respawn_inf";
+			id=297;
+		};
+		class Item230
+		{
+			dataType="Marker";
+			position[]={25710.059,0.61491698,19498.666};
+			name="delfinaki_beachhead";
+			text="Delfinaki Beachhead";
+			type="respawn_inf";
+			id=298;
+		};
+		class Item231
+		{
+			dataType="Marker";
+			position[]={9329.5977,1.6251954,22788.012};
+			name="ammolofi_beachhead";
+			text="Ammolofi Beachhead";
+			type="respawn_inf";
+			id=299;
+		};
+		class Item232
+		{
+			dataType="Marker";
+			position[]={3048.4878,1.7445035,22058.123};
+			name="oreokastro_beachhead";
+			text="Oreokastro Beachhead";
+			type="respawn_inf";
+			id=300;
+		};
+		class Item233
+		{
+			dataType="Marker";
+			position[]={3000.4707,2.4784889,18135.191};
+			name="fotia_beachhead";
+			text="Fotia Beachhead";
+			type="respawn_inf";
+			id=301;
+		};
+		class Item234
+		{
+			dataType="Marker";
+			position[]={3844.3589,1.0654187,17361.605};
+			name="agios_konstantinos_beachhead";
+			text="Agios Konstantinos Beachhead";
+			type="respawn_inf";
+			id=302;
+		};
+		class Item235
+		{
+			dataType="Marker";
+			position[]={2715.9688,1.0781616,9815.4326};
+			name="fournos_beachhead";
+			text="Fournos Beachhead";
+			type="respawn_inf";
+			id=303;
+		};
+		class Item236
+		{
+			dataType="Marker";
+			position[]={3718.4753,1.1635571,10171.036};
+			name="athanos_beachhead";
+			text="Athanos Beachhead";
+			type="respawn_inf";
+			id=304;
+		};
+		class Item237
+		{
+			dataType="Marker";
+			position[]={4640.582,0,10030.959};
+			name="panochori_beachhead";
+			text="Panochori Beachhead";
+			type="respawn_inf";
+			id=305;
+		};
+		class Item238
+		{
+			dataType="Marker";
+			position[]={7448.3555,1.7999022,10844.557};
+			name="edessa_beachhead";
+			text="Edessa Beachhead";
+			type="respawn_inf";
+			id=306;
+		};
+		class Item239
+		{
+			dataType="Marker";
+			position[]={23199.764,13.871707,19957.883};
 			name="tms_tl_ioannina";
 			type="Empty";
-			id=73;
+			id=307;
+		};
+		class Item240
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24069.354,4.0153027,18002.287};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
+			};
+			id=311;
+			type="B_CargoNet_01_ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_MXC_F"",""arifle_MXM_F"",""arifle_MX_F"",""arifle_MX_GL_F"",""arifle_MX_SW_F"",""arifle_SDAR_F"",""hgun_P07_F"",""hgun_Pistol_heavy_01_F"",""launch_NLAW_F"",""launch_Titan_F"",""launch_Titan_short_F"",""SMG_01_F"",""srifle_EBR_F"",""srifle_LRR_camo_F"",""srifle_LRR_F"",""FirstAidKit"",""Medikit"",""MineDetector""],[4,2,8,4,4,2,2,2,2,2,2,2,2,2,2,10,1,1]],[[""100Rnd_65x39_caseless_mag_Tracer"",""11Rnd_45ACP_Mag"",""16Rnd_9x21_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""20Rnd_556x45_UW_mag"",""20Rnd_762x51_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_556x45_Stanag_red"",""30Rnd_65x39_caseless_mag"",""3Rnd_HE_Grenade_shell"",""7Rnd_408_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""B_IR_Grenade"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""HandGrenade"",""Laserbatteries"",""MiniGrenade"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""SmokeShell"",""SmokeShellBlue"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AA"",""Titan_AP"",""Titan_AT"",""UGL_FlareGreen_F"",""UGL_FlareWhite_F""],[16,14,14,15,2,2,2,2,2,2,2,6,24,14,6,52,3,12,5,5,5,5,8,5,5,24,5,24,5,5,2,2,2,2,2,2,2,6,6,6,2,2]],[[""Binocular"",""Laserdesignator"",""Rangefinder"",""acc_flashlight"",""acc_pointer_IR"",""ItemGPS"",""muzzle_snds_acp"",""muzzle_snds_B"",""muzzle_snds_H"",""muzzle_snds_H_SW"",""muzzle_snds_L"",""optic_Aco"",""optic_Aco_smg"",""optic_DMS"",""optic_Hamr"",""optic_Holosight"",""optic_LRPS"",""optic_MRD"",""optic_NVS"",""optic_SOS"",""optic_tws"",""optic_tws_mg"",""ToolKit""],[1,1,1,5,5,5,5,5,5,1,5,2,2,2,2,2,2,2,2,2,2,2,1]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item241
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8484.3447,82.978355,25292.457};
+				angles[]={0.21273196,0,0.015994642};
+			};
+			id=312;
+			type="ACE_moduleEquipFRIES";
+		};
+		class Item242
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8410,79.002579,25225.762};
+				angles[]={0.23680627,0,0.10362019};
+			};
+			id=321;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="s2";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 };
