@@ -21,11 +21,11 @@ respawnOnStart = 0;
 
 DisabledAI=1;
 
-onLoadMission = "TMSCTI 0.0.1";
+onLoadMission = "TMSCTI 0.0.3";
 onLoadMissionTime = false;
-onLoadName = "TMSCTI 0.0.1";
+onLoadName = "TMSCTI 0.0.3";
 
-briefingName = "TMSCTI 0.0.1";
+briefingName = "TMSCTI 0.0.3";
 
 dev = "MDTorch";
 author = "MDTorch";
