@@ -90,11 +90,14 @@ _airplane landAt (_supply_location select tms_sl_cols_airstrip_id);
 _message = format ["Transport airplane approaching %1, clear runway!",  _supply_location select tms_sl_cols_display_name];
 [[(driver _airplane), _message], "sideChat", west, false, false] call BIS_fnc_MP;
 
+_airplane setVariable ["return_pos", _spawnpos];
+
 _airplane addEventHandler ["LandedStopped", {
 	hint "Your supply has arrived";
 	{deleteVehicle _x} forEach crew (_this select 0);
 	(_this select 0) addAction ["<t color='#FFFF00'>Return airplane to home base</t>", {
 		_airplane = _this select 0;
+		_return_pos = _airplane getVariable "return_pos";
 		createVehicleCrew _airplane;
 		_airplane animate ["back_ramp", 0];
 		_airplane animate ["back_ramp_st", 0];
@@ -104,7 +107,7 @@ _airplane addEventHandler ["LandedStopped", {
 
 		[[(driver _airplane), "Transport airplane returning to base - clear taxi- and runway!"], "sideChat", west, false, false] call BIS_fnc_MP;
 		_group = group _airplane;
-		_wp0 =_group addWaypoint [_spawnpos, 0];
+		_wp0 =_group addWaypoint [_return_pos, 0];
 		_wp0 setWaypointType "MOVE";
 		_wp0 setWaypointSpeed "FULL";
 		_wp0 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
