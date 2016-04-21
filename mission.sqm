@@ -1,4 +1,4 @@
-version=51;
+version=52;
 class EditorData
 {
 	moveGridStep=1;
@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={20093.758,502.62057,19897.17};
-		dir[]={-0.67653364,-0.7236762,-0.13676377};
-		up[]={-0.70936906,0.69009185,-0.14340296};
-		aside[]={-0.19815825,-5.8817386e-007,0.98022407};
+		dir[]={0.93500036,-0.30971184,-0.1731032};
+		up[]={0.30463478,0.9507969,-0.056397993};
+		aside[]={-0.18205136,4.6486093e-007,-0.98334378};
 	};
 };
 binarizationWanted=0;
@@ -131,6 +131,7 @@ class Mission
 			name="respawn_east";
 			type="Empty";
 			id=1;
+			atlOffset=-0.0019409657;
 		};
 		class Item2
 		{
@@ -147,6 +148,7 @@ class Mission
 			name="sp_n";
 			type="Empty";
 			id=3;
+			atlOffset=185.77895;
 		};
 		class Item4
 		{
@@ -227,6 +229,7 @@ class Mission
 			name="altis_cargo_harbor_port";
 			type="Empty";
 			id=13;
+			atlOffset=6.893785;
 		};
 		class Item14
 		{
@@ -235,6 +238,7 @@ class Mission
 			name="altis_cargo_harbor_dock";
 			type="Empty";
 			id=14;
+			atlOffset=7.4227219;
 		};
 		class Item15
 		{
@@ -243,6 +247,7 @@ class Mission
 			name="shipwp0";
 			type="Empty";
 			id=15;
+			atlOffset=175.82866;
 		};
 		class Item16
 		{
@@ -259,6 +264,7 @@ class Mission
 			name="shipwp2";
 			type="Empty";
 			id=17;
+			atlOffset=99.264259;
 		};
 		class Item18
 		{
@@ -301,6 +307,7 @@ class Mission
 				position[]={24080.49,3.1900001,18013.66};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -339,7 +346,7 @@ class Mission
 						angles[]={6.2285738,0,0.026668631};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -350,6 +357,7 @@ class Mission
 					};
 					id=26;
 					type="B_Soldier_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item1
 				{
@@ -360,6 +368,7 @@ class Mission
 						angles[]={6.2285728,0,0.031988446};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -378,6 +387,7 @@ class Mission
 						angles[]={6.2365522,0,0.4200784};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -392,6 +402,7 @@ class Mission
 			{
 			};
 			id=25;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item25
 		{
@@ -409,7 +420,7 @@ class Mission
 						angles[]={0.11943288,0,0.11679743};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -490,6 +501,7 @@ class Mission
 						angles[]={0.067895547,0,0.071875811};
 					};
 					side="East";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -508,6 +520,7 @@ class Mission
 						angles[]={0.0093286335,0,0.1430165};
 					};
 					side="East";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -1101,6 +1114,7 @@ class Mission
 			};
 			id=40;
 			type="ACE_ModuleMap";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1229,6 +1243,7 @@ class Mission
 			};
 			id=41;
 			type="ace_map_gestures_moduleSettings";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1423,6 +1438,7 @@ class Mission
 			};
 			id=44;
 			type="ace_mk6mortar_module";
+			atlOffset=3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2068,6 +2084,7 @@ class Mission
 			};
 			id=54;
 			type="ACE_moduleCargoSettings";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2170,6 +2187,7 @@ class Mission
 			};
 			id=57;
 			type="ACE_moduleRepairSettings";
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2356,6 +2374,7 @@ class Mission
 			};
 			id=58;
 			type="ACE_moduleAdvancedMedicalSettings";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2618,6 +2637,7 @@ class Mission
 			};
 			id=59;
 			type="ACE_moduleMedicalMenuSettings";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3220,6 +3240,7 @@ class Mission
 			};
 			id=71;
 			type="tfar_ModuleTaskForceRadio";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3481,6 +3502,7 @@ class Mission
 			};
 			id=75;
 			type="HeliHEmpty";
+			atlOffset=0.00035142899;
 		};
 		class Item58
 		{
@@ -3506,6 +3528,7 @@ class Mission
 			text="Almyra Salt Lake Airstrip";
 			type="respawn_plane";
 			id=78;
+			atlOffset=-3.1792207;
 		};
 		class Item61
 		{
@@ -3546,6 +3569,7 @@ class Mission
 			};
 			id=83;
 			type="HeliHEmpty";
+			atlOffset=0.000623703;
 		};
 		class Item65
 		{
@@ -3554,6 +3578,7 @@ class Mission
 			name="aac_airfield_sl_pos";
 			type="Empty";
 			id=84;
+			atlOffset=6.6803856;
 		};
 		class Item66
 		{
@@ -3562,6 +3587,7 @@ class Mission
 			name="aac_airfield_heli_pos";
 			type="Empty";
 			id=85;
+			atlOffset=1.4746265;
 		};
 		class Item67
 		{
@@ -3571,6 +3597,7 @@ class Mission
 			text="AAC Airfield";
 			type="respawn_plane";
 			id=86;
+			atlOffset=3.520071;
 		};
 		class Item68
 		{
@@ -3586,6 +3613,7 @@ class Mission
 			};
 			id=87;
 			type="HeliHEmpty";
+			atlOffset=1.4609833;
 		};
 		class Item69
 		{
@@ -3594,6 +3622,7 @@ class Mission
 			name="molos_airfield_sl_pos";
 			type="Empty";
 			id=88;
+			atlOffset=5.1586361;
 		};
 		class Item70
 		{
@@ -3602,6 +3631,7 @@ class Mission
 			name="molos_airfield_heli_pos";
 			type="Empty";
 			id=89;
+			atlOffset=0.0050506592;
 		};
 		class Item71
 		{
@@ -3611,6 +3641,7 @@ class Mission
 			text="Molos Airfield";
 			type="respawn_plane";
 			id=90;
+			atlOffset=2.9173794;
 		};
 		class Item72
 		{
@@ -3626,6 +3657,7 @@ class Mission
 			};
 			id=91;
 			type="HeliHEmpty";
+			atlOffset=0.00016021729;
 		};
 		class Item73
 		{
@@ -3634,6 +3666,7 @@ class Mission
 			name="krya_nera_airfield_sl_pos";
 			type="Empty";
 			id=92;
+			atlOffset=6.0762424;
 		};
 		class Item74
 		{
@@ -3642,6 +3675,7 @@ class Mission
 			name="krya_nera_airfield_heli_pos";
 			type="Empty";
 			id=93;
+			atlOffset=0.0081262589;
 		};
 		class Item75
 		{
@@ -3651,6 +3685,7 @@ class Mission
 			text="Krya Nera Airstrip";
 			type="respawn_plane";
 			id=94;
+			atlOffset=3.8224611;
 		};
 		class Item76
 		{
@@ -3661,12 +3696,14 @@ class Mission
 				angles[]={0.014664836,0,6.272521};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=95;
 			type="HeliHEmpty";
+			atlOffset=-3.1471252e-005;
 		};
 		class Item77
 		{
@@ -3675,6 +3712,7 @@ class Mission
 			name="selakano_airfield_sl_pos";
 			type="Empty";
 			id=96;
+			atlOffset=7.9605789;
 		};
 		class Item78
 		{
@@ -3683,6 +3721,7 @@ class Mission
 			name="selakano_airfield_heli_pos";
 			type="Empty";
 			id=97;
+			atlOffset=0.007434845;
 		};
 		class Item79
 		{
@@ -3692,6 +3731,7 @@ class Mission
 			text="Selakano Airfield";
 			type="respawn_plane";
 			id=98;
+			atlOffset=4.5907593;
 		};
 		class Item80
 		{
@@ -3716,6 +3756,7 @@ class Mission
 			name="military_hill_helipad_sl_pos";
 			type="Empty";
 			id=104;
+			atlOffset=24.52755;
 		};
 		class Item82
 		{
@@ -3748,6 +3789,7 @@ class Mission
 			};
 			id=107;
 			type="HeliHEmpty";
+			atlOffset=0.0002746582;
 		};
 		class Item85
 		{
@@ -3773,6 +3815,7 @@ class Mission
 			text="Telos Military Outpost";
 			type="respawn_air";
 			id=114;
+			atlOffset=-4.0891724;
 		};
 		class Item88
 		{
@@ -3788,6 +3831,7 @@ class Mission
 			};
 			id=115;
 			type="HeliHEmpty";
+			atlOffset=0.21887207;
 		};
 		class Item89
 		{
@@ -3796,6 +3840,7 @@ class Mission
 			name="altis_military_base_helipad_sl_pos";
 			type="Empty";
 			id=120;
+			atlOffset=3.2794952;
 		};
 		class Item90
 		{
@@ -3804,6 +3849,7 @@ class Mission
 			name="altis_military_base_helipad_heli_pos";
 			type="Empty";
 			id=121;
+			atlOffset=2.7285614;
 		};
 		class Item91
 		{
@@ -3828,6 +3874,7 @@ class Mission
 			};
 			id=123;
 			type="HeliHEmpty";
+			atlOffset=2.9483624;
 		};
 		class Item93
 		{
@@ -3836,6 +3883,7 @@ class Mission
 			name="pefkas_military_outpost_helipad_sl_pos";
 			type="Empty";
 			id=126;
+			atlOffset=-2.3653679;
 		};
 		class Item94
 		{
@@ -3844,6 +3892,7 @@ class Mission
 			name="pefkas_military_outpost_helipad_heli_pos";
 			type="Empty";
 			id=127;
+			atlOffset=9.6925583;
 		};
 		class Item95
 		{
@@ -3853,6 +3902,7 @@ class Mission
 			text="Pefkas Military Outpost";
 			type="respawn_air";
 			id=128;
+			atlOffset=-16.955963;
 		};
 		class Item96
 		{
@@ -3868,6 +3918,7 @@ class Mission
 			};
 			id=129;
 			type="HeliHEmpty";
+			atlOffset=9.9102364;
 		};
 		class Item97
 		{
@@ -3876,6 +3927,7 @@ class Mission
 			name="agios_georgios_military_outpost_helipad_sl_pos";
 			type="Empty";
 			id=134;
+			atlOffset=15.394945;
 		};
 		class Item98
 		{
@@ -3884,6 +3936,7 @@ class Mission
 			name="agios_georgios_military_outpost_helipad_heli_pos";
 			type="Empty";
 			id=135;
+			atlOffset=1.5306454;
 		};
 		class Item99
 		{
@@ -3893,6 +3946,7 @@ class Mission
 			text="Agios Georgios Military Outpost";
 			type="respawn_air";
 			id=136;
+			atlOffset=4.9076881;
 		};
 		class Item100
 		{
@@ -3908,6 +3962,7 @@ class Mission
 			};
 			id=137;
 			type="HeliHEmpty";
+			atlOffset=1.7506523;
 		};
 		class Item101
 		{
@@ -3916,6 +3971,7 @@ class Mission
 			name="pyrgos_military_base_helipad_sl_pos";
 			type="Empty";
 			id=142;
+			atlOffset=2.0138063;
 		};
 		class Item102
 		{
@@ -3924,6 +3980,7 @@ class Mission
 			name="pyrgos_military_base_helipad_heli_pos";
 			type="Empty";
 			id=143;
+			atlOffset=3.3933105;
 		};
 		class Item103
 		{
@@ -3933,6 +3990,7 @@ class Mission
 			text="Pyrgos Military Base";
 			type="respawn_air";
 			id=144;
+			atlOffset=3.7806215;
 		};
 		class Item104
 		{
@@ -3948,6 +4006,7 @@ class Mission
 			};
 			id=145;
 			type="HeliHEmpty";
+			atlOffset=0.88655281;
 		};
 		class Item105
 		{
@@ -3956,6 +4015,7 @@ class Mission
 			name="fort_vikos_helipad_sl_pos";
 			type="Empty";
 			id=146;
+			atlOffset=-2.1694183;
 		};
 		class Item106
 		{
@@ -3964,6 +4024,7 @@ class Mission
 			name="fort_vikos_helipad_heli_pos";
 			type="Empty";
 			id=147;
+			atlOffset=4.8366699;
 		};
 		class Item107
 		{
@@ -3973,6 +4034,7 @@ class Mission
 			text="Fort Vikos";
 			type="respawn_air";
 			id=148;
+			atlOffset=3.14534;
 		};
 		class Item108
 		{
@@ -3988,6 +4050,7 @@ class Mission
 			};
 			id=149;
 			type="HeliHEmpty";
+			atlOffset=5.046524;
 		};
 		class Item109
 		{
@@ -3996,6 +4059,7 @@ class Mission
 			name="vikos_military_outpost_helipad_sl_pos";
 			type="Empty";
 			id=158;
+			atlOffset=-2.0200806;
 		};
 		class Item110
 		{
@@ -4004,6 +4068,7 @@ class Mission
 			name="vikos_military_outpost_helipad_heli_pos";
 			type="Empty";
 			id=159;
+			atlOffset=0.6062851;
 		};
 		class Item111
 		{
@@ -4013,6 +4078,7 @@ class Mission
 			text="Vikos Military Outpost";
 			type="respawn_air";
 			id=160;
+			atlOffset=0.53966522;
 		};
 		class Item112
 		{
@@ -4028,6 +4094,7 @@ class Mission
 			};
 			id=161;
 			type="HeliHEmpty";
+			atlOffset=0.83263397;
 		};
 		class Item113
 		{
@@ -4036,6 +4103,7 @@ class Mission
 			name="zaros_military_outpost_helipad_sl_pos";
 			type="Empty";
 			id=166;
+			atlOffset=3.306366;
 		};
 		class Item114
 		{
@@ -4044,6 +4112,7 @@ class Mission
 			name="zaros_military_outpost_helipad_heli_pos";
 			type="Empty";
 			id=167;
+			atlOffset=2.3816147;
 		};
 		class Item115
 		{
@@ -4053,6 +4122,7 @@ class Mission
 			text="Zaros Military Outpost";
 			type="respawn_air";
 			id=168;
+			atlOffset=3.0188217;
 		};
 		class Item116
 		{
@@ -4068,6 +4138,7 @@ class Mission
 			};
 			id=169;
 			type="HeliHEmpty";
+			atlOffset=2.5978241;
 		};
 		class Item117
 		{
@@ -4152,6 +4223,7 @@ class Mission
 			text="Mazi Docks";
 			type="respawn_naval";
 			id=184;
+			atlOffset=3.152791;
 		};
 		class Item127
 		{
@@ -4160,6 +4232,7 @@ class Mission
 			name="trachia_docks_port";
 			type="Empty";
 			id=185;
+			atlOffset=21.798901;
 		};
 		class Item128
 		{
@@ -4168,6 +4241,7 @@ class Mission
 			name="trachia_docks_dock";
 			type="Empty";
 			id=186;
+			atlOffset=22.6229;
 		};
 		class Item129
 		{
@@ -4177,6 +4251,7 @@ class Mission
 			text="Trachia Docks";
 			type="respawn_naval";
 			id=187;
+			atlOffset=31.24353;
 		};
 		class Item130
 		{
@@ -4202,6 +4277,7 @@ class Mission
 			text="Aktinarki Docks";
 			type="respawn_naval";
 			id=190;
+			atlOffset=9.6596193;
 		};
 		class Item133
 		{
@@ -4227,6 +4303,7 @@ class Mission
 			text="Cap Kategidis Docks";
 			type="respawn_naval";
 			id=193;
+			atlOffset=3.9951155;
 		};
 		class Item136
 		{
@@ -4268,6 +4345,7 @@ class Mission
 			name="molos_harbor_dock";
 			type="Empty";
 			id=198;
+			atlOffset=4.9041858;
 		};
 		class Item141
 		{
@@ -4277,6 +4355,7 @@ class Mission
 			text="Molos Harbor";
 			type="respawn_naval";
 			id=199;
+			atlOffset=13.372866;
 		};
 		class Item142
 		{
@@ -4293,6 +4372,7 @@ class Mission
 			name="sideras_docks_dock";
 			type="Empty";
 			id=201;
+			atlOffset=6.6623726;
 		};
 		class Item144
 		{
@@ -4302,6 +4382,7 @@ class Mission
 			text="Sideras Docks";
 			type="respawn_naval";
 			id=202;
+			atlOffset=16.669659;
 		};
 		class Item145
 		{
@@ -4318,6 +4399,7 @@ class Mission
 			name="iraklia_docks_dock";
 			type="Empty";
 			id=204;
+			atlOffset=17.534683;
 		};
 		class Item147
 		{
@@ -4327,6 +4409,7 @@ class Mission
 			text="Iraklia Docks";
 			type="respawn_naval";
 			id=205;
+			atlOffset=25.771503;
 		};
 		class Item148
 		{
@@ -4343,6 +4426,7 @@ class Mission
 			name="pefkas_docks_dock";
 			type="Empty";
 			id=207;
+			atlOffset=1.5412028;
 		};
 		class Item150
 		{
@@ -4352,6 +4436,7 @@ class Mission
 			text="Pefkas Docks";
 			type="respawn_naval";
 			id=208;
+			atlOffset=27.69474;
 		};
 		class Item151
 		{
@@ -4368,6 +4453,7 @@ class Mission
 			name="agios_georgios_docks_dock";
 			type="Empty";
 			id=210;
+			atlOffset=7.524601;
 		};
 		class Item153
 		{
@@ -4377,6 +4463,7 @@ class Mission
 			text="Agios Georgios Docks";
 			type="respawn_naval";
 			id=211;
+			atlOffset=15.866929;
 		};
 		class Item154
 		{
@@ -4402,6 +4489,7 @@ class Mission
 			text="Kalithea Harbor";
 			type="respawn_naval";
 			id=214;
+			atlOffset=6.2507119;
 		};
 		class Item157
 		{
@@ -4427,6 +4515,7 @@ class Mission
 			text="Cap Zefyris Docks";
 			type="respawn_naval";
 			id=217;
+			atlOffset=8.4205761;
 		};
 		class Item160
 		{
@@ -4452,6 +4541,7 @@ class Mission
 			text="Agia Triada Docks";
 			type="respawn_naval";
 			id=220;
+			atlOffset=7.6794205;
 		};
 		class Item163
 		{
@@ -4468,6 +4558,7 @@ class Mission
 			name="nychi_docks_dock";
 			type="Empty";
 			id=222;
+			atlOffset=3.299315;
 		};
 		class Item165
 		{
@@ -4477,6 +4568,7 @@ class Mission
 			text="Nychi Docks";
 			type="respawn_naval";
 			id=223;
+			atlOffset=9.9603767;
 		};
 		class Item166
 		{
@@ -4502,6 +4594,7 @@ class Mission
 			text="Aggelochori Docks";
 			type="respawn_naval";
 			id=229;
+			atlOffset=7.614295;
 		};
 		class Item169
 		{
@@ -4527,6 +4620,7 @@ class Mission
 			text="Kavala Harbor";
 			type="respawn_naval";
 			id=232;
+			atlOffset=6.9477539;
 		};
 		class Item172
 		{
@@ -4552,6 +4646,7 @@ class Mission
 			text="Kavala Pier";
 			type="respawn_naval";
 			id=235;
+			atlOffset=1.5116949;
 		};
 		class Item175
 		{
@@ -4568,6 +4663,7 @@ class Mission
 			name="athanos_docks_dock";
 			type="Empty";
 			id=237;
+			atlOffset=24.132511;
 		};
 		class Item177
 		{
@@ -4577,6 +4673,7 @@ class Mission
 			text="Athanos Docks";
 			type="respawn_naval";
 			id=238;
+			atlOffset=24.633772;
 		};
 		class Item178
 		{
@@ -4602,6 +4699,7 @@ class Mission
 			text="Iremi Docks";
 			type="respawn_naval";
 			id=241;
+			atlOffset=4.8573985;
 		};
 		class Item181
 		{
@@ -4610,6 +4708,7 @@ class Mission
 			name="zaros_docks_port";
 			type="Empty";
 			id=242;
+			atlOffset=-0.48661622;
 		};
 		class Item182
 		{
@@ -4618,6 +4717,7 @@ class Mission
 			name="zaros_docks_dock";
 			type="Empty";
 			id=243;
+			atlOffset=0.53970218;
 		};
 		class Item183
 		{
@@ -4627,6 +4727,7 @@ class Mission
 			text="Zaros Docks";
 			type="respawn_naval";
 			id=244;
+			atlOffset=13.680361;
 		};
 		class Item184
 		{
@@ -4643,6 +4744,7 @@ class Mission
 			name="therisa_docks_dock";
 			type="Empty";
 			id=246;
+			atlOffset=1.8766356;
 		};
 		class Item186
 		{
@@ -4685,6 +4787,7 @@ class Mission
 			name="katalaki_docks_port";
 			type="Empty";
 			id=251;
+			atlOffset=8.9168549e-005;
 		};
 		class Item191
 		{
@@ -4702,6 +4805,7 @@ class Mission
 			text="Katalaki Docks";
 			type="respawn_naval";
 			id=253;
+			atlOffset=3.7497973;
 		};
 		class Item193
 		{
@@ -4710,6 +4814,7 @@ class Mission
 			name="neochori_harbor_port";
 			type="Empty";
 			id=254;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item194
 		{
@@ -4743,6 +4848,7 @@ class Mission
 			name="stavros_docks_dock";
 			type="Empty";
 			id=258;
+			atlOffset=4.9006042;
 		};
 		class Item198
 		{
@@ -4752,6 +4858,7 @@ class Mission
 			text="Stavros Docks";
 			type="respawn_naval";
 			id=259;
+			atlOffset=16.259657;
 		};
 		class Item199
 		{
@@ -4760,6 +4867,7 @@ class Mission
 			name="lakka_military_outpost_helipad_sl_pos";
 			type="Empty";
 			id=260;
+			atlOffset=28.879112;
 		};
 		class Item200
 		{
@@ -4768,6 +4876,7 @@ class Mission
 			name="lakka_military_outpost_helipad_heli_pos";
 			type="Empty";
 			id=261;
+			atlOffset=7.446167;
 		};
 		class Item201
 		{
@@ -4792,6 +4901,7 @@ class Mission
 			};
 			id=263;
 			type="HeliHEmpty";
+			atlOffset=7.4446335;
 		};
 		class Item203
 		{
@@ -4801,6 +4911,7 @@ class Mission
 			text="Zaros Drop Zone";
 			type="respawn_para";
 			id=268;
+			atlOffset=3.7812061;
 		};
 		class Item204
 		{
@@ -4845,6 +4956,7 @@ class Mission
 			name="stadium_landing_zone_helipad_sl_pos";
 			type="Empty";
 			id=274;
+			atlOffset=29.036819;
 		};
 		class Item209
 		{
@@ -4853,6 +4965,7 @@ class Mission
 			name="stadium_landing_zone_helipad_heli_pos";
 			type="Empty";
 			id=275;
+			atlOffset=6.2202721;
 		};
 		class Item210
 		{
@@ -4877,6 +4990,7 @@ class Mission
 			};
 			id=277;
 			type="HeliHEmpty";
+			atlOffset=6.2186852;
 		};
 		class Item212
 		{
@@ -4885,6 +4999,7 @@ class Mission
 			name="xirolimni_landing_zone_helipad_sl_pos";
 			type="Empty";
 			id=278;
+			atlOffset=33.743233;
 		};
 		class Item213
 		{
@@ -4893,6 +5008,7 @@ class Mission
 			name="xirolimni_landing_zone_helipad_heli_pos";
 			type="Empty";
 			id=279;
+			atlOffset=6.9563293;
 		};
 		class Item214
 		{
@@ -4917,6 +5033,7 @@ class Mission
 			};
 			id=281;
 			type="HeliHEmpty";
+			atlOffset=6.9544525;
 		};
 		class Item216
 		{
@@ -4925,6 +5042,7 @@ class Mission
 			name="hill215_landing_zone_helipad_sl_pos";
 			type="Empty";
 			id=282;
+			atlOffset=17.803848;
 		};
 		class Item217
 		{
@@ -4933,6 +5051,7 @@ class Mission
 			name="hill215_landing_zone_helipad_heli_pos";
 			type="Empty";
 			id=283;
+			atlOffset=0.00019836426;
 		};
 		class Item218
 		{
@@ -4942,6 +5061,7 @@ class Mission
 			text="Hill 215 Landing Zone";
 			type="respawn_air";
 			id=284;
+			atlOffset=-5.1521912;
 		};
 		class Item219
 		{
@@ -4957,6 +5077,7 @@ class Mission
 			};
 			id=285;
 			type="HeliHEmpty";
+			atlOffset=0.00019836426;
 		};
 		class Item220
 		{
@@ -4974,6 +5095,7 @@ class Mission
 			name="athira_military_outpost_helipad_sl_pos";
 			type="Empty";
 			id=287;
+			atlOffset=26.657307;
 		};
 		class Item222
 		{
@@ -4982,6 +5104,7 @@ class Mission
 			name="athira_military_outpost_helipad_heli_pos";
 			type="Empty";
 			id=288;
+			atlOffset=0.00031089783;
 		};
 		class Item223
 		{
@@ -4991,6 +5114,7 @@ class Mission
 			text="Athira Military Outpost";
 			type="respawn_air";
 			id=289;
+			atlOffset=2.0526905;
 		};
 		class Item224
 		{
@@ -5006,6 +5130,7 @@ class Mission
 			};
 			id=290;
 			type="HeliHEmpty";
+			atlOffset=0.00031089783;
 		};
 		class Item225
 		{
@@ -5123,6 +5248,7 @@ class Mission
 			text="Panochori Beachhead";
 			type="respawn_inf";
 			id=305;
+			atlOffset=-0.25706419;
 		};
 		class Item238
 		{
@@ -5149,12 +5275,14 @@ class Mission
 				position[]={24069.354,4.0153027,18002.287};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
 			};
 			id=311;
 			type="B_CargoNet_01_ammo_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
