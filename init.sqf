@@ -22,7 +22,7 @@ call compile preprocessFileLineNumbers "tmscti\delivery_methods\cargoplane_defin
 call compile preprocessFileLineNumbers "tmscti\area_control_installations.sqf";
 
 // Load townlocations
-execVM "tmscti\ai_control\tms_defense_locations.sqf";
+call compile preprocessFileLineNumbers "tmscti\ai_control\tms_defense_locations.sqf";
 
 tms_init_base_container = compile preprocessFileLineNumbers "tmscti\init_base_container.sqf";
 tms_init_area_control_installation_container = compile preprocessFileLineNumbers "tmscti\init_area_control_installation_container.sqf";
