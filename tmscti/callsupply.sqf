@@ -53,28 +53,15 @@ if (_transportcraft == "Self Delivery (Jet)") then {
 
 // NOTE: Helicopters need a helipad (invisible) placed in the editor in addition to the waypoint marker!
 if (_transportcraft == "Self Delivery (Helicopter)") then {
-	_supply_item_data_string = lbData [1507, 0];
-	_supply_item_data = call compile _supply_item_data_string;
-	_helicopter_classname = _supply_item_data select 1;
-	_helicopter = CreateVehicle [_helicopter_classname, getMarkerPos "sp_e", [], 0, "FLY"];
-	createVehicleCrew (_helicopter);
-
-	_land_pos = getmarkerpos "helipad1"; // TODO: Get the correct point
-
-	_grouphelicopter = group _helicopter;
-	_grouphelicopter setBehaviour "CARELESS";
-
-	_helicopter addEventHandler ["Engine", {
-		hint "Your supply has arrived";
-		{deleteVehicle _x} forEach crew (_this select 0);
-		_this select 0 removeAllEventHandlers "Engine";
-		}];
-
-	_wp0 = _grouphelicopter addWaypoint [_land_pos, 0];
-	_wp0 setWaypointType "MOVE";
-	_wp0 setWaypointCompletionRadius 0.1;
-	_wp0 setWaypointSpeed "FULL";
-	_wp0 setWaypointStatements ["true", "(vehicle this) land 'land'"];
+	_helicopter_data_var = _items_ordered select 0;
+	_helicopter_data = call compile _helicopter_data_var;
+	_helicopter_class_name = _helicopter_data select 1;
+	[
+		[[_helicopter_class_name, tms_current_supply_location_var], "tmscti\delivery_methods\helicopter_self_delivery.sqf"],
+		"BIS_fnc_execVM",
+		false,
+		false
+	] call BIS_fnc_MP;
 	};
 
 if (_transportcraft == "D-41 Transport Ship") then {
