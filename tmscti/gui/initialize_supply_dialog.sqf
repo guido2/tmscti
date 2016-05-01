@@ -52,8 +52,8 @@ else { // if side east
 };
 
 if (not (_airstrip_id isEqualTo false) and _tier >= 2) then {
-	_craftlist lbAdd ("Self Delivery (Jet)");
-	_craftlist lbSetData [_current_index, "Self Delivery (Jet)"];
+	_craftlist lbAdd ("Self Delivery (Airplane)");
+	_craftlist lbSetData [_current_index, "Self Delivery (Airplane)"];
 	_current_index = _current_index + 1;
 	};
 

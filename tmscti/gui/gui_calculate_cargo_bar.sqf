@@ -134,8 +134,10 @@ if (_transportcraft == "CH-47 Chinook") then {
     };
 };
 
-// Self delivery (Jet)
-if (_transportcraft == "Self Delivery (Jet)") then {
+// Self delivery (Airplane)
+if (_transportcraft == "Self Delivery (Airplane)") then {
+	// TODO Disable Accept button if more than one item in list
+	// TODO Check if all items in list are airplanes
     if (_number_of_items > 0) then {
         _cargobar progressSetPosition 1.0;
         _acceptbutton ctrlEnable true;
@@ -145,6 +147,8 @@ if (_transportcraft == "Self Delivery (Jet)") then {
 
 // Self delivery (Helicopter)
 if (_transportcraft == "Self Delivery (Helicopter)") then {
+	// TODO Disable Accept button if more than one item in list
+	// TODO Check if all items in list are helicopters or capable of landing like a helicopter
     if (_number_of_items > 0) then {
         _cargobar progressSetPosition 1.0;
         _acceptbutton ctrlEnable true;

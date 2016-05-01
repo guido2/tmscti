@@ -31,24 +31,17 @@ if (_transportcraft == "C-17 Globemaster III") then {
 	] call BIS_fnc_MP;
 	};
 
-if (_transportcraft == "Self Delivery (Jet)") then {
-	_supply_item_data_string = lbData [1507, 0];
-	_supply_item_data = call compile _supply_item_data_string;
-	_jet_classname = _supply_item_data select 1;
-	_jet = CreateVehicle [_jet_classname, getMarkerPos "sp_e", [], 0, "FLY"];
-	createVehicleCrew (_jet);
-
-	_groupjet = group _jet;
-	_groupjet setBehaviour "CARELESS";
-
-	_jet landAt 5;
-
-	[[(driver _jet), "Aircraft approaching sand airfield, clear runway!"], "sideChat", west, false, false] call BIS_fnc_MP;
-
-	_jet addEventHandler ["LandedStopped", {
-		hint "Your supply has arrived";
-		{deleteVehicle _x} forEach crew (_this select 0);
-		}];
+if (_transportcraft == "Self Delivery (Airplane)") then {
+	// TODO Check that this is really an airplane class name
+	_airplane_data_var = _items_ordered select 0;
+	_airplane_data = call compile _airplane_data_var;
+	_airplane_class_name = _airplane_data select 1;
+	[
+		[[_airplane_class_name, tms_current_supply_location_var], "tmscti\delivery_methods\airplane_self_delivery.sqf"],
+		"BIS_fnc_execVM",
+		false,
+		false
+	] call BIS_fnc_MP;
 	};
 
 // NOTE: Helicopters need a helipad (invisible) placed in the editor in addition to the waypoint marker!
