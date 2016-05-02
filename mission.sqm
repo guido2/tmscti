@@ -119,7 +119,7 @@ class Mission
 		class Item0
 		{
 			dataType="Marker";
-			position[]={24109.932,3.1740577,17965.543};
+			position[]={24256.363,3.4810083,18058.223};
 			name="respawn_west";
 			type="Empty";
 			id=0;
@@ -127,11 +127,11 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={24108,3.1740577,17965.543};
+			position[]={2685.845,79.101074,9845.1807};
 			name="respawn_east";
 			type="Empty";
 			id=1;
-			atlOffset=-0.0019409657;
+			atlOffset=74.151764;
 		};
 		class Item2
 		{
