@@ -22,6 +22,51 @@ if (_transportcraft == "CH-47 Chinook") then {
 	] call BIS_fnc_MP;
 	};
 
+if (_transportcraft == "UH-1Y Venom") then {
+	[
+		[["RHS_UH1Y_UNARMED_d", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
+		"BIS_fnc_execVM",
+		true,
+		false
+	] call BIS_fnc_MP;
+	};
+
+if (_transportcraft == "CH-53E Super Stallion") then {
+	[
+		[["CUP_B_CH53E_USMC", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
+		"BIS_fnc_execVM",
+		true,
+		false
+	] call BIS_fnc_MP;
+	};
+
+if (_transportcraft == "Ka-60 Kasatka") then {
+	[
+		[["rhs_ka60_c", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
+		"BIS_fnc_execVM",
+		true,
+		false
+	] call BIS_fnc_MP;
+	};
+
+if (_transportcraft == "Mil Mi-8MT") then {
+	[
+		[["RHS_Mi8mt_vvsc", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
+		"BIS_fnc_execVM",
+		true,
+		false
+	] call BIS_fnc_MP;
+	};
+
+if (_transportcraft == "Mil Mi-6") then {
+	[
+		[["CUP_O_MI6A_RU", tms_current_supply_location_var, _items_ordered], "tmscti\delivery_methods\helicopter_slingload.sqf"],
+		"BIS_fnc_execVM",
+		true,
+		false
+	] call BIS_fnc_MP;
+	};
+
 if (_transportcraft == "C-17 Globemaster III") then {
 	[
 		[["USAF_C17", tms_current_supply_location_var, _items_ordered, tms_cargoplane_c17], "tmscti\delivery_methods\deliver_by_cargoplane.sqf"],
