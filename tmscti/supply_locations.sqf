@@ -17,7 +17,7 @@ if(isNil "tms_sl_saltlake_beachhead") then {
 	tms_sl_saltlake_beachhead = ["Salt Lake Beachhead", // Display name of the location
 		"salt_lake_beachhead", // Name of the map marker for this location
 		2, // Tier
-		["salt_lake_beachhead", "salt_lake_beachhead_lc_pos", false, "salt_lake_beachhead_sl_pos", "salt_lake_beachhead_heli_pos", false], // Positions for actual delivery, in order: Self delivery for amphibious vehicles, Delivery via landing craft, delivery via ship, Delivery via helicopter slingload, Self-delivery of helicopters, Paradrop via aircraft false where not possible at this location
+		["salt_lake_beachhead", "salt_lake_beachhead_lc_pos", false, "salt_lake_beachhead_sl_pos", "salt_lake_beachhead_heli_pos", false], // Positions for actual delivery, in order: Self delivery for amphibious vehicles, Delivery via landing craft, delivery via ship, Delivery via helicopter slingload, Self-delivery of helicopters, Paradrop via aircraft. false where not possible at this location
 		false, // ID of attached airstrip for airplane deliveries, false if not airstrip attached
 		independent, // Side this location belongs to, independent means contested
 		[500, 500], // Current amount of supply points for this location, for east and west, respectively
