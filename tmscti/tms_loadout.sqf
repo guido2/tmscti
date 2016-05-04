@@ -21,3 +21,7 @@ if (side _unit == west) then {
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_fieldDressing";};
 _unit addItemToVest "ACE_morphine";
 _unit setSpeaker "ACE_NoVoice";
+_unit addItem "ItemMap";
+_unit addItem "ItemWatch";
+_unit assignItem "ItemWatch";
+_unit assignItem "ItemMap";
