@@ -14,8 +14,9 @@ if(isServer) then {
 	_installation = _this select 0;
 	_side = _this select 1;
 
+	_aci_range = [typeOf _installation] call tms_get_range_of_aci_type;
 	_town_center_object = [position _installation, town_center_objects] call tms_get_nearest_object;
-	if (!(isNil '_town_center_object' or (_town_center_object distance _installation) > 100)) then {
+	if (!(isNil '_town_center_object' or (_town_center_object distance _installation) > _aci_range)) then {
 		_installation setVariable ["active", true, true];
 
 		_old_side = _town_center_object getVariable "side";
@@ -45,8 +46,6 @@ if(isServer) then {
 			};
 		};
 
-	_aci_classname = typeOf _installation;
-	_aci_range = [_aci_classname] call tms_get_range_of_aci_type;
 	_supply_location_variables = [position _installation, _aci_range] call tms_get_near_supply_locations;
 		{
 		[_x] call tms_update_supply_location_side;
