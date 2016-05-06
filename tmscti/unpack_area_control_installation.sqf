@@ -29,5 +29,5 @@ if ((!(isNil '_town_center_object' or (_town_center_object distance _container) 
 	}
 else
 	{
-	systemChat format ["Cannot unpack area control installation: No town center found with %1 meters.", _aci_range];
+	systemChat format ["Cannot unpack area control installation: No town center found within %1 meters.", _aci_range];
 	};
