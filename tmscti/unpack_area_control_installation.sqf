@@ -8,8 +8,10 @@ _town_center_object = [position _container, town_center_objects] call tms_get_ne
 _supply_location = call compile ([position _container] call tms_get_nearest_supply_location);
 _supply_location_position = getMarkerPos (_supply_location select 1);
 
-if ((!(isNil '_town_center_object' or (_town_center_object distance _container) > 100)) or
-	(!(isNil '_supply_location' or (_supply_location_position distance _container) > 100))) then {
+_aci_range = [_installation_class] call tms_get_range_of_aci_type;
+
+if ((!(isNil '_town_center_object' or (_town_center_object distance _container) > _aci_range)) or
+	(!(isNil '_supply_location' or (_supply_location_position distance _container) > _aci_range))) then {
 	for "_i" from 0 to 5 do {
 		player playmove "AinvPknlMstpSlayWnonDnon_medic";
 		};
@@ -27,5 +29,5 @@ if ((!(isNil '_town_center_object' or (_town_center_object distance _container) 
 	}
 else
 	{
-	systemChat "Cannot unpack area control installation: No town center found with 100 meters."
+	systemChat format ["Cannot unpack area control installation: No town center found within %1 meters.", _aci_range];
 	};
