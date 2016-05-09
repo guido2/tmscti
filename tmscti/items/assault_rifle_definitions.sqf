@@ -21,7 +21,7 @@ tms_supply_assaultrifle_families	=	[["M4", "tms_supply_m4_types", west],
 										 ["AKM", "tms_supply_akm_types", east],
 										 ["AKMS", "tms_supply_akms_types", east],
 										 ["AKS", "tms_supply_aks_types", east],
-										 ["AS", "tms_supply_asv_types", east],
+										 ["AS", "tms_supply_as_types", east],
 										 ["ASP", "tms_supply_asp_types", east],
 										 ["PP-19 Bizon", "tms_supply_bizon_types", east],
 										 ["RFB SDAR", "tms_supply_rfb_sdar_e_types", east],
@@ -287,7 +287,6 @@ tms_supply_ak74m_objects			=	["tms_objects_ak74m",
 										 "tms_objects_ak74mfolded",
 										 "tms_objects_ak74mfoldeddesert",
 										 "tms_objects_ak74mfoldedcamo",
-										 "tms_objects_ak74msteelmag",
 										 "tms_objects_ak74mgp25",
 										 "tms_objects_ak74mv2gp25",
 										 "tms_objects_ak74mv3gp25",
@@ -2514,11 +2513,11 @@ tms_objects_ak107 =  ["AK-107", // Name of the vehicle
 tms_objects_ak107gp25 =  ["AK-107 GP-25", // Name of the vehicle
 						  "CUP_arifle_AK107_GL",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
-						 0.2,//Scale factor
-						  "gear", // gear or vehicle
+						  0.2,//Scale factor  
 						  [1.35, 0.25, 0.1],//transformfactor
 						  100, // Supply points used
 						  0, // Size of the vehicle
+						  "gear", // gear or vehicle
 						  ["heli1", "heli2", "heli3", "beachhead", "cargoport1", "cargoport2", "cargoport3", "airfield1", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
 						  ["landing_craft", "c17_vehicle_cargo", "chinook_as_slingload"], // Transport craft that are capable of delivering this vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
@@ -2797,7 +2796,7 @@ tms_objects_aks74 =  ["AKS-74", // Name of the vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
 
-tms_objects_aksv1gp25 =  ["AKS-74 GP-25 V1", // Name of the vehicle
+tms_objects_aks74v1gp25 =  ["AKS-74 GP-25 V1", // Name of the vehicle
 						  "VTN_AKS74_76_GP25",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
 						  0.2,//Scale factor
@@ -2810,7 +2809,7 @@ tms_objects_aksv1gp25 =  ["AKS-74 GP-25 V1", // Name of the vehicle
 						  nil // Initialization function to run on this vehicle after it is spawned
 						  ];
 
-tms_objects_aksv2gp25 =  ["AKS-74 GP-25 V2", // Name of the vehicle
+tms_objects_aks74v2gp25 =  ["AKS-74 GP-25 V2", // Name of the vehicle
 						  "VTN_AKS74_GP25",// Classname
 						  "\rhsusf\addons\rhsusf_m1a1\m1a1aim_d",// P3D model
 						  0.2,//Scale factor
