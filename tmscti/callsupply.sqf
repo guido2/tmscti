@@ -31,6 +31,15 @@ if (_transportcraft == "C-17 Globemaster III") then {
 	] call BIS_fnc_MP;
 	};
 
+if (_transportcraft == "AN-22 Antei") then {
+	[
+		[["Sab_an22_2", tms_current_supply_location_var, _items_ordered, tms_cargoplane_an22], "tmscti\delivery_methods\deliver_by_cargoplane.sqf"],
+		"BIS_fnc_execVM",
+		false,
+		false
+	] call BIS_fnc_MP;
+	};
+
 if (_transportcraft == "Self Delivery (Airplane)") then {
 	// TODO Check that this is really an airplane class name
 	_airplane_data_var = _items_ordered select 0;

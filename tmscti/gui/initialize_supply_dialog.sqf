@@ -25,7 +25,7 @@ if (_side == west) then {
 		_current_index = _current_index + 1;
 		};
 
-	if (not (_airstrip_id isEqualTo false) and _tier >= 3) then {
+	if (not (_airstrip_id isEqualTo false) and _tier >= 2) then {
 		_craftlist lbAdd ("C-17 Globemaster III");
 		_craftlist lbSetData [_current_index, "C-17 Globemaster III"];
 		_current_index = _current_index + 1;
@@ -41,6 +41,12 @@ else { // if side east
 	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 2) then {
 		_craftlist lbAdd ("Mi-8MT");
 		_craftlist lbSetData [_current_index, "Mi-8MT"];
+		_current_index = _current_index + 1;
+		};
+
+	if (not (_airstrip_id isEqualTo false) and _tier >= 3) then {
+		_craftlist lbAdd ("AN-22 Antei");
+		_craftlist lbSetData [_current_index, "AN-22 Antei"];
 		_current_index = _current_index + 1;
 		};
 
