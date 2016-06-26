@@ -89,7 +89,7 @@ if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Tra
 
 
 // CH-47 Chinook cargo capacity = 1
-if (_transportcraft == "CH-47 Chinook") then {
+if ((_transportcraft == "CH-47 Chinook") or (_transportcraft == "UH-1Y Venom") or (_transportcraft == "CH-53E Super Stallion") or (_transportcraft == "Mil Mi-8MT") or (_transportcraft == "Mil Mi-6") or (_transportcraft == "Ka-60 Kasatka")) then {
     for "_i" from 0 to (_number_of_items - 1) do {
         _item_data_string = lbData [1507, _i];
         _item_data = call compile _item_data_string;

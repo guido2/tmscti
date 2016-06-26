@@ -19,9 +19,21 @@ _tier = tms_current_supply_location select tms_sl_cols_tier;
 _current_index = 0;
 if (_side == west) then {
 	// Note: == operator does not work on booleans for some retarded reason, so we use isEqualTo instead
+	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 1) then {
+		_craftlist lbAdd ("UH-1Y Venom (slingload)");
+		_craftlist lbSetData [_current_index, "UH-1Y Venom"];
+		_current_index = _current_index + 1;
+		};
+
 	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 2) then {
 		_craftlist lbAdd ("CH-47 Chinook (slingload)");
 		_craftlist lbSetData [_current_index, "CH-47 Chinook"];
+		_current_index = _current_index + 1;
+		};
+
+	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 3) then {
+		_craftlist lbAdd ("CH-53E Super Stallion (slingload)");
+		_craftlist lbSetData [_current_index, "CH-53E Super Stallion"];
 		_current_index = _current_index + 1;
 		};
 
@@ -38,9 +50,21 @@ if (_side == west) then {
 		};
 	}
 else { // if side east
+	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 1) then {
+		_craftlist lbAdd ("Ka-60 Kasatka");
+		_craftlist lbSetData [_current_index, "Ka-60 Kasatka"];
+		_current_index = _current_index + 1;
+		};
+
 	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 2) then {
 		_craftlist lbAdd ("Mi-8MT");
 		_craftlist lbSetData [_current_index, "Mi-8MT"];
+		_current_index = _current_index + 1;
+		};
+
+	if (not (_delivery_positions select 3 isEqualTo false) and _tier >= 3) then {
+		_craftlist lbAdd ("Mil Mi-6");
+		_craftlist lbSetData [_current_index, "Mil Mi-6"];
 		_current_index = _current_index + 1;
 		};
 
