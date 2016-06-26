@@ -24,7 +24,7 @@ _carrier addAction ["Unload Cargo",{
 		_carrier setVariable ["c17_cargo_loading",true,true];
 		_carrier animate ["rampin",1];
 
-		[_carrier] execVM "\tmscti\item_functions\tms_an22_rampdown.sqf";
+		[_carrier] execVM "\tmscti\item_functions\an22_rampsdown.sqf";
 		waitUntil {(_carrier animationPhase "back_ramp_door_main") == 1};
 		waitUntil {(_carrier animationPhase "back_ramp") == 1};
 		_carrier setVariable ["c17_cargo_loading",false,true];
