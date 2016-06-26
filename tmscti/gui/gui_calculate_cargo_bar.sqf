@@ -23,7 +23,7 @@ clearWeaponCargoGlobal _temp_gear_box;
 clearBackpackCargoGlobal _temp_gear_box;
 
 // C-17 Globemaster III cargo capacity = 6
-if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Transport Ship")) then {
+if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Transport Ship") or (_transportcraft == "AN-22 Antei")) then {
     _cargo_usage = 0;
     _vehicle_cargo = 0;
     _num_gear_boxes = 0;

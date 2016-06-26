@@ -20,6 +20,10 @@ _supply_location = call compile _supply_location_var;
 _transport_capacity = _plane_info select 0;
 _cargo_load_function = call compile (_plane_info select 1);
 
+_initial_function = _plane_info select 2;
+_compiled_initial_function = compile preprocessFileLineNumbers _initial_function;
+_cargo_list = [];
+
 _spawnpos = getmarkerpos "sp_e"; // TODO Get fitting spawn position
 
 _cargobox = false;
@@ -41,6 +45,8 @@ for "_i" from 0 to ((count _items) - 1) do {
 			clearWeaponCargoGlobal _cargobox;
 			clearBackpackCargoGlobal  _cargobox;
 			[_airplane, _cargobox] call _cargo_load_function;
+			_cargo = [_cargobox];
+			_cargo_list = _cargo_list + _cargo;
 			};
 
 		// If the current box is full
@@ -52,6 +58,8 @@ for "_i" from 0 to ((count _items) - 1) do {
 			clearWeaponCargoGlobal _cargobox;
 			clearBackpackCargoGlobal _cargobox;
 			[_airplane, _cargobox] call _cargo_load_function;
+			_cargo = [_cargobox];
+			_cargo_list = _cargo_list + _cargo;
 			};
 
 		// TODO: Make a global function out of this, use that everywhere items are added to a box
@@ -77,8 +85,14 @@ for "_i" from 0 to ((count _items) - 1) do {
 		_vehicle = _item_class_name createVehicle getmarkerpos "vehiclespawn";
 		_vehicle setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
 		[_airplane, _vehicle] call _cargo_load_function;
+		_cargo = [_vehicle];
+		_cargo_list = _cargo_list + _cargo;
 		};
+	_airplane setVariable ["cargo_list", _cargo_list];
 	};
+
+_cargo_list = _airplane getVariable "cargo_list";
+[_airplane, _cargo_list] call _compiled_initial_function;
 
 _airplane setVehicleLock "LOCKED";
 _group = group _airplane;
