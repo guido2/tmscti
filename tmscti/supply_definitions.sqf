@@ -6,6 +6,13 @@ tms_supply_mbt_families = [["M1 Abrams", "tms_supply_m1_types", west],
 						   ["T-100", "tms_supply_t100_types", east],
 						   ["2S25 SPRUT-SD", "tms_supply_2s25_types", east]];
 
+tms_supply_ifv_families = [["M1126 Stryker ICV", "tms_supply_stryker_types", west],
+						   ["LAV-25", "tms_supply_lav25_types", west],
+						   ["M113", "tms_supply_m113_types", west],
+						   ["M2/M3 Bradley IFV", "tms_supply_bradley_types", west],
+						   ["Badger IFV", "tms_supply_badger_types", west],
+						   ["AAVP AMTRAC", "tms_supply_amtrac_types", west]];
+
 tms_supply_fighter_families =	[["F/A-18 Hornet", "tms_supply_f18_types", west],
 								["F/A-22 Raptor", "tms_supply_f22_types", west],
 								["F-16 Fighting Falcon", "tms_supply_f16_types", west],
@@ -22,7 +29,14 @@ tms_supply_gaplanes_families = 	[["A-10 Thunderbolt II", "tms_supply_a10_types",
 								 ["YAK-130", "tms_supply_yak130_types", east]];
 
 tms_supply_transport_families =	[["HMMWV Humvee", "tms_supply_humvee_types", west],
-								 ["UAZ-3151 Kozlik", "tms_supply_uaz3151_types", east]];
+								 ["UAZ-3151 Kozlik", "tms_supply_uaz3151_types", east],
+								 ["HEMTT", "tms_supply_hemtt_types", west],
+								 ["MTVR", "tms_supply_mtvr_types", west],
+								 ["FMTV", "tms_supply_fmtv_types", west],
+								 ["GAZ-66 Schischiga", "tms_supply_gaz66_types", east],
+								 ["Ural 4320", "tms_supply_uraltruck_types", east],
+								 ["KAMAZ 43118", "tms_supply_kamaztruck_types", east],
+								 ["KAMAZ 63968 Typhoon", "tms_supply_kamaztyphoon_types", east]];
 
 tms_supply_mrap_families =	[["M-ATV", "tms_supply_matv_types", west]];
 
@@ -77,6 +91,27 @@ tms_supply_t100_types = [["T-100 Black Eagle", "tms_supply_t100_objects"]];
 
 tms_supply_2s25_types = [["2S25 Sprut-SD", "tms_supply_2s25_objects"]];
 
+tms_supply_stryker_types = [["M1126 Stryker ICV", "tms_supply_m1126_objects"],
+							["M1128 Stryker MGS", "tms_supply_m1128_objects"],
+							["M1129 Stryker MC", "tms_supply_m1129_objects"],
+							["M1130 Stryker CV", "tms_supply_m1130_objects"],
+							["M1133 Stryker MEV", "tms_supply_m1133_objects"],
+							["M1135 Stryker ATGMV", "tms_supply_m1135_objects"]];
+
+tms_supply_lav25_types = [["LAV-25", "tms_supply_lav25_objects"]];
+
+tms_supply_m113_types = [["M113A3", "tms_supply_m113_objects"],
+						 ["M163A1 VADS", "tms_supply_m163_objects"]];
+
+tms_supply_bradley_types = [["M2A2 Bradley IFV", "tms_supply_m2a2_objects"],
+						    ["M2A3 Bradley IFV", "tms_supply_m2a3_objects"],
+							["M6 Linebacker", "tms_supply_m6lb_objects"],
+							["M7 Bradley FIST-V", "tms_supply_m7fist_objects"]];
+
+tms_supply_badger_types = [["Badger IFV", "tms_supply_badger_objects"]];
+
+tms_supply_amtrac_types = [["AAVP-7A1 AMTRAC", "tms_supply_aavp7a1_objects"]];
+
 tms_supply_f18_types = [["F/A-18 Super Hornet", "tms_supply_f18_objects"]];
 
 tms_supply_f22_types = [["F/A-22 Raptor", "tms_supply_f22_objects"]];
@@ -113,6 +148,26 @@ tms_supply_humvee_types =	[["M1025A2 Humvee", "tms_supply_m1025a2_objects"],
 tms_supply_matv_types =	[["M-ATV", "tms_supply_matv_objects"]];
 
 tms_supply_uaz3151_types =	[["UAZ-3151 Kozlik", "tms_supply_uaz3151_objects"]];
+
+tms_supply_hemtt_types = [["M977A4 HEMTT", "tms_supply_hemtttrans_objects"],
+						   ["M983A4 HEMTT Mover", "tms_supply_hemttmover_objects"],
+						   ["M978A4 HEMTT Fuel", "tms_supply_hemttfuel_objects"],
+						   ["M984A1 HEMTT Wrecker", "tms_supply_hemttwrecker_objects"]];
+
+tms_supply_mtvr_types = [["MTVR MK23", "tms_supply_mtvrmk23_objects"]];
+
+tms_supply_fmtv_types = [["M1078A1P2 FMTV", "tms_supply_m1078a1p2_objects"],
+						 ["M1083A1P2 FMTV", "tms_supply_m1083a1p2_objects"]];
+
+tms_supply_kamaztruck_types = [["KAMAZ 5350", "tms_supply_kamaz5350_objects"],
+							   ["KAMAZ 6560", "tms_supply_kamaz6560_objects"]];
+
+tms_supply_uraltruck_types = [["Ural 4320", "tms_supply_ural4320_objects"],
+							  ["9K51 Grad", "tms_supply_grad_objects"]];
+
+tms_supply_gaz66_types = [["GAZ-66 Schischiga", "tms_supply_gaz66_objects"]];
+
+tms_supply_kamaztyphoon_types = [["Kamaz 63968 Typhoon", "tms_supply_kamaztyphoon_objects"]];
 
 tms_supply_ah64apache_types = [["AH-64D Apache Longbow", "tms_supply_ah64d_objects"]];
 
@@ -209,6 +264,57 @@ tms_supply_t100_objects = ["tms_objects_t100"];
 
 tms_supply_2s25_objects = ["tms_objects_2s25"];
 
+tms_supply_m1126_objects = ["tms_objects_m1126m2",
+							"tms_objects_m1126m2slat",
+							"tms_objects_m1126mk19",
+							"tms_objects_m1126mk19slat"];
+
+tms_supply_m1128_objects = ["tms_objects_m1128mg2",
+							"tms_objects_m1128mg2slat"];
+
+tms_supply_m1129_objects = ["tms_objects_m1129mcmk19",
+							"tms_objects_m1129mcmk19slat"];
+
+tms_supply_m1130_objects = ["tms_objects_m1130cv",
+							"tms_objects_m1130cvslat"];
+
+tms_supply_m1133_objects = ["tms_objects_m1133mev",
+							"tms_objects_m1133mevslat"];
+
+tms_supply_m1135_objects = ["tms_objects_m1135atgmv",
+							"tms_objects_m1135atgmvslat"];
+
+tms_supply_lav25_objects = ["tms_objects_lav25",
+							"tms_objects_lav25m240",
+							"tms_objects_lav25hq"];
+
+tms_supply_m113_objects = ["tms_objects_m113a3",
+						   "tms_objects_m113a3m240",
+						   "tms_objects_m113a3m2",
+						   "tms_objects_m113a3mk19",
+						   "tms_objects_m113a3supply",
+						   "tms_objcts_m113a3mev"];
+
+tms_supply_m163_objects = ["tms_objects_m163"];
+
+tms_supply_m2a2_objects = ["tms_objects_m2a2",
+						   "tms_objects_m2a2ods",
+						   "tms_objects_m2a2odsbuski"];
+
+tms_supply_m2a3_objects = ["tms_objects_m2a3",
+						   "tms_objects_m2a3era",
+						   "tms_objects_m2a3buski",
+						   "tms_objects_m2a3buskiii"];
+
+tms_supply_m6lb_objects = ["tms_objects_m6a1",
+						   "tms_objects_m6a2"];
+
+tms_supply_m7fist_objects = ["tms_objects_m7fist"];
+
+tms_supply_badger_objects = ["tms_objects_badger"];
+
+tms_supply_aavp7a1_objects = ["tms_objects_aavp7a1"];
+   
 tms_supply_f18_objects = ["tms_objects_fa18e",
 						  "tms_objects_fa18f",
 						  "tms_objects_fa18x"];
@@ -265,7 +371,83 @@ tms_supply_matv_objects = ["tms_objects_matv_unarmed"];
 
 tms_supply_uaz3151_objects = ["tms_objects_uaz3151_open",
 							  "tms_objects_uaz3151"];
-							  
+
+tms_supply_hemtttrans_objects = ["tms_objects_hemtttrans",
+								"tms_objects_hemtttranscover",
+								"tms_objects_hemttrepair",
+								"tms_objects_hemttmev",
+								"tms_objects_hemttammo"];
+
+tms_supply_hemttmover_objects = ["tms_objects_hemttmover"];
+
+tms_supply_hemttfuel_objects = ["tms_objects_hemttfuel"];
+
+tms_supply_hemttwrecker_objects = ["tms_objects_hemttcram",
+								   "tms_objects_hemttnasams"];
+
+tms_supply_mtvrmk23_objects = ["tms_objects_mtvrmk23transcover"];
+
+tms_supply_m1078a1p2_objects = ["tms_objects_m1078A1P2trans",
+								"tms_objects_m1078A1P2flat",
+								"tms_objects_m1078A1P2open",
+								"tms_objects_m1078A1P2btrans",
+								"tms_objects_m1078A1P2bdflat",
+								"tms_objects_m1078A1P2bopen",
+								"tms_objects_m1078A1P2bm2",
+								"tms_objects_m1078A1P2bflatm2",
+								"tms_objects_m1078A1P2bopenm2"];
+
+tms_supply_m1083a1p2_objects = ["tms_objects_m1083A1P2trans",
+								"tms_objects_m1083A1P2flat",
+								"tms_objects_m1083A1P2open",
+								"tms_objects_m1083A1P2btrans",
+								"tms_objects_m1083A1P2bdflat",
+								"tms_objects_m1083A1P2bopen",
+								"tms_objects_m1083A1P2bm2",
+								"tms_objects_m1083A1P2bflatm2",
+								"tms_objects_m1083A1P2bopenm2",
+								"tms_objects_m1083A1P2bcsh",
+								"tms_objects_m1083A1P2bmhq"];
+
+tms_supply_kamaz5350_objects = ["tms_supply_5350trans",
+								 "tms_supply_5350transcover",
+								 "tms_supply_5350ammo",
+								 "tms_supply_5350repair",
+								 "tms_supply_5350fuel",
+								 "tms_supply_5350medical"];
+
+tms_supply_kamaz6560_objects = ["tms_supply_96k6panzir"];
+
+tms_supply_ural4320_objects = ["tms_supply_4320flatbed",
+							   "tms_supply_4320transport",
+							   "tms_supply_4320mover",
+							   "tms_supply_4320flatbedcover",
+							   "tms_supply_4320cover",
+							   "tms_supply_4320fuel",
+							   "tms_supply_4320repair",
+							   "tms_supply_4320ammo",
+							   "tms_supply_4320zu23"];
+
+tms_supply_grad_objects = ["tms_supply_9K51grad"];
+
+tms_supply_gaz66_objects = ["tms_supply_gaz66flatbed",
+							"tms_supply_gaz66trans",
+							"tms_supply_gaz66flatcover",
+							"tms_supply_gaz66covered",
+							"tms_supply_gaz66ammo",
+							"tms_supply_gaz66ap2",
+							"tms_supply_gaz66repair",
+							"tms_supply_gaz66r142n"];
+
+tms_supply_kamaztyphoon_objects = ["tms_supply_63968typhoontrans",
+								   "tms_supply_63968typhooncover",
+								   "tms_supply_63968typhoonarmored",
+								   "tms_supply_63968typhoonmev",
+								   "tms_supply_63968typhoonfuel",
+								   "tms_supply_63968typhoonrepair",
+								   "tms_supply_63968typhoonammo",
+								   "tms_supply_63968typhoondevice"];
+
 tms_supply_ah64d_objects = ["tms_objects_ah64d"];
 
 tms_supply_ah6littlebird_objects = ["tms_objects_ah6littlebird"];
@@ -670,6 +852,474 @@ tms_objects_2s25 =		["2S25 Sprut-SD",
 						"vehicle",//item or vehicle
 						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
 						["landing_craft", "an14_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo", "il76_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1126m2 =	["M1126 Stryker ICV M2",
+						"CUP_B_M1126_ICV_M2_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1126m2slat =	["M1126 Stryker ICV SLAT M2",
+						"CUP_B_M1126_ICV_M2_Desert_Slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1126mk19 =	["M1126 Stryker ICV MK19",
+						"CUP_B_M1126_ICV_MK19_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1126mk19slat =	["M1126 Stryker ICV MK19 SLAT",
+						"CUP_B_M1126_ICV_MK19_Desert_Slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1128mg2 =	["M1128 Stryker MGS",
+						"CUP_B_M1128_MGS_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1128mg2slat =	["M1128 Stryker MGS SLAT",
+						"CUP_B_M1128_MGS_Desert_slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1129mcmk19 =	["M1129 Stryker MC MK19",
+						"CUP_B_M1129_MC_MK19_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1129mcmk19slat =	["M1129 Stryker MC MK19 SLAT",
+						"CUP_B_M1129_MC_MK19_Desert_slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1130cv =	["M1130 Stryker CV",
+						"CUP_B_M1130_CV_M2_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1130cvslat =	["M1130 Stryker CV SLAT",
+						"CUP_B_M1130_CV_M2_Desert_slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1133mev =	["M1133 Stryker MEV",
+						"CUP_B_M1133_MEV_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1133mevslat =	["M1133 Stryker MEV SLAT",
+						"CUP_B_M1133_MEV_Desert_slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1135atgmv =	["M1135 Stryker ATGMV",
+						"CUP_B_M1135_ATGMV_Desert",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1135atgmvslat =	["M1135 Stryker ATGMV SLAT",
+						"CUP_B_M1135_ATGMV_Desert_slat",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_lav25 =	["LAV-25",
+						"CUP_B_LAV25_USMC",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_lav25m240 =	["LAV-25 M240",
+						"CUP_B_LAV25M240_USMC",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_lav25hq =	["LAV-25 HQ",
+						"CUP_B_LAV25_HQ_USMC",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m113a3 =	["M113A3",
+						"rhsusf_m113d_usarmy_unarmed",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m113a3m240 =	["M113A3 M240",
+						"rhsusf_m113d_usarmy_M240",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m113a3m2 =	["M113A3 M2",
+						"rhsusf_m113d_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m113a3mk19 =	["M113A3 MK19",
+						"rhsusf_m113d_usarmy_MK19",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m113a3supply =	["M113A3 Ammo Transport",
+						"rhsusf_m113d_usarmy_supply",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objcts_m113a3mev =	["M113A3 MEV",
+						"rhsusf_m113d_usarmy_medical",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m163 =	["M163A1 VADS",
+						"CUP_B_M163_USA",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a2 =	["M2A2 Bradley IFV",
+						"CUP_B_M2Bradley_USA_D",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a2ods =	["M2A2 Bradley IFV ODS",
+						"RHS_M2A2",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a2odsbuski =	["M2A2 Bradley IFV ODS BUSK I",
+						"RHS_M2A2_BUSKI",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a3 =	["M2A3 Bradley IFV",
+						"RHS_M2A3",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a3era =	["M2A3 Bradley IFV ERA",
+						"CUP_B_M2A3Bradley_USA_D",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a3buski =	["M2A3 Bradley IFV BUSK I",
+						"RHS_M2A3_BUSKI",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m2a3buskiii =	["M2A3 Bradley IFV BUSK III",
+						"RHS_M2A3_BUSKIII",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m6a1 =	["M6A1 Linebacker",
+						"CUP_B_M6LineBacker_USA_D",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m6a2 =	["M6A2 Linebacker",
+						"RHS_M6",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m7fist =	["M7 Bradley FIST-V",
+						"CUP_B_M7Bradley_USA_D",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_badger =	["Badger IFV",
+						"B_APC_Wheeled_01_cannon_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_aavp7a1 =	["AAVP-7A1 AMTRAC",
+						"CUP_B_AAV_USMC",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport3", "airfield2", "airport", "paradrop3"], // Supply locations where this vehicle can be ordered
+						["landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
 						false // Initialization function to run on this vehicle after it is spawned
 						];
 
@@ -1112,6 +1762,825 @@ tms_objects_uaz3151 =  ["UAZ-3151 Kozlik",
 						"vehicle",//item or vehicle
 						["beachhead3", "heli2", "heli3", "cargoport3", "airfield2", "airport", "paradrop2", "paradrop3"], // Supply locations where this vehicle can be ordered
 						["mi8_vehicle_slingload", "mi290_vehicle_slingload", "lcac_vehicle_cargo", "an12_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo", "an12_vehicle_paradrop", "il76_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemtttrans =	["M977A4 HEMTT Transport",
+						"B_Truck_01_transport_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemtttranscover =	["M977A4 HEMTT Transport Covered",
+						"B_Truck_01_covered_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttrepair =	["M977A4 HEMTT Repair",
+						"B_Truck_01_Repair_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttmev =	["M977A4 HEMTT MEV",
+						"B_Truck_01_medical_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttammo =	["M977A4 HEMTT Ammunition",
+						"B_Truck_01_ammo_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttmover =	["M983A4 HEMTT Mover",
+						"B_Truck_01_mover_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttfuel =	["M978A4 HEMTT Fuel",
+						"B_Truck_01_fuel_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttcram =	["M984A1 HEMTT Wrecker C-RAM",
+						"pook_CRAM_US",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_hemttnasams =	["M984A1 HEMTT Wrecker NASAMS",
+						"pook_NASAMS_US",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_mtvrmk23transcover =	["MTVR MK23 Transport Covered",
+						"VTN_MK23_MTVR_DES",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2trans =	["M1078A1P2 Transport FMTV",
+						"rhsusf_M1078A1P2_d_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2flat =	["M1078A1P2 Flatbed FMTV",
+						"rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2open =	["M1078A1P2 Open FMTV",
+						"rhsusf_M1078A1P2_d_open_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2btrans =	["M1078A1P2 B Transport FMTV",
+						"rhsusf_M1078A1P2_B_d_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2bdflat =	["M1078A1P2 B Flatbed FMTV",
+						"rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2bopen =	["M1078A1P2 B Open FMTV",
+						"rhsusf_M1078A1P2_B_d_open_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2bm2 =	["M1078A1P2 B M2 FMTV",
+						"rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2bflatm2 =	["M1078A1P2 B M2 Flatbed FMTV",
+						"rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1078A1P2bopenm2 =	["M1078A1P2 B M2 Open FMTV",
+						"rhsusf_M1078A1P2_B_M2_d_open_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2trans =	["M1083A1P2 Transport FMTV",
+						"rhsusf_M1083A1P2_d_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2flat =	["M1083A1P2 Flatbed FMTV",
+						"rhsusf_M1083A1P2_d_flatbed_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2open =	["M1083A1P2 Open FMTV",
+						"rhsusf_M1083A1P2_d_open_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2btrans =	["M1083A1P2 B Transport FMTV",
+						"rhsusf_M1083A1P2_B_d_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bdflat =	["M1083A1P2 B Flatbed FMTV",
+						"rhsusf_M1083A1P2_B_d_flatbed_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bopen =	["M1083A1P2 B Open FMTV",
+						"rhsusf_M1083A1P2_B_d_open_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bm2 =	["M1083A1P2 B M2 FMTV",
+						"rhsusf_M1083A1P2_B_M2_d_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bflatm2 =	["M1083A1P2 B M2 Flatbed FMTV",
+						"rhsusf_M1083A1P2_B_M2_d_flatbed_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bopenm2 =	["M1083A1P2 B M2 Open FMTV",
+						"rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bcsh =	["M1083A1P2 B CSH FMTV",
+						"rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_objects_m1083A1P2bmhq =	["M1083A1P2 B MHQ FMTV",
+						"rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["ch47_vehicle_slingload", "ch53_vehicle_slingload", "landing_craft", "c17_vehicle_cargo", "c5_vehicle_cargo", "d41_vehicle_cargo", "c17_vehicle_paradrop"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_5350trans =	["Kamaz 5350 Transport",
+						"VTN_KAMAZ5350_OPEN_EMR",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_5350transcover =	["Kamaz 5350 Transport Covered",
+						"VTN_KAMAZ5350_COVERED_EMR",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_5350ammo =	["Kamaz 5350 Ammunition",
+						"VTN_KAMAZ5350_REAMMO_EMR",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_5350repair =	["Kamaz 5350 Repair",
+						"VTN_KAMAZ5350_REPAIR_EMR",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_5350fuel =	["Kamaz 5350 Fuel",
+						"VTN_KAMAZ5350_FUEL_EMR",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_5350medical =	["Kamaz 5350 Medical",
+						"O_Truck_02_medical_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_96k6panzir =	["96K6 Panzir S1 SA22",
+						"pook_96K6_base",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320flatbed =	["Ural 4320 Flatbed",
+						"RHS_Ural_Open_Flat_MSV_01",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320transport =	["Ural 4320 Transport",
+						"RHS_Ural_Open_MSV_01",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320mover =	["Ural 4320 Mover",
+						"CUP_O_Ural_Empty_RU",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320flatbedcover =	["Ural 4320 Flatbed Covered",
+						"RHS_Ural_Flat_MSV_01",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320cover =	["Ural 4320 Covered",
+						"RHS_Ural_MSV_01",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320fuel =	["Ural 4320 Fuel",
+						"RHS_Ural_Fuel_MSV_01",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320repair =	["Ural 4320 Repair",
+						"CUP_O_Ural_Repair_RU",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320ammo =	["Ural 4320 Ammunition",
+						"CUP_O_Ural_Reammo_RU",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_4320zu23 =	["Ural 4320 ZU-23",
+						"CUP_O_Ural_ZU23_RU",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_9K51grad =	["9K51 Grad BM-21",
+						"RHS_BM21_MSV_01",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66flatbed =	["GAZ-66 Flatbed",
+						"rhs_gaz66o_flat_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66trans =	["GAZ-66 Transport",
+						"rhs_gaz66o_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66flatcover =	["GAZ-66 Flatbed Covered",
+						"rhs_gaz66_flat_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66covered =	["GAZ-66 Covered",
+						"rhs_gaz66_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66ammo =	["GAZ-66 Ammunition",
+						"rhs_gaz66_ammo_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66ap2 =	["GAZ-66-AP-2 MEV",
+						"rhs_gaz66_ap2_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66repair =	["GAZ-66 Repair",
+						"rhs_gaz66_repair_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_gaz66r142n =	["GAZ-66 R-142N MHQ",
+						"rhs_gaz66_r142_msv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						2, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoontrans =	["Kamaz 63968 Typhoon Transport",
+						"O_Truck_03_transport_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhooncover =	["Kamaz 63968 Typhoon Covered",
+						"O_Truck_03_covered_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoonarmored =	["Kamaz 63968 Typhoon Armored",
+						"rhs_typhoon_vdv",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoonmev =	["Kamaz 63968 Typhoon MEV",
+						"O_Truck_03_medical_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoonfuel =	["Kamaz 63968 Typhoon Fuel",
+						"O_Truck_03_fuel_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoonrepair =	["Kamaz 63968 Typhoon Repair",
+						"O_Truck_03_repair_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoonammo =	["Kamaz 63968 Typhoon Ammunition",
+						"O_Truck_03_ammo_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
+						false // Initialization function to run on this vehicle after it is spawned
+						];
+
+tms_supply_63968typhoondevice =	["Kamaz 63968 Typhoon Device Transport",
+						"O_Truck_03_device_F",// Classname
+						"\rhsafrf\addons\rhs_sprut\rhs_sprut",// P3D model
+						0.028,//Scale factor
+						[1.28, 0.25, 0.01],//transformfactor 1. X=Achse 2. Z-Achse tiefe 3. Y-Achse
+						100, // Supply points used
+						3, // Size of the vehicle
+						"vehicle",//item or vehicle
+						["beachhead3", "cargoport2", "cargoport3", "airfield2", "airport"], // Supply locations where this vehicle can be ordered
+						["mi8mt_vehicle_slingload", "mi6_vehicle_slingload", "landing_craft", "an12_vehicle_cargo", "an22_vehicle_cargo", "il76_vehicle_cargo", "d41_vehicle_cargo"], // Transport craft that are capable of delivering this vehicle
 						false // Initialization function to run on this vehicle after it is spawned
 						];
 
