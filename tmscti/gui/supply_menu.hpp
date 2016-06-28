@@ -606,6 +606,7 @@ class singlerailobjecttocargolist: RscButton
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {0.656863,0.556863,0.319608,1};
 	tooltip = "Infantry Fighting Vehicles and Armored Personnel Carriers"; //--- ToDo: Localize;
+	action = [tms_supply_ifv_families] execVM "tmscti\gui\set_family_select_list.sqf";
 	};
 	class supplymraps: RscButton
 	{
