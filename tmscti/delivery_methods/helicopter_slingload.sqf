@@ -23,8 +23,8 @@ _spawnpos = getmarkerpos "sp_e"; // TODO Get fitting spawn position
 
 // Create the helicopter and its cargo
 _helicopter = createVehicle [_helicopter_classname, _spawnpos, [], 0, "FLY"];
-createVehicleCrew (_helicopter);
 _helicopter setPosASL [_spawnpos select 0, _spawnpos select 1, 200];
+_helicopter enableSimulation false;
 
 _box_created = false;
 _item_class_name = "";
@@ -39,9 +39,16 @@ for "_i" from 0 to ((count _items) - 1) do {
 	if(_item_type == "gear") then {
 		if(_box_created isEqualTo false) then {
 			systemChat format ["Creating box"];
-			_cargobox = createVehicle ["B_supplyCrate_F", _spawnpos, [], 0, "NONE"];
+			_cargobox = createVehicle ["B_supplyCrate_F", getMarkerPos "vehiclespawn", [], 0, "NONE"];
+			_cargobox enableSimulation false;
+			_cargobox setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
+			_helicopter enableSimulation true;
+			createVehicleCrew (_helicopter);
 			_helicopter setSlingLoad _cargobox;
+			sleep 1.2;
+			_cargobox enableSimulation true;
 			_box_created = true;
+
 			clearItemCargoGlobal _cargobox;
 			clearMagazineCargoGlobal _cargobox;
 			clearWeaponCargoGlobal _cargobox;
@@ -71,6 +78,7 @@ for "_i" from 0 to ((count _items) - 1) do {
 	else {
 		_item_class_name = _item_data select 1;
 		_cargo = _item_class_name createVehicle getmarkerpos "vehiclespawn";
+		_cargo enableSimulation false;
 		_cargo setPosASL [_spawnpos select 0, _spawnpos select 1, 195];
 
 		// For basecontainers and other offcially "not slingloadable" objects:
@@ -85,6 +93,12 @@ for "_i" from 0 to ((count _items) - 1) do {
 		else {
 			_helicopter setSlingLoad _cargo;
 			};
+		createVehicleCrew (_helicopter);
+		_helicopter enableSimulation true;
+		_helicopter setSlingLoad _cargo;
+		sleep 1.2;
+		_cargo enableSimulation true;
+		_cargo setVehicleLock "UNLOCKED";
 		};
 	};
 
