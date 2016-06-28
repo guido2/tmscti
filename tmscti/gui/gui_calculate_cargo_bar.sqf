@@ -22,116 +22,82 @@ clearMagazineCargoGlobal _temp_gear_box;
 clearWeaponCargoGlobal _temp_gear_box;
 clearBackpackCargoGlobal _temp_gear_box;
 
-// C-17 Globemaster III cargo capacity = 6
-if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Transport Ship") or (_transportcraft == "AN-22 Antei")) then {
-    _cargo_usage = 0;
-    _vehicle_cargo = 0;
-    _num_gear_boxes = 0;
+if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Transport Ship") or (_transportcraft == "AN-22 Antei") or
+    (_transportcraft == "CH-47 Chinook") or (_transportcraft == "UH-1Y Venom") or (_transportcraft == "CH-53E Super Stallion") or (_transportcraft == "Mil Mi-8MT") or (_transportcraft == "Mil Mi-6") or (_transportcraft == "Ka-60 Kasatka")) then {
+	_cargo_capacity = 0.0;
+	_max_items = 0;
+	if ((_transportcraft == "C-17 Globemaster III") or (_transportcraft == "D-41 Transport Ship") or (_transportcraft == "AN-22 Antei")) then {
+		_cargo_capacity = 6.0;
+		_max_items = 6; // Cargobox counts as one item
+		};
 
-    for "_i" from 0 to (_number_of_items - 1) do {
-        _item_data_string = lbData [1507, _i];
-        _item_data = call compile _item_data_string;
-        _item_class_name = _item_data select 1;
-        _item_type = _item_data select 7;
+	if ((_transportcraft == "CH-47 Chinook") or (_transportcraft == "UH-1Y Venom") or (_transportcraft == "CH-53E Super Stallion") or (_transportcraft == "Mil Mi-8MT") or (_transportcraft == "Mil Mi-6") or (_transportcraft == "Ka-60 Kasatka")) then {
+		_cargo_capacity = 4.0;
+		_max_items = 1;
+		};
 
-        if (_item_type == "gear") then {
-            if (_num_gear_boxes == 0) then {
-                _num_gear_boxes = 1;
-            };
+	_cargo_usage = 0;
+	_num_gear_boxes = 0;
+	_num_vehicles = 0;
 
-            if (_temp_gear_box canAdd _item_class_name) then {
-                if (isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
-                    _temp_gear_box addWeaponCargo [_item_class_name, 1];
-                } else {
-                    if (isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
-                        _temp_gear_box addMagazineCargo [_item_class_name, 1];
-                    } else {
-                        _temp_gear_box additemCargo [_item_class_name, 1];
-                    };
-                };
-            } else {
-                _num_gear_boxes = _num_gear_boxes + 1;
+	for "_i" from 0 to (_number_of_items - 1) do {
+		_item_data_string = lbData [1507, _i];
+		_item_data = call compile _item_data_string;
+		_item_class_name = _item_data select 1;
+		_item_type = _item_data select 7;
 
-                clearItemCargo _temp_gear_box;
-                clearMagazineCargo _temp_gear_box;
-                clearWeaponCargo _temp_gear_box;
-                clearBackpackCargo _temp_gear_box;
+		if (_item_type == "gear") then {
+			if (_num_gear_boxes == 0) then {
+				_num_gear_boxes = 1;
+			};
 
-                if (isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
-                    _temp_gear_box addWeaponCargo [_item_class_name, 1] ;
-                } else {
-                    if (isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
-                        _temp_gear_box addMagazineCargo [_item_class_name, 1];
-                    } else {
-                        _temp_gear_box additemCargo [_item_class_name, 1];
-                    };
-                };
-            };
+			if (_temp_gear_box canAdd _item_class_name) then {
+				if (isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
+					_temp_gear_box addWeaponCargo [_item_class_name, 1];
+				} else {
+					if (isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
+						_temp_gear_box addMagazineCargo [_item_class_name, 1];
+					} else {
+						_temp_gear_box additemCargo [_item_class_name, 1];
+					};
+				};
+			} else {
+				_num_gear_boxes = _num_gear_boxes + 1;
 
-        } else {
-            _item_size = _item_data select 6;
-            _cargo_usage = _cargo_usage + _item_size;
-        };
-    };
+				clearItemCargo _temp_gear_box;
+				clearMagazineCargo _temp_gear_box;
+				clearWeaponCargo _temp_gear_box;
+				clearBackpackCargo _temp_gear_box;
 
-    _cargo_usage = _cargo_usage + _num_gear_boxes;
+				if (isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
+					_temp_gear_box addWeaponCargo [_item_class_name, 1] ;
+				} else {
+					if (isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
+						_temp_gear_box addMagazineCargo [_item_class_name, 1];
+					} else {
+						_temp_gear_box additemCargo [_item_class_name, 1];
+					};
+				};
+			};
 
-    if (_cargo_usage > 6) then {
-        _cargobar ctrlSetTextColor [0.5, 0, 0, 1];
-        _cargobar progressSetPosition 1.0;
-        _acceptbutton ctrlEnable false;
-        hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!";
-    } else {
-        _cargobar progressSetPosition _cargo_usage / 6.0;
-        _acceptbutton ctrlEnable true;
-    };
-};
+		} else {
+			_item_size = _item_data select 6;
+			_cargo_usage = _cargo_usage + _item_size;
+			_num_vehicles = _num_vehicles + 1;
+		};
+	};
 
+	_cargo_usage = _cargo_usage + _num_gear_boxes;
 
-// CH-47 Chinook cargo capacity = 1
-if ((_transportcraft == "CH-47 Chinook") or (_transportcraft == "UH-1Y Venom") or (_transportcraft == "CH-53E Super Stallion") or (_transportcraft == "Mil Mi-8MT") or (_transportcraft == "Mil Mi-6") or (_transportcraft == "Ka-60 Kasatka")) then {
-    for "_i" from 0 to (_number_of_items - 1) do {
-        _item_data_string = lbData [1507, _i];
-        _item_data = call compile _item_data_string;
-        _item_type = _item_data select 7;
-        _item_size = _item_data select 6;
-
-        if (_item_type == "gear") then {
-            _cargobar progressSetPosition 1.0;
-            _acceptbutton ctrlEnable true;
-            _item_class_name = _item_data select 1;
-
-            if (_temp_gear_box canAdd _item_class_name) then {
-                if ( isClass (configFile >> "CFGweapons" >> _item_class_name)) then {
-                    _temp_gear_box addWeaponCargo [_item_class_name, 1];
-                } else {
-                    if ( isClass (configFile >> "CFGMagazines" >> _item_class_name)) then {
-                        _temp_gear_box addMagazineCargo [_item_class_name, 1];
-                    } else {
-                        _temp_gear_box additemCargo [_item_class_name, 1];
-                    };
-                };
-            } else {
-                _cargobar ctrlSetTextColor [0.5, 0, 0, 1];
-                _cargobar progressSetPosition 1.0;
-                _acceptbutton ctrlEnable false;
-                hint "Your selected items exceed the cargo space of the current supply box. The selected transport vehicle can not carry any more supply boxes!";
-            };
-
-        } else {
-            if (_number_of_items == 1) then {
-                _cargobar progressSetPosition 1.0;
-                _acceptbutton ctrlEnable true;
-            };
-
-            if ((_number_of_items > 1) or (_item_size > 2)) then {
-                _cargobar ctrlSetTextColor [0.5, 0, 0, 1];
-                _cargobar progressSetPosition 1.0;
-                _acceptbutton ctrlEnable false;
-                hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!";
-            };
-        };
-    };
+	if (_cargo_usage > _cargo_capacity or _num_vehicles + _num_gear_boxes > _max_items) then {
+		_cargobar ctrlSetTextColor [0.5, 0, 0, 1];
+		_cargobar progressSetPosition 1.0;
+		_acceptbutton ctrlEnable false;
+		hint "The selected supply exceeds the maximum transport capacity of the selected transport vehicle!";
+	} else {
+		_cargobar progressSetPosition _cargo_usage / (_cargo_capacity * 1.0);
+		_acceptbutton ctrlEnable true;
+	};
 };
 
 // Self delivery (Airplane)
