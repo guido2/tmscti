@@ -111,6 +111,19 @@ if (_transportcraft == "Self Delivery (Helicopter)") then {
 	] call BIS_fnc_MP;
 	};
 
+if (_transportcraft == "Self Delivery (Amphibian)") then {
+	// TODO Check that this is really an amphibian vehicle
+	_vehicle_data_var = _items_ordered select 0;
+	_vehicle_data = call compile _vehicle_data_var;
+	_vehicle_class_name = _vehicle_data select 1;
+	[
+		[[_vehicle_class_name, tms_current_supply_location_var], "tmscti\delivery_methods\amphibian_self_delivery.sqf"],
+		"BIS_fnc_execVM",
+		false,
+		false
+	] call BIS_fnc_MP;
+	};
+
 if (_transportcraft == "D-41 Transport Ship") then {
 	_rp0 = getMarkerpos "shipwp0"; // TODO: Get the correct port
 	_rp1 = getMarkerpos "shipwp1"; // TODO: Get the correct port

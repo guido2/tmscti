@@ -122,6 +122,17 @@ if (_transportcraft == "Self Delivery (Helicopter)") then {
     };
 };
 
+// Self delivery (Amphibian)
+if (_transportcraft == "Self Delivery (Amphibian)") then {
+	// TODO Disable Accept button if more than one item in list
+	// TODO Check if all items in list are amphibian vehicles or capable of swimming
+    if (_number_of_items > 0) then {
+        _cargobar progressSetPosition 1.0;
+        _acceptbutton ctrlEnable true;
+        _cargobar ctrlSetTextColor [0.0, 0.5, 0, 1];
+    };
+};
+
 for "_i" from 0  to (_number_of_items - 1) do {
     _item_data_string = lbData [1507, _i];
     _item_data = call compile _item_data_string;
