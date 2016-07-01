@@ -93,4 +93,10 @@ if (not (_delivery_positions select 4 isEqualTo false)) then {
 	_current_index = _current_index + 1;
 	};
 
+if (not (_delivery_positions select 0 isEqualTo false)) then {
+	_craftlist lbAdd ("Self Delivery (Amphibian)");
+	_craftlist lbSetData [_current_index, "Self Delivery (Amphibian)"];
+	_current_index = _current_index + 1;
+	};
+
 execVM "tmscti\gui\gui_calculate_cargo_bar.sqf";
